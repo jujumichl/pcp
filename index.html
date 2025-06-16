@@ -3,19 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapport de Stage - Julien Michelin</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio de Julien Michelin</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
-    <h1>Rapport de Stage – Julien Michelin</h1>
+    <!-- HEADER -->
+    <header>
+        <!-- Logo ou Nom du Site -->
+        <div class="logo">
+            <img src ="portfolio.jpg" alt = "logo" width="200" height ="100"/>
+        </div>
+
+        <!-- Menu de Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#stage1">présentation de mon 1er stage</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECTION ACCUEIL -->
+    <section id="accueil">
+        <h1>Bienvenue dans mon Portfolio</h1>
+        <p>Étudiant en BTS SIO. Découvrez mes compétences et mes projets ci-dessous.</p>
+    </section>
+
+    <!-- SECTION À PROPOS -->
+    <section id="a-propos">
+        <h2>À propos de moi</h2>
+        <p>Passionné par l'informatique et les nouvelles technologies, je suis actuellement en première année de BTS SIO. Je m'intéresse particulièrement au développement web et à la cyber-sécuriter</p>
+        <p>Mon objectif est de devenir développeur web ou bien devenir hacker étique.</p>
+    </section>
+
+    <!-- SECTION COMPÉTENCES -->
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <ul>
+            <li><strong>Langages de programmation :</strong> Python, HTML, CSS, SQL</li>
+            <li><strong>Outils :</strong> Git, VS Code, MySQL Workbench</li>
+            <li><strong>Systèmes d'exploitation :</strong> Windows</li>
+            <li><strong>Soft Skills :</strong> Travail en équipe, gestion du temps, résolution de problèmes, autonomie</li>
+        </ul>
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        
+        <div class="projet">
+            <h3>Projet 1 : Création en groupe de plusieurs petits jeux en fin de terminal</h3>
+            <p>Création d'une boite dialogue ainsi que d'un menu permettant de naviguer entre plusieurs petits jeux programmer par mes camarades</p>
+            <p><a href = "https://mega.nz/file/25BUiDwT#YNllNI-BQrK3uU1zNi7R5zG8tNDmXJx_chc-xWw_V4M" target = "_blank">Liens pour télécharger le mini jeux</a></p>
+        </div>
+
+        <div class="projet">
+            <h3>Projet 2 : début de la création d'un site web pour l'entreprise AJC Mennuiserie en collaboration avec luka Moisseron</h3>
+            <p>Création du site web de AJC menuiserie debut du projet estimer au début du 2ième semestre.</p>
+            <img src="projet2.png" alt="Image du projet 2">
+        </div>
+
+        <!-- autres projets-->
+    </section>
+
+    <!-- SECTION stage -->
+    <section id="stage1">
+        <h2>Rapport de Stage – Julien Michelin</h2>
 
     <p><strong>Période :</strong> Du 26 mai au 20 juin (5 semaines)</p>
     <p><strong>Association :</strong> Cercle Celtique de Rennes (CCR)</p>
 
-    <h2>Introduction</h2>
+    <h3>Introduction</h3>
     <p>Tout au long de mon stage au sein de l'association du Cercle Celtique de Rennes (CCR), j'ai eu diverses missions techniques et organisationnelles. Ce rapport vise à présenter les tâches qui m'ont été confiées et les solutions que j'ai mises en œuvre durant ces cinq semaines. Un suivi détaillé de mes missions est répertorié dans un Google Sheets partagé avec l'équipe du CCR.</p>
 
-    <h2>Semaine 1 : Du 26 mai au 30 mai</h2>
+    <h3>Semaine 1 : Du 26 mai au 30 mai</h3>
     <p>Dès mon arrivée, j'ai mis en place un cahier des charges pour répertorier les missions à effectuer , partagé avec les membres du CCR pour une meilleure visibilité et une potentielle contribution de leur part.</p>
 
     <p>Mes premières missions ont inclus :</p>
@@ -36,7 +100,7 @@
         <li><strong>Problèmes rencontrés :</strong> Je me suis arrêté sur une Erreur 400, une Bad Request, et n'ai pas trouvé de solution pour l'instant. J'ai également récupéré le fichier Excel des adhérents afin d'initialiser mes variables.</li>
     </ul>
 
-    <h2>Semaine 2 : Du 2 au 6 juin</h2>
+    <h3>Semaine 2 : Du 2 au 6 juin</h3>
     <p>Au cours de cette deuxième semaine, mes missions se sont articulées autour du développement et de l'optimisation :</p>
     <ul>
         <li><strong>Finalisation de l'intégration Brevo (Backend) :</strong> J'ai achevé la mise en place du corps principal des fonctionnalités backend d'importation de Brevo grâce à son API. J'ai ajouté plusieurs fonctionnalités plus spécifiques au Cercle Celtique de Rennes, comme par exemple, la gestion des emails en double, l'ajout du nom et du prénom de la personne et non une mise à jour du contact, et la création d'un fichier Excel qui recense les personnes qui n'ont pas d'email valide ou de numéros de téléphone valide. Je prévois de continuer d'ajouter des fonctionnalités utiles au CCR.</li>
@@ -50,7 +114,7 @@
         <li><strong>Présentation et retour de Dominique :</strong> J'ai présenté mon site à l'équipe du Cercle Celtique de Rennes, ainsi que son fonctionnement. J'ai également mis à jour la FAQ du guide utilisateur. Dominique est venu et nous avons parlé de ce que j'ai réalisé ; il a relevé un point important concernant la pérennité de mon application web. Il m'a proposé de faire un changement au niveau du style du site web, et donc de ne plus utiliser de bibliothèque externe (Framework) et de coder le style de ma page web en CSS. De nouvelles missions de développement ainsi que des missions de documentations et d'information ont été ajoutées.</li>
     </ul>
 
-    <h2>Semaine 3 : Du 9 juin au 13 juin</h2>
+    <h3>Semaine 3 : Du 9 juin au 13 juin</h3>
     <p>Cette semaine a été marquée par des avancées significatives dans le développement d'applications web et la sensibilisation :</p>
     <ul>
         <li><strong>Transition CSS :</strong> Sur les conseils de Dominique, j'ai effectué le passage du Framework Bulma à une feuille de style.</li>
@@ -64,7 +128,7 @@
         <li><strong>Structure de la base de données :</strong> J'ai également travaillé sur la construction théorique de la structure de la base de données.</li>
     </ul>
 
-    <h2>Semaine 4 : Du 16 juin au 20 juin</h2>
+    <h3>Semaine 4 : Du 16 juin au 20 juin</h3>
     <p>Cette dernière semaine de stage s'est concentrée sur l'intégration des données :</p>
     <ul>
         <li><strong>Réunion Base de Données et Répartition des Tâches :</strong> Une réunion a eu lieu ce matin avec Dominique, le sujet était la base de données et la répartition des tâches.</li>
@@ -72,8 +136,13 @@
         <li><strong>Consultation du compte rendu :</strong> J'ai consulté le compte rendu créé par Dominique de la première réunion de ce projet qui a eu lieu le vendredi 12 juin.</li>
     </ul>
 
-    <h2>Conclusion</h2>
+    <h3>Conclusion</h3>
     <p>Ces cinq semaines de stage au Cercle Celtique de Rennes ont été très enrichissantes. J'ai pu travailler sur un éventail de missions variées, allant de la maintenance informatique à la conception et au développement d'applications web, en passant par la sensibilisation à la sécurité. J'ai acquis une expérience précieuse en gestion de projet, en collaboration d'équipe et en résolution de problèmes techniques. Je suis reconnaissant des conseils de Dominique et de l'opportunité de contribuer concrètement aux besoins de l'association.</p>
+    </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Michelin Julien. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
