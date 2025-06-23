@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Julien Michelin</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
-    <script src="./index.js"></script>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css"> 
+    <script defer src="./index.js"></script>
+    <!-- Liens bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <div w3-include-html="rapport_stage.html"></div> 
-    <div w3-include-html="content.html"></div>
-    
+<body> 
+    <!-- Inclusion de html grâce a js <div w3-include-html="content.html"></div> -->
     <!-- HEADER -->
     <header>
         <!-- Logo ou Nom du Site -->
@@ -19,16 +22,7 @@
         </div>
 
         <!-- Menu de Navigation -->
-        <nav>
-            <ul>
-                <li><a href="./accueil.html">Accueil</a></li>
-                <li><a href="./propos.html">À propos</a></li>
-                <li><a href="./skill.html">Compétences</a></li>
-                <li><a href="./proj.html">Projets</a></li>
-                <li><a href="./stages.html">Présentation de mes stages</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div w3-include-html="navbar.html"></div>
 
 
    <!--   <div class="code-display"> -->
@@ -141,9 +135,10 @@
     <h3>Conclusion</h3>
     <p>Ces cinq semaines de stage au Cercle Celtique de Rennes ont été très enrichissantes. J'ai pu travailler sur un éventail de missions variées, allant de la maintenance informatique à la conception et au développement d'applications web, en passant par la sensibilisation à la sécurité. J'ai acquis une expérience précieuse en gestion de projet, en collaboration d'équipe et en résolution de problèmes techniques. Je suis reconnaissant des conseils de Dominique et de l'opportunité de contribuer concrètement aux besoins de l'association.</p>
     </section>
-    <script>includeHTML();</script>
+    
     <footer>
         <p>&copy; 2024-2026 Michelin Julien. Tous droits réservés.</p>
     </footer>
+    <script>includeHTML();</script>
 </body>
 </html>
