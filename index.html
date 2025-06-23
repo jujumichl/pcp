@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Julien Michelin</title>
-    <!-- Lien vers le fichier CSS -->
-    <link rel="stylesheet" href="style.css"> 
-    <script defer src="./index.js"></script>
-    <!-- Liens bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./index.js"></script>
 </head>
 <body> 
-    <!-- Inclusion de html grâce a js <div w3-include-html="content.html"></div> -->
-    <!-- HEADER -->
     <header>
-
-        <!-- Menu de Navigation -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-lg-top bg-dark text-white">
-            <div class="container-fluid bg-dark text-white">
+        <nav class="navbar navbar-expand-lg sticky-lg-top">
+            <div class="container-fluid">
                 <button
                 class="navbar-toggler"
                 type="button"
@@ -36,19 +31,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Acceuil</a>
+                        <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./skill.html">Skills</a>
+                        <a class="nav-link" href="./skill.html">Skills</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./proj.html">Projets</a>
+                        <a class="nav-link" href="./proj.html">Projets</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./stages.html">Stages</a>
+                        <a class="nav-link" href="./stages.html">Stages</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./propos.html">A propos</a>
+                        <a class="nav-link" href="./propos.html">A propos</a>
                         </li>
                     </ul>
                 </div>
@@ -73,71 +68,84 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./accueil.html">Acceuil</a>
+                        <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./skill.html">Skills</a>
+                        <a class="nav-link" href="./skill.html">Skills</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./proj.html">Projets</a>
+                        <a class="nav-link" href="./proj.html">Projets</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./stages.html">Stages</a>
+                        <a class="nav-link" href="./stages.html">Stages</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./propos.html">A propos</a>
+                        <a class="nav-link" href="./propos.html">A propos</a>
                         </li>
-                    </ul>
+                </ul>
             </div>
         </div>
     </header>
-    <section id="index">
-        <h1>Bienvenue dans mon Portfolio</h1>
-        <h2>Julien Michelin</h2>
-        <p>Étudiant en BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers).</p>
-        <p>Actuellement en 1ère année de BTS SIO option SLAM, je recherche une alternance pour la période de septembre 2025-2026. 
-            Fort de mes compétences en HTML/CSS, JavaScript, PHP, Python et C#, ainsi qu'en gestion de bases de données SQL,
-             je suis motivé à appliquer et développer mes acquis au sein d'une équipe dynamique. 
-            Ma curiosité et ma capacité à résoudre des problèmes me poussent à constamment apprendre et à m'adapter.</p>
-    </section>
-    <footer class="bg-light fixed-bottom">
+
+    <main>
+        <section id="accueil" class="hero-section">
+            <div class="container text-center">
+                <h1 class="display-4">Bienvenue dans mon Portfolio</h1>
+                <h2 class="display-6">Julien Michelin</h2>
+                <p class="lead">Développeur Informatique en Alternance (BTS SIO SLAM)</p>
+                <p>
+                    Passionné par la création de solutions logicielles robustes et intuitives, je suis prêt à transformer vos défis en applications performantes.
+                </p>
+                <p>
+                    Actuellement en 1ère année de BTS SIO option SLAM, je recherche une alternance pour la période de septembre 2025-2026. 
+                    Fort de mes compétences en HTML/CSS, JavaScript, PHP, Python et C#, ainsi qu'en gestion de bases de données SQL,
+                    je suis motivé à appliquer et développer mes acquis au sein d'une équipe dynamique. 
+                    Ma curiosité et ma capacité à résoudre des problèmes me poussent à constamment apprendre et à m'adapter.
+                </p>
+                <a href="./proj.html" class="btn btn-primary btn-lg mt-3">Découvrir mes Projets</a>
+            </div>
+        </section>
+
+        </main>
+
+    <footer class="py-4 mt-5">
         <div class="container text-center">
             <div class="row">
-            <div class="col-md-4 mb-3">
-                <h5>Contact</h5>
-                <ul class="list-unstyled">
-                <li><a href="tel:+33749178461" class="text-decoration-none text-dark">Téléphone: 07 49 17 84 61</a> </li>
-                <li><a href="mailto:julienmichelin35@gmail.com" class="text-decoration-none text-dark">Email: julienmichelin35@gmail.com</a> </li>
-                <li>Melesse, 35520, France </li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Navigation</h5>
-                <ul class="list-unstyled">
-                <li><a href="./accueil.html" class="text-decoration-none text-dark">Accueil</a></li>
-                <li><a href="./skill.html" class="text-decoration-none text-dark">Skills</a></li>
-                <li><a href="./proj.html" class="text-decoration-none text-dark">Projets</a></li>
-                <li><a href="./stages.html" class="text-decoration-none text-dark">Stages</a></li>
-                <li><a href="./propos.html" class="text-decoration-none text-dark">A propos</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Suivez-moi</h5>
-                <ul class="list-unstyled">
-                <li><a href="www.linkedin.com/in/julien-michelin-799b982aa" target="_blank" class="text-decoration-none text-dark">LinkedIn</a> </li>
-                <li><a href="https://github.com/jujumichl" target="_blank" class="text-decoration-none text-dark">Gitlab</a> </li>
-                </ul>
-            </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+33749178461" class="text-decoration-none">Téléphone: 07 49 17 84 61</a> </li>
+                        <li><a href="mailto:julienmichelin35@gmail.com" class="text-decoration-none">Email: julienmichelin35@gmail.com</a> </li>
+                        <li>Melesse, 35520, France </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html" class="text-decoration-none">Accueil</a></li>
+                        <li><a href="./skill.html" class="text-decoration-none">Skills</a></li>
+                        <li><a href="./proj.html" class="text-decoration-none">Projets</a></li>
+                        <li><a href="./stages.html" class="text-decoration-none">Stages</a></li>
+                        <li><a href="./propos.html" class="text-decoration-none">A propos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Suivez-moi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.linkedin.com/in/julien-michelin-799b982aa" target="_blank" class="text-decoration-none">LinkedIn</a> </li>
+                        <li><a href="https://github.com/jujumichl" target="_blank" class="text-decoration-none">GitHub</a> </li>
+                        </ul>
+                </div>
             </div>
             <div class="row mt-3">
-            <div class="col-12">
-                <p class="text-muted mb-0">&copy; 2025 Julien Michelin. Tous droits réservés.</p>
-                <p class="text-muted mb-0">Alternance : Septembre 2025 - 2026</p>
-            </div>
+                <div class="col-12">
+                    <p class="mb-0 text-muted">&copy; 2025 Julien Michelin. Tous droits réservés.</p>
+                    <p class="mb-0 text-muted">Alternance : Septembre 2025 - 2026 </p>
+                </div>
             </div>
         </div>
     </footer>
-    </body>
+</body>
 </html>
    <!--   <div class="code-display"> -->
         <!-- <pre><code>
