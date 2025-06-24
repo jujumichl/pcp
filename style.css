@@ -1,162 +1,34 @@
-/* ========================================================= */
-/* Styles Généraux et Bootstrap Overrides */
-/* ========================================================= */
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police plus agréable */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333; /* Couleur de texte générale */
 }
 
-/* ========================================================= */
-/* HEADER / Barre de Navigation */
-/* ========================================================= */
-
-.navbar {
-    background-color: #343434 !important; /* Couleur gris foncé demandée */
-    padding: 15px 30px; /* Votre padding */
-}
-
-.navbar .logo img {
-    /* Ajustement de la taille de l'image du logo pour la rendre responsive et moins intrusive */
-    max-width: 150px; /* Ajustez selon vos préférences */
-    height: auto; /* Maintient le ratio d'aspect */
-}
-
-/* Liens de navigation principaux */
 .navbar-nav .nav-link {
-    color: #fff !important; /* Texte blanc pour les liens */
-    margin-right: 20px; /* Espacement entre les liens */
-    font-weight: 500;
-    transition: color 0.3s ease; /* Transition douce au survol */
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #007bff !important; /* Exemple de couleur au survol/actif (Bleu Bootstrap primaire) */
-    /* Ou une autre couleur si vous avez une palette spécifique, ex: #f8f9fa pour un blanc très léger */
+    color: #007bff !important; 
 }
 
-/* Toggler (bouton hamburger) pour les petits écrans */
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5); /* Bordure blanche semi-transparente */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Icône blanche */
-}
-
-/* ========================================================= */
-/* Offcanvas (Menu mobile) */
-/* ========================================================= */
-
-.offcanvas {
-    background-color: #343434; /* Même fond sombre que la navbar */
-    color: #fff;
-}
-
-.offcanvas-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.offcanvas-title {
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Bouton de fermeture du offcanvas (X) */
-.offcanvas .btn-close {
-    filter: invert(1) grayscale(100%) brightness(200%); /* Rend le 'X' blanc */
-}
 
 .offcanvas-body .nav-link {
-    color: #fff !important;
-    padding: 10px 15px; /* Ajuste le padding des liens dans le offcanvas */
+    padding: 10px 15px;
     transition: background-color 0.3s ease;
 }
 
 .offcanvas-body .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Légère surbrillance au survol */
-}
-
-/* ========================================================= */
-/* Section d'Accueil (Hero Section) */
-/* ========================================================= */
-
-.hero-section {
-    padding: 100px 0; /* Plus de padding pour l'espace */
-    background-color: #f8f9fa; /* Un fond clair pour le contenu */
-    color: #333;
-    text-align: center;
-}
-
-.hero-section h1 {
-    font-size: 3.5rem; /* Ajuste la taille du titre principal */
-    margin-bottom: 20px;
-    color: #212529;
-}
-
-.hero-section h2 {
-    font-size: 2.5rem;
-    color: #495057;
-    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
 .hero-section p {
-    font-size: 1.15rem;
     max-width: 800px;
-    margin: 0 auto 20px auto;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-/* Bouton d'action dans la section hero */
-.hero-section .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 50px; /* Bouton arrondi */
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.hero-section .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-
-/* ========================================================= */
-/* FOOTER */
-/* ========================================================= */
-
-footer {
-    background-color: #343434 !important; /* Même gris foncé que la navbar */
-    color: #fff; /* Texte blanc dans le footer */
-    padding: 40px 0 20px 0; /* Plus de padding vertical */
-}
-
-footer h5 {
-    color: #fff; /* Titres de section du footer en blanc */
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-footer ul li a {
-    color: rgba(255, 255, 255, 0.7) !important; /* Liens du footer légèrement transparents */
-    transition: color 0.3s ease;
-}
-
-footer ul li a:hover {
-    color: #fff !important; /* Liens du footer blancs au survol */
-}
-
-footer .text-muted {
-    color: rgba(255, 255, 255, 0.5) !important; /* Texte de copyright et alternance en gris clair */
-    font-size: 0.9rem;
-}
-
-/* Ajustements pour la réactivité du footer sur petits écrans */
 @media (max-width: 767.98px) {
     footer .col-md-4 {
-        margin-bottom: 30px; /* Plus d'espace entre les colonnes sur mobile */
+        margin-bottom: 1.5rem;
     }
 }
