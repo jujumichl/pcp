@@ -31,11 +31,6 @@ body {
     border-radius: 2px;
 }
 
-.offcanvas-body .nav-link {
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
 .offcanvas-body .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.1); 
 }
@@ -56,8 +51,28 @@ body {
     --bs-table-hover-bg: #dee2e6; 
 }
 
-@media (max-width: 767.98px) {
-    footer .col-md-4 {
-        margin-bottom: 1.5rem;
-    }
+.btn-custom-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-top:hover {
+    opacity: 1;
 }
