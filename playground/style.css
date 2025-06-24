@@ -9,9 +9,8 @@ body {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #007bff !important; 
+    color: #007bff !important;
 }
-
 
 .offcanvas-body .nav-link {
     padding: 10px 15px;
@@ -19,7 +18,13 @@ body {
 }
 
 .offcanvas-body .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-section {
+    background: linear-gradient(to right, #e2e8f0, #ffffff);
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .hero-section p {
@@ -28,14 +33,69 @@ body {
     margin-right: auto;
 }
 
+.section-heading {
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
 .table td {
     padding: 1rem 0.75rem;
 }
 
 .table {
-    --bs-table-bg: #fdfefe; 
-    --bs-table-striped-bg: #e9ecef; 
-    --bs-table-hover-bg: #dee2e6; 
+    --bs-table-bg: #fdfefe;
+    --bs-table-striped-bg: #e9ecef;
+    --bs-table-hover-bg: #dee2e6;
+}
+
+.table thead th {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.btn-custom-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
 }
 
 @media (max-width: 767.98px) {
