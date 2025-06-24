@@ -6,45 +6,9 @@
     <title>Portfolio de Julien Michelin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Styles CSS spécifiques à cette page, ou ajoutez-les à votre style.css */
-        body {
-            background-color: #f8f9fa; /* Light background for the page */
-            /* padding: 2rem; Supprimé car le padding sera géré par les sections ou le container parent */
-        }
-        .container-competences { /* Nouveau nom de classe pour éviter les conflits avec votre .container existant */
-            background-color: #ffffff;
-            padding: 2.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
-            margin-bottom: 3rem; /* Espace après ce conteneur de compétences */
-        }
-        .display-6 {
-            color: #343a40; /* Darker heading color */
-            margin-bottom: 1.5rem;
-            font-weight: 600; /* Slightly bolder headings */
-        }
-        .table {
-            --bs-table-bg: #fdfefe; /* Custom lighter table background */
-            --bs-table-striped-bg: #e9ecef; /* Lighter stripe color */
-            --bs-table-hover-bg: #dee2e6; /* Lighter hover color */
-        }
-        .table th {
-            background-color: #6c757d; /* Darker header background */
-            color: white;
-            vertical-align: middle;
-            text-align: center;
-        }
-        .table td {
-            vertical-align: middle;
-            padding: 1rem 0.75rem;
-        }
-        /* Assurez-vous que le padding du body ne crée pas de double padding avec le container global si vous le gardez */
-        /* Si vous avez un .container principal dans votre body, ajustez ce padding si besoin */
-    </style>
+    <link rel="stylesheet" href="stages_styles.css"> 
 </head>
-<body>
-    <header>
+<body class="bg-light"> <header>
         <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark py-3 px-3">
             <div class="container-fluid">
                 <button
@@ -132,14 +96,14 @@
                 La vie associative génère de nombreux projets en interne comme en externe tels que le festival Sevenadur et des ateliers de découverte culturelle, 
                 reflétant ainsi la richesse et la diversité du patrimoine breton.</p>
             <p class="mb-4">Leurs site web : <a href="https://www.cercleceltiquederennes.org/">Cercle Celtique de Rennes</a><br>
-            Pour les soutenirs ou adhérer au Cercle : <a href="https://www.helloasso.com/associations/cercle-celtique-de-rennes">Hello Asso</a></p>
+            Pour les soutenir ou adhérer au Cercle : <a href="https://www.helloasso.com/associations/cercle-celtique-de-rennes">Hello Asso</a></p>
         </div>
     </section>
 
     <section id="mission" class="hero-section py-5 bg-light text-dark text-center">
         <div class="container">
             <h1 class="display-4 text-dark mb-3">Missions accomplies</h1>
-            <h2 class="display-6 text-dark mb-3">Liste des différentes missions</h2>
+            <h2 class="display-6 text-dark mb-4 fw-semibold">Liste des différentes missions</h2>
             <ul>
                 <li class="mb-3 text-start">Mise en place de documentations et guides utilisateurs sur différentes tâches que j'ai eu à effectuer.</li>
                 <li class="mb-3 text-start">Mise en place d'une application web d'ajout de contact via un fichier tableur dans Brevo (outil permettant d'envoyer des emails).</li>
@@ -151,15 +115,16 @@
     </section>
 
     <section id="competences-stage" class="py-5 bg-light text-dark text-center">
-        <div class="container container-competences"> <h1 class="display-5 text-center text-dark mb-5">Liste des Compétences Exploitées durant ce Stage</h1>
+        <div class="container bg-white p-4 rounded-3 shadow mb-5">
+            <h1 class="display-5 text-center text-dark mb-5">Liste des Compétences Exploitées durant ce Stage</h1>
 
-            <h2 class="display-6 text-dark mb-4 mt-5">Bloc 1 - Support et mise à disposition des services informatiques</h2>
+            <h2 class="display-6 text-dark mb-4 mt-5 fw-semibold">Bloc 1 - Support et mise à disposition des services informatiques</h2>
             <div class="table-responsive mb-5">
                 <table class="table table-striped table-hover table-bordered align-middle">
                     <thead>
                         <tr>
-                            <th scope="col" style="width: 20%;">Libellé de la Compétence</th>
-                            <th scope="col">Intitulé de la Compétence</th>
+                            <th scope="col" style="width: 20%;" class="bg-dark text-white align-middle text-center fw-bold">Libellé de la Compétence</th>
+                            <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Intitulé de la Compétence</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -203,13 +168,13 @@
                 </table>
             </div>
 
-            <h2 class="display-6 text-dark mb-4 mt-5">Bloc 2 - SLAM Conception et développement d’applications</h2>
+            <h2 class="display-6 text-dark mb-4 mt-5 fw-semibold">Bloc 2 - SLAM Conception et développement d’applications</h2>
             <div class="table-responsive mb-5">
                 <table class="table table-striped table-hover table-bordered align-middle">
                     <thead>
                         <tr>
-                            <th scope="col" style="width: 20%;">Libellé de la Compétence</th>
-                            <th scope="col">Intitulé de la Compétence</th>
+                            <th scope="col" style="width: 20%;" class="bg-dark text-white align-middle text-center fw-bold">Libellé de la Compétence</th>
+                            <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Intitulé de la Compétence</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -253,13 +218,13 @@
                 </table>
             </div>
 
-            <h2 class="display-6 text-dark mb-4 mt-5">Bloc 3 - Cybersécurité des services informatiques</h2>
+            <h2 class="display-6 text-dark mb-4 mt-5 fw-semibold">Bloc 3 - Cybersécurité des services informatiques</h2>
             <div class="table-responsive mb-5">
                 <table class="table table-striped table-hover table-bordered align-middle">
                     <thead>
                         <tr>
-                            <th scope="col" style="width: 20%;">Libellé de la Compétence</th>
-                            <th scope="col">Intitulé de la Compétence</th>
+                            <th scope="col" style="width: 20%;" class="bg-dark text-white align-middle text-center fw-bold">Libellé de la Compétence</th>
+                            <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Intitulé de la Compétence</th>
                         </tr>
                     </thead>
                     <tbody>
