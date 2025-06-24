@@ -12,6 +12,24 @@ body {
     color: #007bff !important; 
 }
 
+.section-heading {
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
 
 .offcanvas-body .nav-link {
     padding: 10px 15px;
