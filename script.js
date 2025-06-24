@@ -10,9 +10,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Show/Hide scroll to top button
 const scrollTopBtn = document.getElementById('scrollTopBtn');
-if (scrollTopBtn) { // Ensure the button exists before adding event listeners
+if (scrollTopBtn) {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) { // Show button after scrolling 300px
+        if (window.scrollY > 300) {
             scrollTopBtn.style.display = 'block';
         } else {
             scrollTopBtn.style.display = 'none';
@@ -27,3 +27,21 @@ if (scrollTopBtn) { // Ensure the button exists before adding event listeners
         });
     });
 }
+
+//SYNC side bar with bottom bar
+const codeContent = document.getElementById('code-content');
+const scrollbarArea = document.getElementById('horizontal-scrollbar-area');
+
+codeContent.addEventListener('scroll', () => {
+    scrollbarArea.scrollLeft = codeContent.scrollLeft;
+});
+
+scrollbarArea.addEventListener('scroll', () => {
+    codeContent.scrollLeft = scrollbarArea.scrollLeft;
+});
+
+const updateScrollbarWidth = () => {
+    scrollbarArea.querySelector('div').style.width = codeContent.scrollWidth + 'px';
+};
+window.addEventListener('load', updateScrollbarWidth);
+window.addEventListener('resize', updateScrollbarWidth);
