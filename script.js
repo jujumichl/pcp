@@ -28,6 +28,7 @@ if (scrollTopBtn) {
     });
 }
 
+/**No functionnal see this later 
 //SYNC side bar with bottom bar
 const codeContent = document.getElementById('code-content');
 const scrollbarArea = document.getElementById('horizontal-scrollbar-area');
@@ -45,3 +46,4 @@ const updateScrollbarWidth = () => {
 };
 window.addEventListener('load', updateScrollbarWidth);
 window.addEventListener('resize', updateScrollbarWidth);
+*/

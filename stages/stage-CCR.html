@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Julien Michelin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <link rel="stylesheet" href="./../style.css">
 </head>
 <body>
@@ -122,6 +122,16 @@
                                 Cependant, ce projet n'a pas été publié car un nouveau projet a vu le jour juste après, et donc ils n'ont plus eu besoin de mon application web. Néanmoins, vous pouvez déployer le projet en local.
                             </p>
 <!----------------------------------------------------------------------------- Ajout de bout de code !!!!----------------------------------------------------------------------------->
+                            <div class="card mt-4" style="max-width: 900px; margin-left: auto; margin-right: auto;"> 
+                                <div class="card-header">
+                                    highlight.js utilisé pour la coloration syntaxique
+                                </div>
+                                <div class="card-body text-start" style="max-height: 400px; overflow-y: auto;"> 
+                                    <pre><code class="language-python" style="overflow-x: auto; white-space: pre;">
+
+                                    </code></pre>
+                                </div>
+                            </div>                            
                             <p>Ci-dessous, vous retrouverez l'ensemble dépôt GitHub associé à ce projet.</p>
                             
                             <a href="https://github.com/jujumichl/CCR_brevo"
@@ -141,7 +151,17 @@
                         a la fin de mon stage nous avons pu déployer la V1 du site.
                      </p>
 <!----------------------------------------------------------------------------- Ajout de bout de code !!!!----------------------------------------------------------------------------->
-                     <p>Ci-dessous, vous retrouverez l'ensemble dépôt GitHub associé à ce projet.</p>
+                    <div class="card mt-4" style="max-width: 900px; margin-left: auto; margin-right: auto;"> 
+                        <div class="card-header">
+                            CODE A AJOUTER !!!!!!
+                        </div>
+                        <div class="card-body text-start" style="max-height: 400px; overflow-y: auto;"> 
+                            <pre><code class="PHP" style="overflow-x: auto; white-space: pre;">
+                                echo CODE A AJOUTER !!!!!!
+                            </code></pre>
+                        </div>
+                    </div>   
+                    <p>Ci-dessous, vous retrouverez l'ensemble dépôt GitHub associé à ce projet.</p>
                      <a href="https://github.com/jujumichl/adhesion"
                             class="btn btn-primary btn-lg mx-2 mb-2 rounded-pill fw-bold">Dépôt du projet sur GitHub</a>
                      </div>
@@ -233,7 +253,11 @@
     <button type="button" class="btn btn-primary btn-lg rounded-circle shadow scroll-top" id="scrollTopBtn">
         &#x2191;
     </button>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
     <script defer src="./../script.js"></script>
 </body>
 </html>
