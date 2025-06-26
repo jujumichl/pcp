@@ -89,38 +89,57 @@
         <section id="accueil" class="hero-section py-5 bg-light text-dark text-center">
             <h1 class="display-4 text-dark mb-3">Sommaire : </h1>
             <p class="lead mb-3">DEBUT DU SOMMAIRE, suite du sommaire avec la même classe</p>
-                <h2 class="display-6 text-secondary mb-3">À propos de moi</h2>
-                <p>Ci-dessous vous retrouverez mon CV, l'emploie du temps des alternnaces de l'année scolaire 2025-2026 ainsi que mes réseaux</p>
-                <div class="container">
-                    <a href="#pdf" data-bs-toggle="modal" data-bs-target="#cvModal">
-                    <img class="minia" src="./fichier/pdf_thumbnail.png" alt="Miniature du CV">
-                    </a>
-                    <p>Cliquez sur l'image pour consulter mon CV et mon emplois du temps d'alternance pour l'année 2025-2026</p>
+            <h2 class="display-6 text-secondary mb-3">À propos de moi</h2>
+            <p>Ci-dessous vous retrouverez mon CV, le calendrier des alternnaces de l'année scolaire 2025-2026 ainsi que mes réseaux</p>
+            <div class="container">
+                <a href="#CV" data-bs-toggle="modal" data-bs-target="#cvModal">
+                <img class="minia" src="./fichier/pdf_thumbnail.png" alt="Miniature du CV">
+                </a>
+                <a href="#CV" data-bs-toggle="modal" data-bs-target="#altModal">
+                <img class="minia" src="./fichier/pdf_thumbnail.png" alt="Miniature de l'emploie du temps des alternances (2025-2026)">
+                </a>
+                <p>Cliquez sur les images pour consulter mon CV ou Mon calendrier alternance (Sept. 2025 - Juil. 2026)</p>
 
-                    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl"> <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="cvModalLabel">Mon CV et mon emplois du temps des alternances</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <iframe src="./fichier/Julien_Michelin-CV-alt.pdf" width="100%" height="600px" style="border:none;"></iframe>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                            <a href="./fichier/Julien_Michelin-CV-alt.pdf" target="_blank" class="btn btn-primary">Télécharger le CV</a>
-                        </div>
+                <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="cvModalLabel">Mon CV</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="./fichier/Julien_Michelin-CV.pdf" width="75%" height="600px" style="border:none;"></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="./fichier/Julien_Michelin-CV.pdf" target="_blank" class="btn btn-primary">Télécharger le CV</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="list-group list-group-horizontal">
-                        <a href="./fichier/Julien_Michelin-CV.pdf" class="list-group-item list-group-item-action list-group-item-primary btn-lg fw-bold">Télécharger mon CV</a>
-                        <a href="./fichier/Julien_Michelin-alt.pdf" class="list-group-item list-group-item-action list-group-item-primary fw-bold">Télécharger mon emplois du temps des alternances</a>
-                        <a href="./fichier/Julien_Michelin-CV-alt.pdf" class="list-group-item list-group-item-action list-group-item-info btn-lg fw-bold">Télécharger les deux</a>
+                </div>
+
+                <div class="modal fade" id="altModal" tabindex="-1" aria-labelledby="altModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="altModalLabel">Mon calendrier alternance (Sept. 2025 - Juil. 2026)</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="./fichier/Julien_Michelin-alt.pdf" width="75%" height="600px" style="border:none;"></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="./fichier/Julien_Michelin-alt.pdf" target="_blank" class="btn btn-primary">Télécharger le calendrier</a>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                    <a href="https://www.linkedin.com/in/julien-michelin-799b982aa" target="_blank" class="text-black-50 text-decoration-none">LinkedIn</a> </li>
-                    <a href="https://github.com/jujumichl" target="_blank" class="text-black-50 text-decoration-none">GitHub</a> </li>
-                                        
+                </div>
+
+            </div>
+            <a href="https://www.linkedin.com/in/julien-michelin-799b982aa" target="_blank" class="text-black-50 text-decoration-none">LinkedIn</a> </li>
+            <a href="https://github.com/jujumichl" target="_blank" class="text-black-50 text-decoration-none">GitHub</a> </li>
+                                
 
                 <!--A propos du CCR-->
                     <!--Ce que le CCR a penser de moi durant le stage, leurs retours-->
