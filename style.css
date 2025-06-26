@@ -79,7 +79,7 @@ body {
 
 .minia{
     width:150px;
-    height:300px;
+    height:auto;
     border:1px solid #ccc;
     border-radius:5px;
 }
