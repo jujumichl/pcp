@@ -92,15 +92,31 @@
                 <h2 class="display-6 text-secondary mb-3">À propos de moi</h2>
                 <p>Ci-dessous vous retrouverez mon CV, l'emploie du temps des alternnaces de l'année scolaire 2025-2026 ainsi que mes réseaux</p>
                 <div class="container">
-                    <div class="ratio ratio-4x3">
-                        <object data="./fichier/CV_JulienMichelin.pdf" type="application/pdf">
-                            <p>Il est possible de télécharger mon CV. <a href="./fichier/CV_JulienMichelin.pdf" target="_blank">Cliquez ici pour le télécharger.</a>.</p>
-                        </object>
+                    <a href="#pdf" data-bs-toggle="modal" data-bs-target="#cvModal">
+                    <img class="minia" src="./fichier/pdf_thumbnail.png" alt="Miniature du CV">
+                    </a>
+                    <p>Cliquez sur l'image pour consulter mon CV et mon emplois du temps d'alternance pour l'année 2025-2026</p>
+
+                    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl"> <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cvModalLabel">Mon CV et mon emplois du temps des alternances</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe src="./fichier/Julien_Michelin-CV-alt.pdf" width="100%" height="600px" style="border:none;"></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            <a href="./fichier/Julien_Michelin-CV-alt.pdf" target="_blank" class="btn btn-primary">Télécharger le CV</a>
+                        </div>
+                        </div>
                     </div>
-                    <div class="ratio ratio-4x3">
-                        <object data="./fichier/planningAlternance.pdf" type="application/pdf">
-                            <p>Il est possible de télécharger le planning des alternnaces de 2025-2026. <a href="./fichier/planningAlternance.pdf" target="_blank">Cliquez ici pour le télécharger.</a>.</p>
-                        </object>
+                    <div class="list-group list-group-horizontal">
+                        <a href="./fichier/Julien_Michelin-CV.pdf" class="list-group-item list-group-item-action list-group-item-primary btn-lg fw-bold">Télécharger mon CV</a>
+                        <a href="./fichier/Julien_Michelin-alt.pdf" class="list-group-item list-group-item-action list-group-item-primary fw-bold">Télécharger mon emplois du temps des alternances</a>
+                        <a href="./fichier/Julien_Michelin-CV-alt.pdf" class="list-group-item list-group-item-action list-group-item-info btn-lg fw-bold">Télécharger les deux</a>
+                    </div>
                     </div>
                     <a href="https://www.linkedin.com/in/julien-michelin-799b982aa" target="_blank" class="text-black-50 text-decoration-none">LinkedIn</a> </li>
                     <a href="https://github.com/jujumichl" target="_blank" class="text-black-50 text-decoration-none">GitHub</a> </li>
