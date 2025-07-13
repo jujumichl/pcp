@@ -109,11 +109,23 @@
             <div class="container">
                 <h1 class="display-4 text-dark mb-3">Missions accomplies</h1>
                 <h2 class="display-6 text-secondary mb-5">Liste des différentes missions</h2>
-                <ul class="list-group list-group-flush text-start">
+
+                <!--Mission avec affichage accordéon pour les détails-->
+
+                <ul class="list-group list-group-flush text-start" id="accordionList">
                     <li class="list-group-item d-flex align-items-center mb-3 border rounded shadow-sm p-3">
-                        <span class="badge bg-primary rounded-pill me-3 p-2">1</span>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                            <span class="badge bg-primary rounded-pill me-3 p-2">1</span>
+                            <strong>Documentation et Support Utilisateur</strong>
+                        </div>
+                        <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            +
+                        </button>
+                        </div>
+                        <!-- <span class="badge bg-primary rounded-pill me-3 p-2">1</span>
                         Documentation et Support Utilisateur : Création de guides utilisateurs et de documentations techniques pour faciliter l'autonomie et la compréhension des processus de l'organisation.
-                    </li>
+                    </li> -->
                     <li class="list-group-item d-flex align-items-center mb-3 border rounded shadow-sm p-3">
                         <span class="badge bg-primary rounded-pill me-3 p-2">2</span>
                         Développement Web et Automatisation : Conception et développement d'une application web pour l'intégration automatique de contacts via un fichier tableur dans l'outil de gestion des emails (Brevo).
