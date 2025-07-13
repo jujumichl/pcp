@@ -119,7 +119,7 @@
                             <span class="badge bg-primary rounded-pill me-3 p-2">1</span>
                             Documentation et Support Utilisateur : Création de guides utilisateurs et de documentations techniques pour faciliter l'autonomie et la compréhension des processus.
                         </div>
-                        <button class="btn btn-sm btn-outline-info toggle-btn" type="button"
+                        <button class="btn btn-sm toggle-btn" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
                             aria-controls="collapse1">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,25 +148,141 @@
                             </div>
                         </div>
                     </div>
-                        <!-- <span class="badge bg-primary rounded-pill me-3 p-2">1</span>
-                        Documentation et Support Utilisateur : Création de guides utilisateurs et de documentations techniques pour faciliter l'autonomie et la compréhension des processus de l'organisation.
-                    </li> -->
-                    <li class="list-group-item d-flex align-items-center mb-3 border rounded shadow-sm p-3">
-                        <span class="badge bg-primary rounded-pill me-3 p-2">2</span>
-                        Développement Web et Automatisation : Conception et développement d'une application web pour l'intégration automatique de contacts via un fichier tableur dans l'outil de gestion des emails (Brevo).
+                    
+                    <li class="list-group-item border rounded shadow-sm p-3 mb-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="badge bg-primary rounded-pill me-3 p-2">2</span>
+                            Développement Web et Automatisation : Conception et développement d'une application web pour l'intégration automatique de contacts via un fichier tableur dans l'outil de gestion des emails (Brevo).
+                        </div>
+                        <button class="btn btn-sm toggle-btn" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                            aria-controls="collapse2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        </div>
                     </li>
-                    <li class="list-group-item d-flex align-items-center mb-3 border rounded shadow-sm p-3">
-                        <span class="badge bg-primary rounded-pill me-3 p-2">3</span>
-                        Gestion de Projet et Conception Applicative : Initialisation et structuration d'un projet d'application web destiné à la gestion optimisée des adhérents de l'association.
+                    <div class="collapse mb-3" id="collapse2" data-bs-parent="#accordionList">
+                        <div class="card card-body border-start border-1">
+                            <div class="mb-4 text-center">
+                                <p>Sur demande de l'association, j'ai créé une application web qui utilise l'API de Brevo afin d'ajouter des contacts qui sont présents dans un tableur.
+                                Ce tableur a des colonnes dont les noms ne changent pas, ce qui m'a permis de faire un code qui ne fonctionne qu'avec ce tableur spécifiquement.
+                                    Cependant, ce projet n'a pas été publié car un nouveau projet a vu le jour juste après, et donc ils n'ont plus eu besoin de mon application web. Néanmoins, vous pouvez déployer le projet en local.
+                                </p>
+                                <p>Ci-dessous, vous retrouverez le dépôt GitHub associé à ce projet.</p>
+                                
+                                <a href="https://github.com/jujumichl/CCR_brevo"
+                                class="btn btn-primary btn-lg mx-2 mb-2 rounded-pill fw-bold">Dépôt Brevo sur GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <li class="list-group-item border rounded shadow-sm p-3 mb-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="badge bg-primary rounded-pill me-3 p-2">3</span>
+                            Gestion de Projet et Conception Applicative : Initialisation et structuration d'un projet d'application web destiné à la gestion des adhérents de l'association.
+                        </div>
+                        <button class="btn btn-sm toggle-btn" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                            aria-controls="collapse3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        </div>
                     </li>
-                    <li class="list-group-item d-flex align-items-center mb-3 border rounded shadow-sm p-3">
-                        <span class="badge bg-primary rounded-pill me-3 p-2">4</span>
-                        Cybersécurité et Sensibilisation : Préparation et animation de sessions de formation aux bonnes pratiques de cybersécurité pour sensibiliser les membres de l'équipe.
+                    <div class="collapse mb-3" id="collapse3" data-bs-parent="#accordionList">
+                        <div class="card card-body border-start border-1">
+                            <div class="mb-4 text-center">
+                                <p>C'est donc ce projet qui a vu le jour a la suite du développement de l'application web concernant Brevo. 
+                                    Ce projet est un projet qui répond a une réelle demande des salariés du cerlce celtique. 
+                                    Ils n'avaient pas de logiciel de gestion des adhérents.
+                                    Dominique qui s'occupe du développement informatique du cercle celtique de rennes avait déjà penser auparavant a développer une application web de gestin des adhérents 
+                                    cependant il ne souhaitait pas trop s'avancer il a donc attendu que la demande vienne réellement. J'ai donc permit au projet de se réaliser,
+                                    a la fin de mon stage nous avons pu déployer la V1 du site.
+                                </p>
+                                <div class="card mt-4" style="max-width: 900px; margin-left: auto; margin-right: auto;"> 
+                                    <div class="card-header">
+                                        J'ai travaillé principalement sur le fichier integrationCSV, où j'ai été chargé de mettre en place les fonctions de chargement et d'implémentation du contenu du fichier, ainsi que de sa vérification.
+                                    </div>
+                                    <div class="card-body text-start" style="max-height: 400px; overflow-y: auto;">
+                                        <!--img ex...-->
+                                    </div>
+                                </div>
+                                <p>Ci-dessous, vous retrouverez l'ensemble dépôt GitHub associé à ce projet.</p>
+                                <a href="https://github.com/jujumichl/adhesion"
+                                    class="btn btn-primary btn-lg mx-2 mb-2 rounded-pill fw-bold">Dépôt du projet sur GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <li class="list-group-item border rounded shadow-sm p-3 mb-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="badge bg-primary rounded-pill me-3 p-2">4</span>
+                            Cybersécurité et Sensibilisation : Préparation et animation de sessions de formation aux bonnes pratiques de cybersécurité pour sensibiliser les membres de l'équipe.
+                        </div>
+                        <button class="btn btn-sm toggle-btn" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                            aria-controls="collapse4">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        </div>
                     </li>
-                    <li class="list-group-item d-flex align-items-center mb-3 border rounded shadow-sm p-3">
-                        <span class="badge bg-primary rounded-pill me-3 p-2">5</span>
-                        Maintenance et Administration Réseau : Exécution de tâches de maintenance réseau essentielles, incluant la configuration d'équipements WiFi et la gestion des procédures de sauvegarde de données.
+                    <div class="collapse mb-3" id="collapse4" data-bs-parent="#accordionList">
+                        <div class="card card-body border-start border-1">
+                            <div class="mb-4 text-center">
+                                <p>Quand je suis arrivé dans cette association, j'ai vu le matériel informatique utilisé ainsi que les sécurités qui étaient mises en place. 
+                                    J'ai tout de suite pensé à faire une petite formation aux salariés sur l'importance de la cybersécurité.</p>
+                                <p>Pendant mon stage, ils ont été piratés. Le pirate a usurpé leur identité pour récupérer le montant d'une facture en changeant le RIB sur cette dernière. Le cercle 
+                                    celtique s'est rendu compte qu'ils avaient été piratés car le président était en copie des mails. Le pirate a bien été retrouvé.
+                                </p>
+                                <p>Retrouvez ci-dessous le support que j'ai utilisé pour former les salariés du Cercle Celtique de Rennes
+                                </p>
+                                <a href="https://www.canva.com/design/DAGooSQw_E0/Ana-fJeEHgvV31UPP6nByA/edit?utm_content=DAGooSQw_E0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                        class="btn btn-primary btn-lg mx-2 mb-2 rounded-pill fw-bold">Support de formation utilisé</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <li class="list-group-item border rounded shadow-sm p-3 mb-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="badge bg-primary rounded-pill me-3 p-2">5</span>
+                            Maintenance et Administration Réseau : Exécution de tâches de maintenance réseau , configuration d'équipements WiFi et la gestion des procédures de sauvegarde de données.
+                        </div>
+                        <button class="btn btn-sm toggle-btn" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                            aria-controls="collapse5">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        </div>
                     </li>
+                    <div class="collapse mb-3" id="collapse5" data-bs-parent="#accordionList">
+                        <div class="card card-body border-start border-1">
+                            <div class="mb-4 text-center">
+                            <!-- Détail de mission-->
+                                <p>À mon arrivée, on m'a demandé de trouver comment avoir accès à leur serveur de sauvegarde, un NAS de Synology.</p>
+                                <p>On m'a expliqué que depuis le départ de l'ancien stagiaire qui l'avait mis en place, ils n'avaient plus accès 
+                                    au NAS au bout de 2 semaines, et ne savaient pas si la sauvegarde était toujours en marche.</p>
+                                <p>J'ai donc réussi à me connecter grâce au guide laissé par l'ancien stagiaire et je leur ai remis le service
+                                    en marche. J'ai ensuite repris la documentation du stagiaire.</p>
+                                <p>On m'a aussi demandé de faire un comparatif entre leur serveur cloud et le serveur NAS dans l'optique d'inverser les fonctions des deux serveurs.</p>
+                                <p>Vous retrouverez la documentation ci-dessous.</p>
+
+                                <a href="https://siovhblyceebasch-my.sharepoint.com/:f:/g/personal/julien_michelin_lycee-basch_fr/EkiHOl6pIDdGt_br2fOwZ3wB5-q5TumOxCpzMTQMOSZ9sw?e=51zEuc"
+                                        class="btn btn-primary btn-lg mx-2 mb-2 rounded-pill fw-bold">Documentation liée</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </ul>
             </div>
         </section>
