@@ -7,3 +7,7 @@
 - [] Ajouter sur mon CV mon expérience de super U (Mise en rayon du 14 juillet au 16 août (épicerie, liquide, DPH, fruit et légumes))
 - [] Ajouter mon alternance sur mon CV en fin d'année
 - [] Vérifier que le site est a jours avec les dernières données (A faire tous les 3-4 mois et 1 ou 2 semaines avant l'épreuve)
+- [] lister les logiciels utilisés
+- [] illustration des projets
+- [] le fichier en .csv avec le même formats mais les données anonymes
+- [] img du schéma de la BDD
