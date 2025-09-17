@@ -11,3 +11,12 @@
 - [] illustration des projets
 - [] le fichier en .csv avec le même formats mais les données anonymes
 - [] img du schéma de la BDD
+
+
+
+A voir :
+https://getbootstrap.com/docs/5.3/components/progress/
+
+si insertion de code :
+
+https://getbootstrap.com/docs/5.3/utilities/overflow/
