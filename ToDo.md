@@ -1,8 +1,8 @@
 - [] Crypter ou sécuriser les ressources (fichier de rapport de stage, documentation, ect...)
 - [] Finir le contenue de la page projet (texte, image illustrative...)
 - [] Ajout d'image sur la page de stage
-- [] Ajouter le référentiel des compétences comme ressource en liens sur la page de stage
-- [] Mettre les numéros des missions sur les compétences présentée et ajouter un Hover sur les libellés des mission pour comprendre a quoi correspondent les numéros
+- [x] Ajouter le référentiel des compétences comme ressource en liens sur la page de stage
+- [x] Mettre les numéros des missions sur les compétences présentée et ajouter un Hover sur les libellés des mission pour comprendre a quoi correspondent les numéros
 - [] Crée une page destinnée a l'alternance
 - [] Ajouter sur mon CV mon expérience de super U (Mise en rayon du 14 juillet au 16 août (épicerie, liquide, DPH, fruit et légumes))
 - [] Ajouter mon alternance sur mon CV en fin d'année
