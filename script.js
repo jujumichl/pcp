@@ -27,23 +27,3 @@ if (scrollTopBtn) {
         });
     });
 }
-
-/**No functionnal see this later 
-//SYNC side bar with bottom bar
-const codeContent = document.getElementById('code-content');
-const scrollbarArea = document.getElementById('horizontal-scrollbar-area');
-
-codeContent.addEventListener('scroll', () => {
-    scrollbarArea.scrollLeft = codeContent.scrollLeft;
-});
-
-scrollbarArea.addEventListener('scroll', () => {
-    codeContent.scrollLeft = scrollbarArea.scrollLeft;
-});
-
-const updateScrollbarWidth = () => {
-    scrollbarArea.querySelector('div').style.width = codeContent.scrollWidth + 'px';
-};
-window.addEventListener('load', updateScrollbarWidth);
-window.addEventListener('resize', updateScrollbarWidth);
-*/
