@@ -83,3 +83,20 @@ body {
     border:1px solid #ccc;
     border-radius:5px;
 }
+
+
+
+
+.mission-links {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+.mission-links a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #007bff;
+}
+.mission-links a:hover {
+  text-decoration: underline;
+}

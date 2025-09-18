@@ -106,9 +106,9 @@
 
                 <ul class="list-group list-group-flush text-start" id="accordionList">
                     <li class="list-group-item border rounded shadow-sm p-3 mb-1">
-<div class="d-flex align-items-center justify-content-between btn-group" role="group">
+                        <div class="d-flex align-items-center justify-content-between btn-group" role="group">
                             <button class="btn toggle-btn btn-sm" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1" id="M1">
                                 <span class="badge bg-primary rounded-pill me-3 p-2 fs-7 justify-content-start">1</span>
                                 <span class="fs-6">Documentation et Support Utilisateur : Création de guides
                                     utilisateurs et de
@@ -155,7 +155,7 @@
                     <li class="list-group-item border rounded shadow-sm p-3 mb-1">
                         <div class="d-flex align-items-center justify-content-between btn-group" role="group">
                             <button class="btn toggle-btn btn-sm" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" id="M2">
                                 <span class="badge bg-primary rounded-pill me-3 p-2 fs-7 justify-content-start">2</span>
                                 <span class="fs-6">Développement Web et Automatisation : Conception et développement
                                     d'une application web
@@ -195,7 +195,7 @@
                     <li class="list-group-item border rounded shadow-sm p-3 mb-1">
                         <div class="d-flex align-items-center justify-content-between btn-group" role="group">
                             <button class="btn toggle-btn btn-sm" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" id="M3">
                                 <span class="badge bg-primary rounded-pill me-3 p-2 fs-7 justify-content-start">3</span>
                                 <span class="fs-6">Gestion de Projet et Conception Applicative : Initialisation et
                                     structuration d'un
@@ -250,7 +250,7 @@
                     <li class="list-group-item border rounded shadow-sm p-3 mb-1">
                         <div class="d-flex align-items-center justify-content-between btn-group" role="group">
                             <button class="btn toggle-btn btn-sm" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" id="M4">
                                 <span class="badge bg-primary rounded-pill me-3 p-2 fs-7 justify-content-start">4</span>
                                 <span class="fs-6">Cybersécurité et Sensibilisation : Préparation et animation de
                                     sessions de formation aux
@@ -291,7 +291,7 @@
                     <li class="list-group-item border rounded shadow-sm p-3 mb-1">
                         <div class="d-flex align-items-center justify-content-between btn-group" role="group">
                             <button class="btn toggle-btn btn-sm" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" id="M5">
                                 <span class="badge bg-primary rounded-pill me-3 p-2 fs-7 justify-content-start">5</span>
                                 <span class="fs-6">Maintenance et Administration Réseau : Exécution de tâches de
                                     maintenance réseau ,
@@ -359,49 +359,65 @@
                                                 <th scope="col"
                                                     class="bg-dark text-white align-middle text-center fw-bold">Intitulé
                                                     de la Compétence</th>
+                                                <th scope="col"
+                                                    class="bg-dark text-white align-middle text-center fw-bold">Missions
+                                                    associées</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.1.1</td>
                                                 <td>Recenser et identifier les ressources numériques</td>
+                                                <td><a href="#M4">Mission 4</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.1.3</td>
                                                 <td>Exploiter des référentiels, normes et standards adoptés par le
                                                     prestataire informatique</td>
+                                                <td><a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.1.4</td>
                                                 <td>Gérer des sauvegardes</td>
+                                                <td><a href="#M5">Mission 5</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.1.5</td>
                                                 <td>Vérifier les conditions de la continuité d’un service informatique
                                                 </td>
+                                                <td><a href="#M2">Mission 2</a>  <a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.1.6</td>
                                                 <td>Vérifier le respect des règles d’utilisation des ressources
                                                     numériques</td>
+                                                <td><a href="#M1">Mission 1</a>  <a href="#M4">Mission 4</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.2</td>
                                                 <td>Répondre aux incidents et aux demandes d’assistance et d’évolution
                                                 </td>
+                                                <td><a href="#M1">Mission 1</a> <a href="#M2">Mission 2</a> 
+                                                    <a href="#M3">Mission 3</a> <a href="#M5">Mission 5</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.4</td>
                                                 <td>Travailler en mode projet</td>
+                                                <td><a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.5</td>
                                                 <td>Mettre à disposition des utilisateurs un service informatique
                                                     (orienté utilisateurs)</td>
+                                                <td><a href="#M2">Mission 2</a>  <a href="#M3">Mission 3 </a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B1.6</td>
                                                 <td>Organiser son développement professionnel</td>
+                                                <td><a href="#M1">Mission 1</a>  <a href="#M2">Mission 2</a>  <a
+                                                        href="#M1">Mission 3</a>  <a href="#M4">Mission 4</a> 
+                                                    <a href="#M5">Mission 5</a>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -425,48 +441,60 @@
                                                 <th scope="col"
                                                     class="bg-dark text-white align-middle text-center fw-bold">Intitulé
                                                     de la Compétence</th>
+                                                <th scope="col"
+                                                    class="bg-dark text-white align-middle text-center fw-bold">Missions
+                                                    associées</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.1</td>
                                                 <td>Analyser un besoin exprimé et son contexte juridique</td>
+                                                <td><a href="#M1">Mission 1</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.2</td>
                                                 <td>Modéliser une solution applicative</td>
+                                                <td><a href="#M2">Mission 2</a>  <a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.3</td>
                                                 <td>Participer à la conception de l’architecture d’une solution
                                                     applicative</td>
+                                                <td><a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.7</td>
                                                 <td>Utiliser des composants d’accès aux données</td>
+                                                <td><a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.8</td>
                                                 <td>Exploiter les fonctionnalités d’un environnement de développement et
                                                     de tests</td>
+                                                <td><a href="#M2">Mission 2</a> <a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.9</td>
                                                 <td>Réaliser des tests nécessaires à la validation ou à la mise en
                                                     production d’éléments adaptés ou développés</td>
+                                                <td><a href="#M2">Mission 2</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.11</td>
                                                 <td>Évaluer la qualité d’une solution applicative</td>
+                                                <td><a href="#M2">Mission 2</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.1.12</td>
                                                 <td>Rédiger des documentations techniques et d’utilisation d’une
                                                     solution applicative</td>
+                                                <td><a href="#M1">Mission 1</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B2.3</td>
                                                 <td>Gérer les données</td>
+                                                <td><a href="#M3">Mission 3</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -490,32 +518,40 @@
                                                 <th scope="col"
                                                     class="bg-dark text-white align-middle text-center fw-bold">Intitulé
                                                     de la Compétence</th>
+                                                <th scope="col"
+                                                    class="bg-dark text-white align-middle text-center fw-bold">Missions
+                                                    associées</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B3.1</td>
                                                 <td>Protéger les données à caractère personnel</td>
+                                                <td><a href="M3">Mission 3</a> <a href="#M4">Mission 4</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B3.3.1</td>
                                                 <td>Informer les utilisateurs sur les risques associés à l’utilisation
                                                     d’une ressource numérique et promouvoir les bons usages à adopter
                                                 </td>
+                                                <td><a href="#M4">Mission 4</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B3.5B.1</td>
                                                 <td>Participer à la vérification des éléments contribuant à la qualité
                                                     d’un développement informatique</td>
+                                                <td><a href="#M2">Mission 2</a> <a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B3.5B.2</td>
                                                 <td>Prendre en compte la sécurité dans un projet de développement d’une
                                                     solution applicative</td>
+                                                <td><a href="#M3">Mission 3</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="mission-links">
                                                 <td class="text-center">B3.5B.4</td>
                                                 <td>Prévenir les attaques</td>
+                                                <td><a href="#M4">Mission 4</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -524,6 +560,7 @@
                         </div>
                     </div>
                 </div>
+                <a class="justify-content-end" href="./propos.html">Tableau de compétences - référentiels du BTS SIO</a>
             </div>
         </section>
 
