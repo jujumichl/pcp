@@ -9,7 +9,7 @@ body {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #007bff !important; 
+    color: #007bff !important;
 }
 
 .section-heading {
@@ -32,7 +32,7 @@ body {
 }
 
 .offcanvas-body .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hero-section p {
@@ -46,9 +46,9 @@ body {
 }
 
 .table {
-    --bs-table-bg: #fdfefe; 
-    --bs-table-striped-bg: #e9ecef; 
-    --bs-table-hover-bg: #dee2e6; 
+    --bs-table-bg: #fdfefe;
+    --bs-table-striped-bg: #e9ecef;
+    --bs-table-hover-bg: #dee2e6;
 }
 
 .btn-custom-primary {
@@ -77,26 +77,25 @@ body {
     opacity: 1;
 }
 
-.minia{
-    width:150px;
-    height:auto;
-    border:1px solid #ccc;
-    border-radius:5px;
+.minia {
+    width: 150px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-
-
-
 
 .mission-links {
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
 }
+
 .mission-links a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #007bff;
+    text-decoration: none;
+    font-weight: normal;
+    color: #007bff;
 }
+
 .mission-links a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
