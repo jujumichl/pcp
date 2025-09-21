@@ -12,7 +12,9 @@
 - [] le fichier en .csv avec le même formats mais les données anonymes
 - [] img du schéma de la BDD
 
-
+**/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\**  
+M3 Menu liste personne = crash, changement des chemin des fichiers.  
+**/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\**
 
 A voir :
 https://getbootstrap.com/docs/5.3/components/progress/
