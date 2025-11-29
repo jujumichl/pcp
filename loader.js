@@ -1,29 +1,28 @@
 // loader.js
 window.addEventListener("load",initApp);
 
+/**
+ * function which is 
+ * launch during the loading of page
+ */
 async function initApp(){
     let footer = "includes/footer.html";
     const footerHTML = document.getElementById('footer');
     await insertHTMLFile(footer, footerHTML);
-
-    // ne fonctione pas a voir pourquoi !!!!
-    // Trouver, le fichier est bien importer cependant j'ai mal
-    // configurer mon element du DOM
-
-    // /!\ pb d'encodage a voir
-
-/*     let head = "includes/head.html";
-    const headHTML = document.getElementById('head-content');
-    await insertHTMLFile(head, headHTML); */
-
     let header = "includes/header.html"
     const headerHTML = document.getElementById('header-content');
-    insertHTMLFile(header, headerHTML);
-
-    
+    await insertHTMLFile(header, headerHTML);
 }
+
+/**
+ * Used to insert file which contain html code
+ * @param {String} htmlFile the path of the file from the file "loader.js"
+ * @param {String} htmlElement DOM element which used to load this file
+ */
 async function insertHTMLFile(htmlFile, htmlElement) {
   try {
+    
+    // get the content 
     const response = await fetch(htmlFile);
 
     if (!response.ok) {
@@ -32,8 +31,8 @@ async function insertHTMLFile(htmlFile, htmlElement) {
 
     const htmlContent = await response.text();
     
-    // Insérer le contenu
-    if (htmlElement) { // Vérification de l'existence de l'élément
+    // insert the content
+    if (htmlElement) {
         htmlElement.innerHTML = htmlContent;
         console.log("Contenu du fichier .html charger dans " + htmlElement.id);
     } else {
@@ -41,6 +40,6 @@ async function insertHTMLFile(htmlFile, htmlElement) {
     }
 
   } catch (error) {
-    console.error("Erreur lors de la récupération du fichier:", error);
+    console.error(`Erreur lors de la récupération du ${htmlFile} : `, error);
   }
 }

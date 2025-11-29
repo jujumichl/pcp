@@ -10,11 +10,7 @@
 - [] lister les logiciels utilisés
 - [] illustration des projets
 - [] le fichier en .csv avec le même formats mais les données anonymes
-- [] img du schéma de la BDD
-
-**/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\**  
-M3 Menu liste personne = crash, changement des chemin des fichiers.  
-**/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\** **/!\\**
+- [x] img du schéma de la BDD
 
 A voir :
 https://getbootstrap.com/docs/5.3/components/progress/

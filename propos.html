@@ -9,75 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark py-3 px-3">
-            <div class="container-fluid">
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar"
-                    aria-controls="offcanvasNavbar"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="logo">
-                    <img src ="images/portfolio.jpg" alt = "logo" width="200" height ="100" class="img-fluid" style="max-width: 150px;"/>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./proj.html">Projets 🚧</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./stages.html">Stages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./propos.html">À propos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div
-            class="offcanvas offcanvas-start text-bg-dark"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-        >
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                <button
-                    type="button"
-                    class="btn-close btn-close-white"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                ></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="./index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="./proj.html">Projets 🚧</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="./stages.html">Stages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="./propos.html">À propos</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <header id="header-content">
     </header>
-
 
     <main>
         <section id="accueil" class="hero-section py-5 bg-light text-dark text-center">
@@ -106,11 +39,11 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <iframe src="./fichier/Julien_Michelin-CV.pdf" width="75%" height="600px" style="border:none;"></iframe>
+                                <iframe src="./PDFfiles/Julien_Michelin-CV.pdf" width="75%" height="600px" style="border:none;"></iframe>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                <a class="btn btn-primary" href="./fichier/Julien_Michelin-CV.pdf" download="CV-Julien_Michelin">Télécharger le CV</a>
+                                <a class="btn btn-primary" href="./PDFfiles/Julien_Michelin-CV.pdf" download="CV-Julien_Michelin">Télécharger le CV</a>
                                 
                             </div>
                         </div>
@@ -125,11 +58,11 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <iframe src="./fichier/Julien_Michelin-alt.pdf" width="75%" height="600px" style="border:none;"></iframe>
+                                <iframe src="./PDFfiles/Julien_Michelin-alt.pdf" width="75%" height="600px" style="border:none;"></iframe>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                <a class="btn btn-primary" href="./fichier/Julien_Michelin-alt.pdf" download="Calendrier_alternance_Julien_Michelin-2025/2026">Télécharger le calendrier</a>
+                                <a class="btn btn-primary" href="./PDFfiles/Julien_Michelin-alt.pdf" download="Calendrier_alternance_Julien_Michelin-2025/2026">Télécharger le calendrier</a>
                             </div>
                         </div>
                     </div>
@@ -145,11 +78,11 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <iframe src="./fichier/SLAM_Competences_Savoirs.pdf" width="75%" height="600px" style="border:none;"></iframe>
+                                <iframe src="./PDFfiles/SLAM_Competences_Savoirs.pdf" width="75%" height="600px" style="border:none;"></iframe>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                <a class="btn btn-primary" href="./fichier/SLAM_Competences_Savoirs.pdf" download="Referentiel_competences_BTS-SIO">Télécharger le référentiel</a>
+                                <a class="btn btn-primary" href="./PDFfiles/SLAM_Competences_Savoirs.pdf" download="Referentiel_competences_BTS-SIO">Télécharger le référentiel</a>
                             </div>
                         </div>
                     </div>
@@ -157,8 +90,9 @@
             </div>
     </main>
 
-    <div id="footer">
-        <script src="./loader.js"></script>
-    </div>
+    <footer id="footer" class="bg-dark text-white py-4">
+    </footer>
+    <script src="./loader.js"></script>
+
 </body>
 </html>
