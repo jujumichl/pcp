@@ -1,21 +1,21 @@
 // loader.js
-window.addEventListener("load",initApp);
+window.addEventListener("load", initApp);
 
 /**
  * function which is 
  * launch during the loading of page
  */
-async function initApp(){
-    let footer = "includes/footer.html";
-    const footerHTML = document.getElementById('footer');
-    await insertHTMLFile(footer, footerHTML);
-    let header = "includes/header.html"
-    const headerHTML = document.getElementById('header-content');
-    await insertHTMLFile(header, headerHTML);
-    const menu = document.querySelectorAll("a.nav-link");
-    for (let element of menu){
-      element.addEventListener('click', currentPage(1, element));
-    }
+async function initApp() {
+  let footer = "includes/footer.html";
+  const footerHTML = document.getElementById('footer');
+  await insertHTMLFile(footer, footerHTML);
+  let header = "includes/header.html"
+  const headerHTML = document.getElementById('header-content');
+  await insertHTMLFile(header, headerHTML);
+  const menuHTML = document.querySelectorAll("a.nav-link");
+  for (let element of menuHTML) {
+    element.addEventListener('click', currentPage(1, element));
+  }
 }
 
 /**
@@ -25,7 +25,7 @@ async function initApp(){
  */
 async function insertHTMLFile(htmlFile, htmlElement) {
   try {
-    
+
     // get the content 
     const response = await fetch(htmlFile);
 
@@ -34,13 +34,13 @@ async function insertHTMLFile(htmlFile, htmlElement) {
     }
 
     const htmlContent = await response.text();
-    
+
     // insert the content
     if (htmlElement) {
-        htmlElement.innerHTML = htmlContent;
-        console.log("Contenu du fichier .html charger dans " + htmlElement.id);
+      htmlElement.innerHTML = htmlContent;
+      console.log("Contenu du fichier .html charger dans " + htmlElement.id);
     } else {
-        console.error("Élément" + htmlElement.id + " non trouvé.");
+      console.error("Élément" + htmlElement.id + " non trouvé.");
     }
 
   } catch (error) {
@@ -48,14 +48,18 @@ async function insertHTMLFile(htmlFile, htmlElement) {
   }
 }
 
-function currentPage(evt, element){
+async function currentPage(evt, element) {
   let current_url = window.location.pathname.substring(5);
   let current_element = element.ariaCurrent;
-  if (current_url === current_element){
+  let current_file = current_url.substring(0, current_url.search(".html"));
+  if (current_url === current_element) {
+    const currentHTMLElement = document.getElementById(`${current_file}-content`);
+    let currentElement = `pagesContent/${current_file}.html`
+    await insertHTMLFile(currentElement, currentHTMLElement);
     element.classList.add('active');
   }
   else {
-    if (element.classList.contains('active')){
+    if (element.classList.contains('active')) {
       element.classList.remove('active');
     }
   }
