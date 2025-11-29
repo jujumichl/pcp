@@ -16,10 +16,10 @@ async function initApp(){
     const headHTML = document.getElementById('head-content');
     await insertHTMLFile(head, headHTML); */
 
-/*     let header = "includes/header.html"
+    let header = "includes/header.html"
     const headerHTML = document.getElementById('header-content');
     insertHTMLFile(header, headerHTML);
- */
+
     
 }
 async function insertHTMLFile(htmlFile, htmlElement) {
