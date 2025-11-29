@@ -1,14 +1,26 @@
 // loader.js
-window.addEventListener("load", initApp);
+window.addEventListener("load",initApp);
 
-function initApp(){
+async function initApp(){
     let footer = "includes/footer.html";
     const footerHTML = document.getElementById('footer');
+    await insertHTMLFile(footer, footerHTML);
+
     // ne fonctione pas a voir pourquoi !!!!
-    let header = "includes/header.html";
-    const headerHTML = document.getElementById('head-content');
-    insertHTMLFile(footer, footerHTML);
+    // Trouver, le fichier est bien importer cependant j'ai mal
+    // configurer mon element du DOM
+
+    // /!\ pb d'encodage a voir
+
+/*     let head = "includes/head.html";
+    const headHTML = document.getElementById('head-content');
+    await insertHTMLFile(head, headHTML); */
+
+/*     let header = "includes/header.html"
+    const headerHTML = document.getElementById('header-content');
     insertHTMLFile(header, headerHTML);
+ */
+    
 }
 async function insertHTMLFile(htmlFile, htmlElement) {
   try {
@@ -32,5 +44,3 @@ async function insertHTMLFile(htmlFile, htmlElement) {
     console.error("Erreur lors de la récupération du fichier:", error);
   }
 }
-
-
