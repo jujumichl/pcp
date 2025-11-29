@@ -12,6 +12,10 @@ async function initApp(){
     let header = "includes/header.html"
     const headerHTML = document.getElementById('header-content');
     await insertHTMLFile(header, headerHTML);
+    const menu = document.querySelectorAll("a.nav-link");
+    for (let element of menu){
+      element.addEventListener('click', currentPage(1, element));
+    }
 }
 
 /**
@@ -41,5 +45,18 @@ async function insertHTMLFile(htmlFile, htmlElement) {
 
   } catch (error) {
     console.error(`Erreur lors de la récupération du ${htmlFile} : `, error);
+  }
+}
+
+function currentPage(evt, element){
+  let current_url = window.location.pathname.substring(5);
+  let current_element = element.ariaCurrent;
+  if (current_url === current_element){
+    element.classList.add('active');
+  }
+  else {
+    if (element.classList.contains('active')){
+      element.classList.remove('active');
+    }
   }
 }
