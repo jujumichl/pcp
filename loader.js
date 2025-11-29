@@ -6,10 +6,10 @@ window.addEventListener("load", initApp);
  * launch during the loading of page
  */
 async function initApp() {
-  let footer = "includes/footer.html";
+  let footer = "pagesContent/footer.html";
   const footerHTML = document.getElementById('footer');
   await insertHTMLFile(footer, footerHTML);
-  let header = "includes/header.html"
+  let header = "pagesContent/header.html"
   const headerHTML = document.getElementById('header-content');
   await insertHTMLFile(header, headerHTML);
   const menuHTML = document.querySelectorAll("a.nav-link");
@@ -57,6 +57,12 @@ async function currentPage(evt, element) {
     let currentElement = `pagesContent/${current_file}.html`
     await insertHTMLFile(currentElement, currentHTMLElement);
     element.classList.add('active');
+  }
+  else if (current_url == ''){
+    let defaultPageHTML = document.getElementById(`index-content`);
+    let defaultPage = 'pagesContent/index.html'
+    await insertHTMLFile(defaultPage, defaultPageHTML);
+    document.querySelectorAll("a.nav-link")[0].classList.add('active');
   }
   else {
     if (element.classList.contains('active')) {
