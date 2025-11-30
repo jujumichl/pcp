@@ -111,7 +111,8 @@ body {
   display: block;
   margin: -50px auto 0;
   position: relative;
-  color: #FFF;
+  /* Changement de couleur de base */
+  color: #00bcd4; 
   transform: translateY(30px);
   box-sizing: border-box;
   animation: animloader 2s ease infinite;
@@ -125,7 +126,8 @@ body {
   box-shadow: 0 30px, 0 -30px;
   border-radius: 4px;
   background: currentColor;
-  color: #111111;
+  /* Changement de couleur de base */
+  color: #00bcd4; 
   position: absolute;
   left: 30px;
   top: 0;
@@ -139,21 +141,24 @@ body {
 @keyframes animloader {
   0% {
     top: 0;
-    color: rgb(14, 14, 14);
+    /* Couleur d'accent */
+    color: #00bcd4; 
   }
   50% {
     top: 30px;
-    color: rgba(255, 255, 255, 0.2);
+    /* Couleur foncée pour l'effet d'atténuation */
+    color: #00838f; 
   }
   100% {
     top: 0;
-    color: rgb(161, 150, 150);
+    /* Couleur d'accent */
+    color: #00bcd4; 
   }
 }
 
 
 .loaderTxt {
-  color: #FFF;
+  color: #050505;
   display: inline-block;
   position: relative;
   font-size: 48px;
