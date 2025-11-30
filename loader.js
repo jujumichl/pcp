@@ -6,16 +6,30 @@ window.addEventListener("load", initApp);
  * launch during the loading of page
  */
 async function initApp() {
-  let footer = "pagesContent/footer.html";
-  const footerHTML = document.getElementById('footer');
-  await insertHTMLFile(footer, footerHTML);
-  let header = "pagesContent/header.html"
-  const headerHTML = document.getElementById('header-content');
-  await insertHTMLFile(header, headerHTML);
+
+  await insertHTMLFile("pagesContent/header.html", document.getElementById('header-content'));
+
+  // get all link of menu et know which one i am
   const menuHTML = document.querySelectorAll("a.nav-link");
   for (let element of menuHTML) {
-    element.addEventListener('click', currentPage(1, element));
+    element.addEventListener('click', currentPage(Event, element));
   }
+
+  /* GENERER PAR IA MAIS FONCTIONNE PAS
+  // Cibler tous les éléments 'collapse' que Bootstrap va gérer
+  const collapseElements = document.querySelectorAll('.collapse');
+  
+  collapseElements.forEach(element => {
+      // Écouter l'événement 'shown.bs.collapse' qui se déclenche APRÈS l'ouverture complète
+      element.addEventListener('shown.bs.collapse', function() {
+          // 'this' est l'élément #collapse5 ou tout autre élément ouvert
+          this.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+          });
+      });
+  });
+   */
 }
 
 /**
@@ -52,13 +66,18 @@ async function currentPage(evt, element) {
   let current_url = window.location.pathname.substring(5);
   let current_element = element.ariaCurrent;
   let current_file = current_url.substring(0, current_url.search(".html"));
+
   if (current_url === current_element) {
+
     const currentHTMLElement = document.getElementById(`${current_file}-content`);
     let currentElement = `pagesContent/${current_file}.html`
+
+    // load content
     await insertHTMLFile(currentElement, currentHTMLElement);
+    await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
     element.classList.add('active');
   }
-  else if (current_url == ''){
+  else if (current_url == '') {
     let defaultPageHTML = document.getElementById(`index-content`);
     let defaultPage = 'pagesContent/index.html'
     await insertHTMLFile(defaultPage, defaultPageHTML);
