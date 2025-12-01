@@ -81,6 +81,7 @@ async function currentPage(evt, element) {
     let defaultPageHTML = document.getElementById(`index-content`);
     let defaultPage = 'pagesContent/index.html'
     await insertHTMLFile(defaultPage, defaultPageHTML);
+    await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
     document.querySelectorAll("a.nav-link")[0].classList.add('active');
   }
   else {
