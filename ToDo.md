@@ -11,6 +11,8 @@
 - [] illustration des projets
 - [] le fichier en .csv avec le même formats mais les données anonymes
 - [x] img du schéma de la BDD
+- [ ] Développer plus la missions 2
+- [ ] AP31 : présentation du projet (différentes étapes)
 
 A voir :
 https://getbootstrap.com/docs/5.3/components/progress/
