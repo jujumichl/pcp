@@ -1,18 +1,21 @@
 - [] Crypter ou sécuriser les ressources (fichier de rapport de stage, documentation, ect...)
-- [] Finir le contenue de la page projet (texte, image illustrative...)
-- [] Ajout d'image sur la page de stage
 - [x] Ajouter le référentiel des compétences comme ressource en liens sur la page de stage
 - [x] Mettre les numéros des missions sur les compétences présentée et ajouter un Hover sur les libellés des mission pour comprendre a quoi correspondent les numéros
-- [] Crée une page destinnée a l'alternance
-- [] Ajouter sur mon CV mon expérience de super U (Mise en rayon du 14 juillet au 16 août (épicerie, liquide, DPH, fruit et légumes))
-- [] Ajouter mon alternance sur mon CV en fin d'année
-- [] Vérifier que le site est a jours avec les dernières données (A faire tous les 3-4 mois et 1 ou 2 semaines avant l'épreuve)
+- [] Crée une page destinnée a l'alternance (contenue)
+- [] Ajouter sur mon CV mon expérience de super U (Mise en rayon du 14 juillet au 16 août (épicerie, 
+liquide, DPH, fruit et légumes) + mon alternance sur mon CV en fin d'année)
 - [] lister les logiciels utilisés
 - [] illustration des projets
+
 - [] le fichier en .csv avec le même formats mais les données anonymes
 - [x] img du schéma de la BDD
-- [ ] Développer plus la missions 2
-- [ ] AP31 : présentation du projet (différentes étapes)
+- [] Développer plus la missions 2
+- [] AP31 : présentation du projet (différentes étapes)
+- [] Refaire le schéma M3
+- [] Bouger les flèches du caroussel
+
+- [] Vérifier que le site est a jours avec les dernières données (A faire tous les 3-4 mois et 1 ou 2 semaines avant l'épreuve)
+
 
 A voir :
 https://getbootstrap.com/docs/5.3/components/progress/
