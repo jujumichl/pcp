@@ -63,8 +63,10 @@ async function insertHTMLFile(htmlFile, htmlElement) {
 }
 
 async function currentPage(evt, element) {
-  let current_url = window.location.pathname.substring(5);
+  //Récupération du nom du fichier
+  let current_url = window.location.pathname.split("/").pop();
   let current_element = element.ariaCurrent;
+  // on enlève le .html situer a la fin du fichier
   let current_file = current_url.substring(0, current_url.search(".html"));
 
   if (current_url === current_element) {
