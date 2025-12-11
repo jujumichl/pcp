@@ -1,46 +1,83 @@
 <section id="proj" class="hero-section py-5 bg-light text-dark text-center">
-    <div class="container">
-        <h1 class="display-4 text-dark mb-3">Projets effectués pendant ma formation</h1>
-        <p class="display-6 text-secondary mb-3">Application web gitlab</p>
+  <div class="container">
+    <h1 class="display-4 text-dark mb-3">Projets effectués pendant ma formation</h1>
+    <p class="display-6 text-secondary mb-3">Application web gitlab</p>
 
-        <p class="fst-italic">
-            Ce projet a été le premier effectuer en groupe lors de notre 2ème année.
-        </p>
+    <p class="fst-italic">
+      Ce projet a été le premier effectuer en groupe lors de notre 2ème année.
+    </p>
 
-        <h2 class="lead mb-3">Contexte du projet</h2>
-        <p>
-            Pour ce premier projet, nous avons été répartie en 4 groupes de 3,
-            le but était de pouvoir effectuer des actions sur différents utilisateurs, projets et groupes.
-            L'application à été développer pour des administrateur de la plateforme Gitlab. Cette dernière ne nous permet pas 
-            de supprimer plusieurs projets ou groupe en une seule fois,
-            nous somme obliger de les supprimés un par un ce qui prend beaucoup de temps et qui peut être 
-            très long surtout quand on doit supprimer les comptes et projets des anciens élèves.
-        </p>
-        <h2 class="lead mb-3">Présentation du projet</h2>
-        <p class="lead">Page d'acceuil :</p>
-        <img src="./images/ap31-gitlab/PageAcceuil.png" alt="page d'acceuil du projet contentant le menu ainsi que les utiliter de chaque pages">
-        <p>
-            Comme vous pouvez le voir, nous avons 5 pages au total dans ce projet, 1 page d'acceuil,
-            3 pages de gestion (projets, utilisateurs, groupes), 1 page pour paramétrer son token 
-            ainsi que l'url du serveur gitlab.<br><br>
-            Les pages que j'ai modifier dans ce projets sont surlignée en jaune, sur la page d'acceuil 
-            que vous pouvez voir j'ai ajouter la possibiliter de cliquer sur les blocs descriptifs 
-            de chacune des pages ainsi que le bloc descriptif de la page paramètre qui n'était pas 
-            présent dans la première version
-        </p>
-        <!-- Ajout d'une présentation de la page projet, puis focus sur la page paramètre -->
-        <p></p>
+    <h2 class="lead mb-3">Contexte du projet</h2>
+    <p>
+      Pour ce premier projet, nous avons été répartie en 4 groupes de 3,
+      le but était de pouvoir effectuer des actions sur différents utilisateurs, projets et groupes.
+      L'application à été développer pour des administrateur de la plateforme Gitlab. Cette dernière ne nous permet pas
+      de supprimer plusieurs projets ou groupe en une seule fois,
+      nous somme obliger de les supprimés un par un ce qui prend beaucoup de temps et qui peut être
+      très long surtout quand on doit supprimer les comptes et projets des anciens élèves.
+    </p>
+    <h2 class="lead mb-3">Présentation du projet</h2>
+    <p class="lead">Page d'acceuil :</p>
+    <img src="./images/ap31-gitlab/PageAcceuil.png"
+      alt="page d'acceuil du projet contentant le menu ainsi que les utiliter de chaque pages">
+    <p>
+      Comme vous pouvez le voir, nous avons 5 pages au total dans ce projet, 1 page d'acceuil,
+      3 pages de gestion (projets, utilisateurs, groupes), 1 page pour paramétrer son token
+      ainsi que l'url du serveur gitlab.<br><br>
+      Les pages que j'ai modifier dans ce projets sont surlignée en jaune, sur la page d'acceuil
+      que vous pouvez voir j'ai ajouter la possibiliter de cliquer sur les blocs descriptifs
+      de chacune des pages ainsi que le bloc descriptif de la page paramètre qui n'était pas
+      présent dans la première version
+    </p>
+    <!-- Ajout d'une présentation de la page projet, puis focus sur la page paramètre -->
 
-        <span class="loaderTxt">En attente d'ajouts de nouveaux projets...</span>
-        <p>
-            <!--
+    <!-- Début du carousel -->
+    <div id="carouselCaptions" class="carousel carousel-dark slide"
+      style="max-width: 900px; margin-left: auto; margin-right: auto;">
+      <!-- Mise en place de la 1ère slide -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+      </div>
+      <div class="carousel-inner">
+
+        <!-- Première slide -->
+        <div class="carousel-item active">
+          <div class="card">
+            <img src="./images/ap31-gitlab/PageAcceuil.png" class="d-block w-auto mx-auto img-fluid"
+              alt="Image de la page d'acceuil">
+            <div class="card-body mb-4">
+              <h5 class="card-title">Page d'acceuil</h5>
+              <p class="card-text">Comme vous pouvez le voir, nous avons 5 pages au total dans ce projet, 1 page
+                d'acceuil,
+                3 pages de gestion (projets, utilisateurs, groupes), 1 page pour paramétrer son token
+                ainsi que l'url du serveur gitlab.<br><br>
+                Les pages que j'ai modifier dans ce projets sont surlignée en jaune, sur la page d'acceuil
+                que vous pouvez voir j'ai ajouter la possibiliter de cliquer sur les blocs descriptifs
+                de chacune des pages ainsi que le bloc descriptif de la page paramètre qui n'était pas
+                présent dans la première version</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Suivant</span>
+        </button>
+      </div>
+    </div>
+    <p>
+      <!--
                     <a href="https://siovhblyceebasch-my.sharepoint.com/:f:/g/personal/julien_michelin_lycee-basch_fr/EhcKoc-lyt9DrBdpZ7pkvBEBVisCyhWnYPrUA_qoGpYdeQ?e=6FqLah">
                         Cliquer ici pour accéder aux ressources utilisées
                     </a>
                     -->
-        </p>
+    </p>
 
-        <!-- A copier coller pour chaque ajout d'un projets
+    <!-- A copier coller pour chaque ajout d'un projets
         <p class="display-6 text-secondary mb-3">Titre du projet</p>
 
         <p class="fst-italic">Mes impressions sur le projet</p>
@@ -57,5 +94,5 @@
             Documentation (si présente).
         </p>
         -->
-    </div>
+  </div>
 </section>
