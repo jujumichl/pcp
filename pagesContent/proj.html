@@ -16,7 +16,7 @@
       nous somme obliger de les supprimés un par un ce qui prend beaucoup de temps et qui peut être
       très long surtout quand on doit supprimer les comptes et projets des anciens élèves.
     </p>
-    <h2 class="lead mb-3">Présentation du projet</h2>
+    <p class="display-6 text-secondary mb-3">Présentation du site</p>
     <!-- Début du carousel -->
     <div id="carouselCaptions" class="carousel carousel-dark slide"
       style="max-width: 900px; margin-left: auto; margin-right: auto;">
@@ -70,21 +70,38 @@
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/PresentationSite/ChangVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Image de la page d'accueil">
             <div class="card-body mb-4">
               <h5 class="card-title">Changement de la visibilité</h5>
-              <p class="card-text"></p>
+              <p class="card-text">
+                Grâce à cette page, vous pouvez changer la visibilité d'un ou plusieurs projet(s).
+                Les différents niveaux de visibilité sont : <strong>Public</strong>, <strong>Internal</strong> et
+                <strong>Private</strong> :
+              </p>
+              <ul>
+                <li><strong>Public :</strong> Tout le monde peut voir le projet, même sans compte GitLab. Les
+                  utilisateurs peuvent cloner le projet et l’utiliser localement, mais seuls les membres autorisés
+                  peuvent le modifier.</li>
+                <li><strong>Internal :</strong> Seules les personnes connectées à GitLab et faisant partie de votre
+                  serveur ou groupe peuvent voir le projet.</li>
+                <li><strong>Private :</strong> Seuls les membres explicitement ajoutés au projet peuvent voir et accéder
+                  au contenu.</li>
+              </ul>
+              <p class="card-text">
+                Choisir le bon niveau de visibilité permet de protéger vos projets tout en autorisant l’accès nécessaire
+                aux bonnes personnes.
+              </p>
             </div>
           </div>
         </div>
 
+
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/msgError/dmdConfVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Demande de confirmation pour changer la visibilité">
             <div class="card-body mb-4">
               <h5 class="card-title">Demande de confirmation pour changer la visibilité</h5>
-              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -92,10 +109,9 @@
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/msgError/confChangeVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Message de confirmation">
             <div class="card-body mb-4">
               <h5 class="card-title">Message de confirmation</h5>
-              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -103,10 +119,11 @@
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/PresentationSite/ChangVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Résultat du changement">
             <div class="card-body mb-4">
               <h5 class="card-title">Résultat du changement</h5>
-              <p class="card-text"></p>
+              <p class="card-text">Comme on peux le constater ici la visibilité du projet a été changée et elle est
+                passée a internal</p>
             </div>
           </div>
         </div>
@@ -114,10 +131,9 @@
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/msgError/dmdConfPro.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Demande de confirmation de suppression des projets">
             <div class="card-body mb-4">
               <h5 class="card-title">Demande de confirmation de suppression des projets</h5>
-              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -125,21 +141,22 @@
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/msgError/confSuprPro.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Pop up de confirmation de suppression des projets">
             <div class="card-body mb-4">
-              <h5 class="card-title">Confirmation de suppression des projets</h5>
-              <p class="card-text"></p>
+              <h5 class="card-title">Pop up de confirmation de suppression des projets</h5>
             </div>
           </div>
         </div>
 
         <div class="carousel-item">
           <div class="card">
-            <img src="./images/ap31-gitlab/PresentationSite/PageParam.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+            <img src="./images/ap31-gitlab/PresentationSite/PageParam.png" class="d-block w-auto mx-auto img-fluid" alt="Image d'un formulaire à 3 champs, 1 pour le protocole (http/https), 1 pour l'Url 
+              d'acces a la plateforme gitlab et enfin 1 pour le token">
             <div class="card-body mb-4">
               <h5 class="card-title">Page de parammètre</h5>
-              <p class="card-text"></p>
+              <p class="card-text">Voici la page paramètre, un incontournable pour pouvoir paramétrer son access token
+                ainsi que son Url d'acces au serveur Gitlab.
+              </p>
             </div>
           </div>
         </div>
@@ -147,10 +164,14 @@
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/PresentationSite/stockageData.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Stockage des données en localStorage et non en sessionStorage">
             <div class="card-body mb-4">
               <h5 class="card-title">Voici comment sont stocker les données de connexions</h5>
-              <p class="card-text"></p>
+              <p class="card-text">J'ai choisit de stocker les données de connexions en localStorage et
+                non en sessionStorage car un administrateur peux avoir besoin de se connecter qu'une ou 2 fois
+                tous les 2 ou 3 mois cela évite donc a l'utilisateur d'avoir a rentrer les différentes informations
+                demander pour le paramétrage.
+              </p>
             </div>
           </div>
         </div>
@@ -158,10 +179,9 @@
         <div class="carousel-item">
           <div class="card">
             <img src="./images/ap31-gitlab/msgError/ErrorUrl.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'acceuil">
+              alt="Pop up d'erreur qui apparait lors d'un chargement des projets lorsque le token ou l'url sont mal former">
             <div class="card-body mb-4">
               <h5 class="card-title">Message d'erreur au cas où l'url/le tokken est mal former</h5>
-              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -176,8 +196,89 @@
         </button>
       </div>
     </div>
+    <br>
+    <p class="display-6 text-secondary mb-3">Création et paramétrage du token</p>
+    <br>
+    <div id="carouselTutoGit" class="carousel carousel-dark slide"
+      style="max-width: 900px; margin-left: auto; margin-right: auto;">
+      <!-- Mise en place de la 1ère slide -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="1" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="2" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="3" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="4" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="5" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
 
-    <!--Ajouter le tuto gitlab -->
+        <!-- Première slide -->
+        <div class="carousel-item active">
+          <div class="card">
+            <img src="./images/ap31-gitlab/tutoGitlab/PageAccGitlab.png" class="d-block w-auto mx-auto img-fluid"
+              alt="Page Acceuil gitlab">
+            <div class="card-body mb-4">
+              <h5 class="card-title">Page d'acceuil de Gitlab</h5>
+              <p class="card-text">Vous arriverez ici une fois connecter a Gitlab</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card">
+            <img src="./images/ap31-gitlab/tutoGitlab/OuClick.png" class="d-block w-auto mx-auto img-fluid"
+              alt="Menu quand l'icone utilisateur est clicker">
+            <div class="card-body mb-4">
+              <h5 class="card-title">Clicker sur préférence</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card">
+            <img src="./images/ap31-gitlab/tutoGitlab/ParamAccessTK.png" class="d-block w-auto mx-auto img-fluid"
+              alt="Clicker sur access token pour paramétrer votre token">
+            <div class="card-body mb-4">
+              <h5 class="card-title">Clicker sur access token pour paramétrer votre token</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card">
+            <img src="./images/ap31-gitlab/tutoGitlab/ExConfigTK.png" class="d-block w-auto mx-auto img-fluid"
+              alt="Exemple de configuration d'un access token">
+            <div class="card-body mb-4">
+              <h5 class="card-title">Exemple de configuration d'un access token</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card">
+            <img src="./images/ap31-gitlab/tutoGitlab/DroitMinimTK.png" class="d-block w-auto mx-auto img-fluid"
+              alt="Droit api">
+            <div class="card-body mb-4">
+              <h5 class="card-title">Voici les droits minimal que doit avoir le token</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton de contrôle (slide suivante/précédente) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTutoGit" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTutoGit" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Suivant</span>
+        </button>
+      </div>
+    </div>
     <p>
       <!--
                     <a href="https://siovhblyceebasch-my.sharepoint.com/:f:/g/personal/julien_michelin_lycee-basch_fr/EhcKoc-lyt9DrBdpZ7pkvBEBVisCyhWnYPrUA_qoGpYdeQ?e=6FqLah">
