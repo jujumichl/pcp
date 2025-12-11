@@ -15,7 +15,7 @@ liquide, DPH, fruit et légumes) + mon alternance sur mon CV en fin d'année)
 - [] Bouger les flèches du caroussel
 
 - [] Vérifier que le site est a jours avec les dernières données (A faire tous les 3-4 mois et 1 ou 2 semaines avant l'épreuve)
-
+- [] dans les carousels faire en sorte de pouvoir avoir un agrendissement lors de l'appuie dessus
 
 A voir :
 https://getbootstrap.com/docs/5.3/components/progress/
