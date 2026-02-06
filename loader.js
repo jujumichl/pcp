@@ -52,7 +52,7 @@ async function insertHTMLFile(htmlFile, htmlElement) {
     // insert the content
     if (htmlElement) {
       htmlElement.innerHTML = htmlContent;
-      console.log("Contenu du fichier .html charger dans " + htmlElement.id);
+      console.log(`Contenu du fichier ${htmlFile} chargé dans ${htmlElement.id}`);
     } else {
       console.error("Élément" + htmlElement.id + " non trouvé.");
     }
