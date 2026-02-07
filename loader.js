@@ -40,6 +40,7 @@ async function initApp() {
 async function insertHTMLFile(htmlFile, htmlElement) {
   try {
 
+    console.log(htmlElement);
     // get the content 
     const response = await fetch(htmlFile);
 
@@ -64,18 +65,24 @@ async function insertHTMLFile(htmlFile, htmlElement) {
 
 async function currentPage(evt, element) {
   //Récupération du nom du fichier
-  let current_url = window.location.pathname.split("/").pop();
+  let current_url = window.location.pathname.split("/").pop();  
   let current_element = element.ariaCurrent;
+
   // on enlève le .html situer a la fin du fichier
-  let current_file = current_url.substring(0, current_url.search(".html"));
+  let current_file = current_url.replace(".html", "")
 
   if (current_url === current_element) {
 
     const currentHTMLElement = document.getElementById(`${current_file}-content`);
     let currentElement = `pagesContent/${current_file}.html`
 
+    if (getProjectFromURL()){
+      loadProjAlt();
+    }
+    else {
+      await insertHTMLFile(currentElement, currentHTMLElement);
+    }
     // load content
-    await insertHTMLFile(currentElement, currentHTMLElement);
     await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
     element.classList.add('active');
   }
@@ -90,5 +97,24 @@ async function currentPage(evt, element) {
     if (element.classList.contains('active')) {
       element.classList.remove('active');
     }
+  }
+}
+
+function getProjectFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("project");
+}
+
+function loadProjAlt(){
+  const projects = {
+    carto: "./pagesContent/projetAlt/carto.html",
+    castle: "./pagesContent/projetAlt/castle.html",
+    qcm: "./pagesContent/projetAlt/qcm.html",
+  };
+
+  const project = getProjectFromURL();
+
+  if (projects[project]){
+    insertHTMLFile(projects[project], document.getElementById('alt-content'))
   }
 }
