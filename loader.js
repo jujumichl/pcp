@@ -14,22 +14,9 @@ async function initApp() {
   for (let element of menuHTML) {
     element.addEventListener('click', currentPage(Event, element));
   }
-
-  /* GENERER PAR IA MAIS FONCTIONNE PAS
   // Cibler tous les éléments 'collapse' que Bootstrap va gérer
-  const collapseElements = document.querySelectorAll('.collapse');
+
   
-  collapseElements.forEach(element => {
-      // Écouter l'événement 'shown.bs.collapse' qui se déclenche APRÈS l'ouverture complète
-      element.addEventListener('shown.bs.collapse', function() {
-          // 'this' est l'élément #collapse5 ou tout autre élément ouvert
-          this.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-          });
-      });
-  });
-   */
 }
 
 /**
@@ -39,8 +26,6 @@ async function initApp() {
  */
 async function insertHTMLFile(htmlFile, htmlElement) {
   try {
-
-    console.log(htmlElement);
     // get the content 
     const response = await fetch(htmlFile);
 
@@ -65,7 +50,7 @@ async function insertHTMLFile(htmlFile, htmlElement) {
 
 async function currentPage(evt, element) {
   //Récupération du nom du fichier
-  let current_url = window.location.pathname.split("/").pop();  
+  let current_url = window.location.pathname.split("/").pop();
   let current_element = element.ariaCurrent;
 
   // on enlève le .html situer a la fin du fichier
@@ -76,7 +61,7 @@ async function currentPage(evt, element) {
     const currentHTMLElement = document.getElementById(`${current_file}-content`);
     let currentElement = `pagesContent/${current_file}.html`
 
-    if (getProjectFromURL()){
+    if (getProjectFromURL()) {
       await loadProjAlt();
     }
     else {
@@ -105,7 +90,7 @@ function getProjectFromURL() {
   return params.get("project");
 }
 
-async function loadProjAlt(){
+async function loadProjAlt() {
   const projects = {
     carto: "./pagesContent/projetAlt/carto.html",
     castle: "./pagesContent/projetAlt/castle.html",
@@ -114,30 +99,13 @@ async function loadProjAlt(){
 
   const project = getProjectFromURL();
 
-  if (projects[project]){
-    await insertHTMLFile(projects[project], document.getElementById('alt-content'))
-    initGalleryModal();
-
+  if (projects[project]) {
+    await insertHTMLFile(projects[project], document.getElementById('alt-content'));
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.addEventListener('click', function() {
+        const modalImage = document.getElementById('modalImage');
+        modalImage.src = this.src; // injecte le src de l'image cliquée
+      });
+    });
   }
-}
-
-function initGalleryModal() {
-  const modalElement = document.getElementById('imageModal');
-  const gallerie = document.getElementById('gallerie');
-
-  if (!modalElement || !gallerie) {
-    console.warn('Galerie ou modal introuvable');
-    return;
-  }
-
-  const modalImage = document.getElementById('modalImage');
-  const modal = new bootstrap.Modal(modalElement);
-
-  gallerie.addEventListener('click', evt => {
-    const img = evt.target.closest('img');
-    if (!img) return;
-
-    modalImage.src = img.src;
-    modal.show();
-  });
 }

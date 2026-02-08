@@ -1,2 +1,151 @@
-<section class="hero-section py-5 bg-light text-dark text-center" id="presentation-MairieFougeres">
-<h1> COUCOU</h1>
+<section class="hero-section py-5 bg-light text-dark" id="presentation-MairieFougeres">
+  <div class="container">
+
+    <!-- Titre -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Projet d'application android pour le château de fougères</h1>
+      <p class="text-muted fs-5">
+        XAML • C# • Markdown
+      </p>
+      <p class="text-muted">
+        Nombre de personnes sur le projet : 1
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- Présentation -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Présentation du projet</h2>
+          <p>
+            Le projet a été réalisé par moi-même, 
+            le code est accessible sur GitHub :
+            <a href="https://github.com/jujumichl/AppCarteInteractive" target="_blank">
+              dépot GitHub
+            </a>
+          </p>
+        </section>
+
+        <!-- Origine -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Origine et besoin client</h2>
+          <p>
+            Le projet provient d’une demande du château de fougères.
+            Il souhaitait avoir une application quelconque qui permet sans connexion internet de consulter les vidéos 
+            de présentation en langue des signes française pour les personnes malentendantes, avant ils avaient un site web local
+            a déployer sur tablette puis ils devait aller sur internet pour consulter les vidéos, sauf que la connexion internet n'est
+            pas stable, ils m'ont donc demander de trouver une solution, j'ai donc proposer de faire une application android.
+          </p>
+        </section>
+
+        <!-- Conception -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Phase de conception</h2>
+          <p>
+            Un brainstorming a été réalisé afin de définir les fonctionnalités et le design.
+            Cette phase s’est déroulée sur une journée, la personne n'a pas demander d'interface utilisateur 
+            particulière, elle souhaitais juste qu'on ai accès aux vidéos hors ligne et qu'on puisse cliquer sur la carte.
+          </p>
+        </section>
+
+        <!-- Développement -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Développement</h2>
+          <p>
+            Après m'être documenter sur la façons de faire une application web, j'ai choisi d'utiliser le C#. 
+            J'ai donc commencer par mettre en place ma première page XAML puis j'ai commencer a faire le backend en C#, 
+            ci dessous vous retrouverez l'image principal de l'application:
+          </p>
+
+          <img src="./images/alternances/appCastle/cartechateau.png" class="img-fluid rounded shadow-sm border mt-3"
+            alt="Interface de connexion">
+        </section>
+
+        <!-- Menu latéral -->
+<!--         <section class="mb-5">
+          <h2 class="h4 mb-3">Développement – Menu latéral</h2>
+          <p>
+            Pendant qu’Owen s’occupait de la mise en place de la page de connexion,
+            je me suis chargé du développement du menu latéral.
+            Les fonctionnalités demandées par Yasin étaient :
+          </p>
+
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">Déconnexion</li>
+            <li class="list-group-item">Réduction / déploiement du menu</li>
+            <li class="list-group-item">Sélection d’un QCM</li>
+            <li class="list-group-item">Entrée d’un code pour passer un QCM</li>
+            <li class="list-group-item">Corbeille conservant les QCM supprimés pendant 7 jours</li>
+            <li class="list-group-item">Ajout, suppression et renommage des QCM</li>
+          </ul>
+
+          <p class="text-muted">
+            Ci-dessous, plusieurs captures d’écran illustrent le fonctionnement du menu.
+          </p>
+          <div id="gallerie">
+             Galerie 
+            <div class="row g-4">
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/accueilSSQcm.png"
+                  class="img-fluid rounded shadow-sm border gallery-img" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/modif.png" class="img-fluid rounded shadow-sm border gallery-img"
+                  alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/rename.png" class="img-fluid rounded shadow-sm border gallery-img"
+                  alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/MessRenameConf.png"
+                  class="img-fluid rounded shadow-sm border gallery-img" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/RenameEffec.png"
+                  class="img-fluid rounded shadow-sm border gallery-img" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/allSelect.png" class="img-fluid rounded shadow-sm border gallery-img"
+                  alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/MessConfSuppr.png"
+                  class="img-fluid rounded shadow-sm border gallery-img" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/Corbeille.png" class="img-fluid rounded shadow-sm border gallery-img"
+                  alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/selectQcm.png" class="img-fluid rounded shadow-sm border gallery-img"
+                  alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/accueil.png" class="img-fluid rounded shadow-sm border gallery-img"
+                  alt="">
+              </div>
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal" data-bs-target="#picModal">
+                <img src="./images/alternances/QCM/codeQcm.png" class="img-fluid rounded shadow-sm border gallery-img"
+                  alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal fade" id="picModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body text-center">
+        <img id="modalImage" class="img-fluid rounded shadow" alt="Image agrandie">
+      </div>
+    </div>
+  </div>
+</div>
+ -->
