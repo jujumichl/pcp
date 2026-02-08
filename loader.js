@@ -77,7 +77,7 @@ async function currentPage(evt, element) {
     let currentElement = `pagesContent/${current_file}.html`
 
     if (getProjectFromURL()){
-      loadProjAlt();
+      await loadProjAlt();
     }
     else {
       await insertHTMLFile(currentElement, currentHTMLElement);
@@ -105,7 +105,7 @@ function getProjectFromURL() {
   return params.get("project");
 }
 
-function loadProjAlt(){
+async function loadProjAlt(){
   const projects = {
     carto: "./pagesContent/projetAlt/carto.html",
     castle: "./pagesContent/projetAlt/castle.html",
@@ -115,6 +115,29 @@ function loadProjAlt(){
   const project = getProjectFromURL();
 
   if (projects[project]){
-    insertHTMLFile(projects[project], document.getElementById('alt-content'))
+    await insertHTMLFile(projects[project], document.getElementById('alt-content'))
+    initGalleryModal();
+
   }
+}
+
+function initGalleryModal() {
+  const modalElement = document.getElementById('imageModal');
+  const gallerie = document.getElementById('gallerie');
+
+  if (!modalElement || !gallerie) {
+    console.warn('Galerie ou modal introuvable');
+    return;
+  }
+
+  const modalImage = document.getElementById('modalImage');
+  const modal = new bootstrap.Modal(modalElement);
+
+  gallerie.addEventListener('click', evt => {
+    const img = evt.target.closest('img');
+    if (!img) return;
+
+    modalImage.src = img.src;
+    modal.show();
+  });
 }
