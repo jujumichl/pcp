@@ -9,12 +9,13 @@ async function initApp() {
 
   await insertHTMLFile("pagesContent/header.html", document.getElementById('header-content'));
 
-  // get all link of menu et know which one i am
-  const menuHTML = document.querySelectorAll("a.nav-link.header");
-  for (let element of menuHTML) {
-    element.addEventListener('click', () => { currentPage(element) });
+  
+  if (getProjectFromURLPage()){
+    currentPage(getProjectFromURLPage());
   }
-  currentPage("") // get url pages=...
+  else {
+    currentPage("index");
+  }
   await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
 
   // Cibler tous les éléments 'collapse' que Bootstrap va gérer
@@ -53,7 +54,6 @@ async function insertHTMLFile(htmlFile, htmlElement) {
 
 async function currentPage(element) {
 
-  console.log("el" + element);
 
   const paths = {
     index: "./pagesContent/index.html",
@@ -63,18 +63,19 @@ async function currentPage(element) {
     propos: "./pagesContent/propos.html",
   };
   const content = document.getElementById(`main-content`);
-  //Récupération du nom du fichier
-  const page = getProjectFromURLPage();
 
-  if (paths[page]) {
+
+  if (paths[element]) {
 
     if (getProjectFromURLProj()) {
       await loadProjAlt();
+      document.getElementById(element).classList.add('active');
+
     }
     else {
-      await insertHTMLFile(paths[page], content);
+      await insertHTMLFile(paths[element], content);
       // load content
-      element.classList.add('active');
+      document.getElementById(element).classList.add('active');
     }
   }
   else {
