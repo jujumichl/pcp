@@ -10,13 +10,16 @@ async function initApp() {
   await insertHTMLFile("pagesContent/header.html", document.getElementById('header-content'));
 
   // get all link of menu et know which one i am
-  const menuHTML = document.querySelectorAll("a.nav-link");
+  const menuHTML = document.querySelectorAll("a.nav-link.header");
   for (let element of menuHTML) {
-    element.addEventListener('click', currentPage(Event, element));
+    element.addEventListener('click', () => { currentPage(element) });
   }
+  currentPage("") // get url pages=...
+  await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
+
   // Cibler tous les éléments 'collapse' que Bootstrap va gérer
 
-  
+
 }
 
 /**
@@ -48,46 +51,47 @@ async function insertHTMLFile(htmlFile, htmlElement) {
   }
 }
 
-async function currentPage(evt, element) {
+async function currentPage(element) {
+
+  console.log("el" + element);
+
+  const paths = {
+    index: "./pagesContent/index.html",
+    proj: "./pagesContent/proj.html",
+    stages: "./pagesContent/stages.html",
+    alt: "./pagesContent/alt.html",
+    propos: "./pagesContent/propos.html",
+  };
+  const content = document.getElementById(`main-content`);
   //Récupération du nom du fichier
-  let current_url = window.location.pathname.split("/").pop();
-  let current_element = element.ariaCurrent;
+  const page = getProjectFromURLPage();
 
-  // on enlève le .html situer a la fin du fichier
-  let current_file = current_url.replace(".html", "")
+  if (paths[page]) {
 
-  if (current_url === current_element) {
-
-    const currentHTMLElement = document.getElementById(`${current_file}-content`);
-    let currentElement = `pagesContent/${current_file}.html`
-
-    if (getProjectFromURL()) {
+    if (getProjectFromURLProj()) {
       await loadProjAlt();
     }
     else {
-      await insertHTMLFile(currentElement, currentHTMLElement);
+      await insertHTMLFile(paths[page], content);
+      // load content
+      element.classList.add('active');
     }
-    // load content
-    await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
-    element.classList.add('active');
-  }
-  else if (current_url == '') {
-    let defaultPageHTML = document.getElementById(`index-content`);
-    let defaultPage = 'pagesContent/index.html'
-    await insertHTMLFile(defaultPage, defaultPageHTML);
-    await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
-    document.querySelectorAll("a.nav-link")[0].classList.add('active');
   }
   else {
-    if (element.classList.contains('active')) {
-      element.classList.remove('active');
-    }
+    await insertHTMLFile(paths['index'], content);
+    document.querySelectorAll("a.nav-link")[0].classList.add('active');
   }
+
 }
 
-function getProjectFromURL() {
+function getProjectFromURLProj() {
   const params = new URLSearchParams(window.location.search);
   return params.get("project");
+}
+
+function getProjectFromURLPage() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("pages");
 }
 
 async function loadProjAlt() {
@@ -97,15 +101,18 @@ async function loadProjAlt() {
     qcm: "./pagesContent/projetAlt/qcm.html",
   };
 
-  const project = getProjectFromURL();
+  const project = getProjectFromURLProj();
 
   if (projects[project]) {
-    await insertHTMLFile(projects[project], document.getElementById('alt-content'));
+    await insertHTMLFile(projects[project], document.getElementById('main-content'));
     document.querySelectorAll('.gallery-img').forEach(img => {
-      img.addEventListener('click', function() {
+      img.addEventListener('click', function () {
         const modalImage = document.getElementById('modalImage');
         modalImage.src = this.src; // injecte le src de l'image cliquée
       });
     });
+  }
+  else {
+    await insertHTMLFile("./pagesContent/index.html", document.getElementById('main-content'));
   }
 }

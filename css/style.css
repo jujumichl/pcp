@@ -99,3 +99,9 @@ body {
 .mission-links a:hover {
     text-decoration: underline;
 }
+
+
+.carousel-control-prev:hover .carousel-control-next:hover{
+    background-color: rgb(128, 128, 128);
+}
+
