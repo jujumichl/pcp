@@ -19,7 +19,7 @@
         <section class="mb-5">
           <h2 class="h4 mb-3">Présentation du projet</h2>
           <p>
-            Le projet a été réalisé par Owen ainsi que moi-même, 
+            Le projet a été réalisé par Owen ainsi que moi-même,
             le code est accessible sur GitHub :
             <a href="https://github.com/jujumichl/qcm-fougeres" target="_blank">
               dépot GitHub
@@ -44,9 +44,14 @@
             Cette phase s’est déroulée sur une semaine et a permis une première mise en place
             de l’interface utilisateur (UI).
           </p>
-          <div class="ratio ratio-16x9">
-            <iframe style="border:none" src="https://whimsical.com/embed/Q1TwnYKNwju5niCVTq5zTD"></iframe>
-          </div>
+          
+          <a href="https://whimsical.com/Q1TwnYKNwju5niCVTq5zTD" target="_blank">
+            <img src="./images/alternances/QCM/whishmical.png" class="img-fluid rounded shadow-sm border mt-3"
+            alt="">
+            </a>
+            <p class="text-muted text-center">
+            Vous pouvez cliquer sur l'image afin de l'ouvrir dans votre navigateur
+          </p>
         </section>
 
         <!-- Développement -->
@@ -72,17 +77,9 @@
             Les fonctionnalités demandées par Yasin étaient :
           </p>
 
-          <ul class="list-group list-group-flush mb-4">
-            <li class="list-group-item">Déconnexion</li>
-            <li class="list-group-item">Réduction / déploiement du menu</li>
-            <li class="list-group-item">Sélection d’un QCM</li>
-            <li class="list-group-item">Entrée d’un code pour passer un QCM</li>
-            <li class="list-group-item">Corbeille conservant les QCM supprimés pendant 7 jours</li>
-            <li class="list-group-item">Ajout, suppression et renommage des QCM</li>
-          </ul>
-
           <p class="text-muted">
-            Ci-dessous, plusieurs captures d’écran illustrent le fonctionnement du menu.
+            Ci-dessous, plusieurs captures d’écran illustrent le fonctionnement du menu, vous pouvez cliquer dessus afin 
+            de les agendirs.
           </p>
           <div id="gallerie">
             <!-- Galerie -->
@@ -90,49 +87,93 @@
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/accueilSSQcm.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
+                <p class="text-muted text-center">
+                  Voici la page d'accueil pour un nouvel utilisateur, il y a un texte qui permet a l'utilisateur
+                  de comprendre comment créer un nouveau QCM
+                </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/modif.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
+                <p class="text-muted text-center">
+                  Voici le menu de modification des QCM, ici l'utilisateur peux ajouter, renommer et supprimer un QCM
+                </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/rename.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
+                <p class="text-muted text-center">
+                  Voici l'interface quand un utilisateur choisit de renommer un QCM, comme vous pouvez le constater il
+                  y a un bouton de validation de renommage, il est aussi possible de valider le renommage avec la touche
+                  entrée
+                  et d'annuler le renommage avec la touche échap
+                </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/MessRenameConf.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
-              </div>
-              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
-                <img src="./images/alternances/QCM/RenameEffec.png"
-                  class="img-fluid rounded shadow-sm border gallery-img" alt="">
+                <p class="text-muted text-center">
+                  Le message affiché est un message de confirmation de renommage, il apparait uniquement quand on
+                  clique sur un autre renommage ou qu'on souhaite quitter le mode de modification.
+                </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/allSelect.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
+                <p class="text-muted text-center">
+                  Il y a aussi la possibilité de séléctionner tous les QCM créer et donc de les supprimés.
+                </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/MessConfSuppr.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
+                <p class="text-muted text-center">
+                  Lorsque l'on souhaite supprimer un QCM, un message de confirmation apparait, ce message est la pour
+                  éviter
+                  les suppressions accidentelles
+                </p>
               </div>
+
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/Corbeille.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
+                <p class="text-muted text-center">
+                  Une fois les messsages supprimés ils sont placer dans la corbeille, ils sont daté de la date de
+                  suppression,
+                  les QCM sont garder en corbeille pendant 7 jours, ils sont donc récupérable dans l'intervale des 7
+                  jours suivant
+                  la suppression.
+                </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/selectQcm.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
+                <p class="text-muted text-center">
+                  Un QCM séléctionner a un style différent que les QCM qui ne sont pas sélectionner afin de les
+                  différencier
+                  (ici la fonctionnalité qui vas servir a lire les QCM n'est pas encore développer).
+                </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/accueil.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
+                <p class="text-muted text-center">
+                  Et voici la page d'accueil quand l'utilisateur a déjà créer des QCM
+                </p>
               </div>
-              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal" data-bs-target="#picModal">
+              <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal"
+                data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/codeQcm.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
+                <p class="text-muted text-center">
+                  Les QCM peuvent être passer grâce a un code, ce code est un chiffre hexadécimal de 7 caractère de
+                  long,
+                  il est automatiquement générer a la création d'un QCM.
+                </p>
               </div>
             </div>
           </div>
+          
         </section>
       </div>
     </div>
