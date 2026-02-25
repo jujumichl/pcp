@@ -9,8 +9,8 @@ async function initApp() {
 
   await insertHTMLFile("pagesContent/header.html", document.getElementById('header-content'));
 
-  
-  if (getProjectFromURLPage()){
+
+  if (getProjectFromURLPage()) {
     currentPage(getProjectFromURLPage());
   }
   else {
@@ -61,6 +61,7 @@ async function currentPage(element) {
     stages: "./pagesContent/stages.html",
     alt: "./pagesContent/alt.html",
     propos: "./pagesContent/propos.html",
+    veille: "./pagesContent/veille.html",
   };
   const content = document.getElementById(`main-content`);
 
@@ -76,6 +77,9 @@ async function currentPage(element) {
       await insertHTMLFile(paths[element], content);
       // load content
       document.getElementById(element).classList.add('active');
+      if (element == "veille"){
+        this.feed()
+      }
     }
   }
   else {
@@ -116,4 +120,95 @@ async function loadProjAlt() {
   else {
     await insertHTMLFile("./pagesContent/index.html", document.getElementById('main-content'));
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////// Récupération du flux RSS du CERT-FR de l'ANSSI ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Renvoie les dernières actus/avis cyber
+ * @param {string} url Url du flux RSS
+ * @param {int} limit limite de récupération (5 par défaut)
+ * @returns les dernières actus/avis cyber
+ */
+async function fetchRSS(url, limit = 5) {
+  const res = await fetch(url);
+
+  if (!res.ok) {
+    throw new Error(`Erreur HTTP : ${res.status}`);
+  }
+
+  const text = await res.text();
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(text, "application/xml");
+
+  const parseError = xml.querySelector("parsererror");
+  if (parseError) {
+    throw new Error("Erreur de parsing XML");
+  }
+
+  return Array.from(xml.querySelectorAll("item"))
+    .map(item => ({
+      title: item.querySelector("title")?.textContent ?? "Sans titre",
+      link: item.querySelector("link")?.textContent ?? "#",
+      date: item.querySelector("pubDate")?.textContent ?? null,
+      description: item.querySelector("description")?.textContent ?? "",
+    }))
+    .sort((a, b) => new Date(b.date) - new Date(a.date)) // tri du plus récent au plus ancien
+    .slice(0, limit);
+}
+
+function renderItems(targetId, items) {
+  const container = document.getElementById(targetId);
+  container.innerHTML = "";
+
+  items.forEach(item => {
+    const div = document.createElement("div");
+    div.classList.add("border", "rounded", "p-3", "mb-3", "bg-light");
+
+    const a = document.createElement("a");
+    a.href = item.link;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.classList.add("fw-semibold", "text-decoration-none");
+    a.textContent = item.title;
+
+    const dateDiv = document.createElement("div");
+    dateDiv.classList.add("text-muted", "small", "my-1");
+    dateDiv.textContent = item.date
+      ? new Date(item.date).toLocaleDateString('fr-FR')
+      : "";
+
+    const p = document.createElement("p");
+    p.classList.add("mb-0", "text-secondary", "small");
+    p.textContent = item.description;
+
+    div.append(a, dateDiv, p);
+    container.appendChild(div);
+  });
+}
+
+async function loadFeed(url, targetId, limit = 5) {
+  const container = document.getElementById(targetId);
+  try {
+    const items = await fetchRSS(url, limit);
+    renderItems(targetId, items);
+  } catch (error) {
+    console.error(`Erreur chargement RSS (${targetId}):`, error);
+    container.textContent = "Impossible de charger le flux.";
+  }
+}
+
+async function feed() {
+  const WORKER_URL = "https://cert-fr-anssi.julienmichelin35.workers.dev";
+
+  const AVIS_RSS = `${WORKER_URL}/?url=https://www.cert.ssi.gouv.fr/avis/feed/`;
+  const BULLETINS_RSS = `${WORKER_URL}/?url=https://www.cert.ssi.gouv.fr/actualite/feed/`;
+  const MENACE_RSS = `${WORKER_URL}/?url=https://www.cert.ssi.gouv.fr/cti/feed/`
+
+  console.info("Démarrage chargement flux...");
+  await loadFeed(AVIS_RSS, "avis-feed");
+  await loadFeed(BULLETINS_RSS, "bulletins-feed");
+  await loadFeed(MENACE_RSS, "menace-feed");
 }
