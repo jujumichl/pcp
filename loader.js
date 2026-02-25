@@ -62,6 +62,8 @@ async function currentPage(element) {
     alt: "./pagesContent/alt.html",
     propos: "./pagesContent/propos.html",
     veille: "./pagesContent/veille.html",
+    anssi: "./pagesContent/veille/ANSSI.html",
+    // cyberbreizh: "./pagesContent/veille/cyberbreizh.html",
   };
   const content = document.getElementById(`main-content`);
 
@@ -71,15 +73,20 @@ async function currentPage(element) {
     if (getProjectFromURLProj()) {
       await loadProjAlt();
       document.getElementById(element).classList.add('active');
-
     }
     else {
       await insertHTMLFile(paths[element], content);
       // load content
       document.querySelectorAll(`[aria-current=${element}`).forEach(elem => elem.classList.add('active'));
-      if (element == "veille"){
+      if (element == "anssi"){
         this.feed()
       }
+      // else if (element == "cyberbreizh"){
+      //   document.getElementById('main-content').addEventListener("DOMContentLoaded", (event) => {
+      //     document.getElementById('tarteaucitronAllDenied2').click();
+      //     document.querySelectorAll('[data-category="infos-cyber"]')[0].click();
+      //   });
+      // }
     }
   }
   else {
