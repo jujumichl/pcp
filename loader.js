@@ -76,7 +76,7 @@ async function currentPage(element) {
     else {
       await insertHTMLFile(paths[element], content);
       // load content
-      document.getElementById(element).classList.add('active');
+      document.querySelectorAll(`[aria-current=${element}`).forEach(elem => elem.classList.add('active'));
       if (element == "veille"){
         this.feed()
       }
