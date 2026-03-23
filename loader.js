@@ -17,9 +17,9 @@ async function initApp() {
     currentPage("index");
   }
   await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
-
-  // Cibler tous les éléments 'collapse' que Bootstrap va gérer
-
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el)
+  });
 
 }
 
@@ -88,6 +88,7 @@ async function currentPage(element) {
       //   });
       // }
     }
+    
   }
   else {
     await insertHTMLFile(paths['index'], content);
@@ -111,6 +112,8 @@ async function loadProjAlt() {
     carto: "./pagesContent/projetAlt/carto.html",
     castle: "./pagesContent/projetAlt/castle.html",
     qcm: "./pagesContent/projetAlt/qcm.html",
+    ap31: "./pagesContent/projetSIO/ap31.html",
+    ap32: "./pagesContent/projetSIO/ap32.html",
   };
 
   const project = getProjectFromURLProj();

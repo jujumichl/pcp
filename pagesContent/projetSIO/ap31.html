@@ -1,0 +1,208 @@
+<section class="hero-section py-5 bg-light text-dark" id="proj">
+  <div class="container">
+
+    <!-- Titre -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Application web GitLab</h1>
+      <p class="text-muted fs-5">
+        Markdown • JS • API Gitlab • HTML5 • Bootstrap
+      </p>
+      <p class="text-muted">
+        Nombre de personnes sur le projet : 2
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- Présentation -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Présentation du projet</h2>
+          <p>
+            Le projet a été réalisé par 
+            <a 
+            href="https://github.com/TGnrd" 
+            data-bs-toggle="tooltip" 
+            data-bs-placement="bottom" 
+            data-bs-title="Liens vers son github" 
+            target="_blank">Titouan</a> 
+            ainsi que moi-même, 
+            le code est accessible sur GitHub :
+            <a href="https://github.com/jujumichl/Gitlab-WebApp" target="_blank">
+              dépot GitHub
+            </a>
+          </p>
+        </section>
+
+        <!-- Contexte -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Contexte du projet</h2>
+          <p>
+            Pour ce projet, nous avons été répartis en 4 groupes de 3.
+            L’objectif était de réaliser une application permettant de gérer
+            des utilisateurs, projets et groupes sur GitLab.
+          </p>
+          <p>
+            GitLab ne permettant pas la suppression en masse, les administrateurs
+            doivent supprimer les éléments un par un, ce qui est long,
+            notamment pour la suppression de plusieurs éléments.
+          </p>
+        </section>
+
+        <!-- Galerie -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Présentation du site</h2>
+
+          <p class="text-muted text-center mb-4">
+            Cliquez sur une image pour l’agrandir
+          </p>
+
+          <div class="row g-4">
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/PageAccueil.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Page d’accueil avec navigation vers les différentes sections du site.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/PageProj.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Page de chargement des projets depuis l’API GitLab.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/ChangVis.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Modification de la visibilité des projets (Public, Internal, Private).
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/msgError/dmdConfVis.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Demande de confirmation avant modification de la visibilité.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/msgError/confChangeVis.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Message confirmant la modification effectuée.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/msgError/dmdConfPro.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Confirmation avant suppression de projets.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/msgError/confSuprPro.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Message de confirmation après suppression.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/PageParam.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Page de paramétrage de l’URL GitLab et de l’access token.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/stockageData.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Stockage des données en localStorage pour éviter une ressaisie fréquente.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/msgError/ErrorUrl.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Message d’erreur si l’URL ou le token est invalide.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Tutoriel -->
+        <section class="mb-5">
+          <h2 class="h4 mb-3">Création du token GitLab</h2>
+
+          <div class="row g-4">
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/PageAccGitlab.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Page d’accueil après connexion à GitLab.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/OuClick.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Accès aux préférences utilisateur.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/ParamAccessTK.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Configuration de l’access token.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/ExConfigTK.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Exemple de configuration d’un token.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/DroitMinimTK.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Droits minimaux nécessaires pour le token.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="imgModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body text-center">
+        <img id="modalImage" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</div>

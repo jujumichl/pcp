@@ -1,308 +1,60 @@
-<section id="proj" class="hero-section py-5 bg-light text-dark text-center">
-  <div class="container">
-    <h1 class="display-4 text-dark mb-3">Projets effectués pendant ma formation</h1>
-    <p class="display-6 text-secondary mb-3">Application web gitlab</p>
-
-    <p class="fst-italic">
-      Ce projet a été le premier effectuer en groupe lors de notre 2ème année.
-    </p>
-
-    <h2 class="lead mb-3">Contexte du projet</h2>
-    <p>
-      Pour ce premier projet, nous avons été répartie en 4 groupes de 3,
-      le but était de pouvoir effectuer des actions sur différents utilisateurs, projets et groupes.
-      L'application à été développer pour des administrateur de la plateforme Gitlab. Cette dernière ne nous permet pas
-      de supprimer plusieurs projets ou groupe en une seule fois,
-      nous somme obliger de les supprimés un par un ce qui prend beaucoup de temps et qui peut être
-      très long surtout quand on doit supprimer les comptes et projets des anciens élèves.
-    </p>
-    <p class="display-6 text-secondary mb-3">Présentation du site</p>
-    <!-- Début du carousel -->
-    <div id="carouselCaptions" class="carousel carousel-dark slide"
-      style="max-width: 900px; margin-left: auto; margin-right: auto;">
-      <!-- Mise en place de la 1ère slide -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
-        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>
-      </div>
-      <div class="carousel-inner">
-
-        <!-- Première slide -->
-        <div class="carousel-item active">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/PageAccueil.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'accueil">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Page d'accueil</h5>
-              <p class="card-text">Comme vous pouvez le voir, nous avons 5 pages au total dans ce projet, 1 page
-                d'accueil,
-                3 pages de gestion (projets, utilisateurs, groupes), 1 page pour paramétrer son token
-                ainsi que l'url du serveur gitlab.<br><br>
-                Les pages que j'ai modifier dans ce projets sont surlignée en jaune, sur la page d'accueil
-                que vous pouvez voir j'ai ajouter la possibiliter de cliquer sur les blocs descriptifs
-                de chacune des pages ainsi que le bloc descriptif de la page paramètre qui n'était pas
-                présent dans la première version</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/PageProj.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'accueil">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Page de chargement des projets</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/ChangVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Image de la page d'accueil">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Changement de la visibilité</h5>
-              <p class="card-text">
-                Grâce à cette page, vous pouvez changer la visibilité d'un ou plusieurs projet(s).
-                Les différents niveaux de visibilité sont : <strong>Public</strong>, <strong>Internal</strong> et
-                <strong>Private</strong> :
-              </p>
-              <ul>
-                <li><strong>Public :</strong> Tout le monde peut voir le projet, même sans compte GitLab. Les
-                  utilisateurs peuvent cloner le projet et l’utiliser localement, mais seuls les membres autorisés
-                  peuvent le modifier.</li>
-                <li><strong>Internal :</strong> Seules les personnes connectées à GitLab et faisant partie de votre
-                  serveur ou groupe peuvent voir le projet.</li>
-                <li><strong>Private :</strong> Seuls les membres explicitement ajoutés au projet peuvent voir et accéder
-                  au contenu.</li>
-              </ul>
-              <p class="card-text">
-                Choisir le bon niveau de visibilité permet de protéger vos projets tout en autorisant l’accès nécessaire
-                aux bonnes personnes.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/msgError/dmdConfVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Demande de confirmation pour changer la visibilité">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Demande de confirmation pour changer la visibilité</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/msgError/confChangeVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Message de confirmation">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Message de confirmation</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/ChangVis.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Résultat du changement">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Résultat du changement</h5>
-              <p class="card-text">Comme on peux le constater ici la visibilité du projet a été changée et elle est
-                passée a internal</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/msgError/dmdConfPro.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Demande de confirmation de suppression des projets">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Demande de confirmation de suppression des projets</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/msgError/confSuprPro.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Pop up de confirmation de suppression des projets">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Pop up de confirmation de suppression des projets</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/PageParam.png" class="d-block w-auto mx-auto img-fluid" alt="Image d'un formulaire à 3 champs, 1 pour le protocole (http/https), 1 pour l'Url 
-              d'acces a la plateforme gitlab et enfin 1 pour le token">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Page de parammètre</h5>
-              <p class="card-text">Voici la page paramètre, un incontournable pour pouvoir paramétrer son access token
-                ainsi que son Url d'acces au serveur Gitlab.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/stockageData.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Stockage des données en localStorage et non en sessionStorage">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Voici comment sont stocker les données de connexions</h5>
-              <p class="card-text">J'ai choisit de stocker les données de connexions en localStorage et
-                non en sessionStorage car un administrateur peux avoir besoin de se connecter qu'une ou 2 fois
-                tous les 2 ou 3 mois cela évite donc a l'utilisateur d'avoir a rentrer les différentes informations
-                demander pour le paramétrage.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/msgError/ErrorUrl.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Pop up d'erreur qui apparait lors d'un chargement des projets lorsque le token ou l'url sont mal former">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Message d'erreur au cas où l'url/le tokken est mal former</h5>
-            </div>
-          </div>
-        </div>
-        <!-- Bouton de contrôle (slide suivante/précédente) -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Précédent</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Suivant</span>
-        </button>
-      </div>
-    </div>
-    <br>
-    <p class="display-6 text-secondary mb-3">Création et paramétrage du token</p>
-    <br>
-    <div id="carouselTutoGit" class="carousel carousel-dark slide"
-      style="max-width: 900px; margin-left: auto; margin-right: auto;">
-      <!-- Mise en place de la 1ère slide -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="1" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="2" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="3" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="4" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselTutoGit" data-bs-slide-to="5" aria-label="Slide 5"></button>
-      </div>
-      <div class="carousel-inner">
-
-        <!-- Première slide -->
-        <div class="carousel-item active">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/PageAccGitlab.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Page accueil gitlab">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Page d'accueil de Gitlab</h5>
-              <p class="card-text">Vous arriverez ici une fois connecter a Gitlab</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/OuClick.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Menu quand l'icone utilisateur est clicker">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Clicker sur préférence</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/ParamAccessTK.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Clicker sur access token pour paramétrer votre token">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Clicker sur access token pour paramétrer votre token</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/ExConfigTK.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Exemple de configuration d'un access token">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Exemple de configuration d'un access token</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="card">
-            <img src="./images/ProjetCours/ap31-gitlab/tutoGitlab/DroitMinimTK.png" class="d-block w-auto mx-auto img-fluid"
-              alt="Droit api">
-            <div class="card-body mb-4">
-              <h5 class="card-title">Voici les droits minimal que doit avoir le token</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bouton de contrôle (slide suivante/précédente) -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTutoGit" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Précédent</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselTutoGit" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Suivant</span>
-        </button>
-      </div>
-    </div>
-    <p>
-      <!--
-                    <a href="https://siovhblyceebasch-my.sharepoint.com/:f:/g/personal/julien_michelin_lycee-basch_fr/EhcKoc-lyt9DrBdpZ7pkvBEBVisCyhWnYPrUA_qoGpYdeQ?e=6FqLah">
-                        Cliquer ici pour accéder aux ressources utilisées
-                    </a>
-                    -->
-    </p>
-
-    <!-- A copier coller pour chaque ajout d'un projets
-        <p class="display-6 text-secondary mb-3">Titre du projet</p>
-
-        <p class="fst-italic">Mes impressions sur le projet</p>
-
-        <h2 class="lead mb-3">Contexte du projet</h2>
-        <p>CONTEXT----------------------------------------------</p>
-        
-        <h2 class="lead mb-3">Présentation du projet</h2>
-        <p>AJOUT D'IMAGE, DE DETAIL SUR CE PROJET....</p>
-
-        <p> 
-            RESSOURCES pour télécharger le projet (git clone du dépot git), 
-            /!\ ne pas oublier le README.md pour présenter comment déployer le projet /!\,
-            Documentation (si présente).
+<section class="hero-section py-5 bg-light text-dark text-center" id="presentation-MairieFougeres">
+    <div class="container">
+        <h1 class="display-4 text-dark mb-3">BTS SIO(2024-2026)</h1>
+        <p class="lead mb-4">
+          Je prépare actuellement un BTS SIO option SLAM (Solutions Logicielles et Applications Métiers), 
+          une formation de deux ans spécialisée dans le développement d’applications. J’y développe des compétences 
+          en programmation, en bases de données et en conception de solutions logicielles adaptées aux besoins des 
+          entreprises, au lycée Victor et Hélène Basch à Rennes.
         </p>
-        -->
-  </div>
+        <p class="lead mb-4 text">
+          Voici les différents projets que j'ai effectué durant ma 2ème année de BTS SIO :
+        </p>
+ 
+        <div class="row g-4 d-flex justify-content-center column-gap-4">
+            <div class="card col-12 col-md-6 col-lg-3 mb-3 mb-sm-0">
+                <div class="card-header">
+                    <img src="./images/sio/ap31/" class="card-img-top img-fluid" alt="Image de présentation">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Mise en place d'une application web de gestion de gitlab</h5>
+                    <p class="card-text">
+                      Le projet consiste a mettre a disposition une application pour les personnes ayant une platforme 
+                      Gitlab et qui souhaiterais administrer les groupes, les projets ainsi que les utilisateurs. 
+                    </p>
+                    <a href="index.html?pages=proj&project=ap31" class="btn btn-primary">Découvrir</a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-3 mb-3 mb-sm-0">
+                <div class="card-header">
+                    <img src="./images/sio/ap32/" class="card-img-top img-fluid" alt="Image de présentation">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Création d'une API REST de gestion des Organisations, stages et des contacts</h5>
+                    <p class="card-text">
+                      Le projet consiste a mettre en place une API REST avec PHP symfony, 
+                      nous devions mettre en place une API sécurisée qui servirais à modifier et récupérer des Organisations ainsi que 
+                      créer et récupérer des contacts et des stages.
+                    </p>
+                    <a href="index.html?pages=proj&project=ap32" class="btn btn-primary">Découvrir</a>
+                </div>
+            </div>
+
+            <!-- Templates 
+            <div class="card col-12 col-md-6 col-lg-3 mb-3 mb-sm-0">
+                <div class="card-header">
+                    <img src="./images/" class="card-img-top img-fluid" alt="Image de présentation">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Mise en place d'un site web de QCM</h5>
+                    <p class="card-text">Le projet consiste a mettre en place un site web qui permet de faire des QCM en ligne,
+                        l'authentification se fait par l'active directory (AD).
+                    </p>
+                    <a href="index.html?pages=alt&project=qcm" class="btn btn-primary">Découvrir</a>
+                </div>
+            </div>
+            -->
+          </div>
+    </div>
+    
 </section>
