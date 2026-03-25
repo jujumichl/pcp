@@ -72,7 +72,7 @@ async function currentPage(element) {
 
     if (getProjectFromURLProj()) {
       await loadProjAlt();
-      document.getElementById(element).classList.add('active');
+      document.querySelectorAll(`[aria-current=${element}`).forEach(elem => elem.classList.add('active'));
     }
     else {
       await insertHTMLFile(paths[element], content);

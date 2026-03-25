@@ -5,7 +5,7 @@
     <div class="text-center mb-5">
       <h1 class="fw-bold">Mise en place d'une API REST sécurisée avec PHP Symfony</h1>
       <p class="text-muted fs-5">
-        PHP Symfony • Gitlab • Markdown • ORM • JWT token
+        PHP Symfony • Gitlab • Markdown • ORM
       </p>
       <p class="text-muted">
         Nombre de personnes sur le projet : 2
@@ -19,14 +19,10 @@
         <section class="mb-5">
           <h2 class="h4 mb-3">Présentation du projet</h2>
           <p>
-            Le projet a été réalisé par 
-            <a 
-            href="https://github.com/TGnrd" 
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Liens vers son github" 
-            target="_blank">Titouan</a> 
-            ainsi que moi-même, 
+            Le projet a été réalisé par
+            <a href="https://github.com/TGnrd" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Liens vers son github" target="_blank">Titouan</a>
+            ainsi que moi-même,
             le code est accessible sur GitHub :
             <a href="https://github.com/jujumichl/Stage-API-REST" target="_blank">
               dépot GitHub
@@ -39,31 +35,640 @@
           <h2 class="h4 mb-3">Contexte du projet</h2>
           <p>
             Pour ce projet, nous avons été répartis en groupes.
-            L’objectif était de réaliser une API REST symfony permettant de gérer
-            des Stages, des Organisations et des Contacts.
+            L’objectif était de réaliser une API REST (REpresental State Transfer) symfony permettant de gérer
+            des Stages, des Organisations et des Contacts. Une API est une interface qui permet a des sytèmes logiciel
+            de communiquer entre eux grâce au protocole HTTP, grâce a cette API dans notre contexte nous pouvons créer
+            (POST)
+            et récupérer (GET) un stage et un contact, nous pouvons aussi modifier et récupérer une organisation grâce a
+            des
+            routes.
           </p>
         </section>
 
         <!-- Galerie -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Présentation du site</h2>
+          <h2 class="h4 mb-3">Présentation de l'API</h2>
 
+          <p>
+            presentation site :
+            screen d'une page d'API (Stages)
+            présentation talend
+            montrer les différentes requêtes possibles avec talend :
+            POST, GET -> stage
+            GET tous, GET un, GET false, POST bon, POST faux
+            &
+            PUT GET -> organisation
+            GET tous, GET one, GET false, PUT false, PUT
+            présentation rapide de JWT si présent (a mettre c'est mieux)
+
+          </p>
           <p class="text-muted text-center mb-4">
             Cliquez sur une image pour l’agrandir
           </p>
-          <p class="text-muted">
-            En attente de screenshot...
-          </p>
           <div class="row g-4">
 
-            <!-- <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
-                <img src="./images/ProjetCours/ap31-gitlab/PresentationSite/PageAccueil.png"
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap32-API_REST/GETtousAPI.png"
                 class="img-fluid rounded shadow-sm border gallery-img">
-                <p class="text-muted text-center">
-                Page d’accueil avec navigation vers les différentes sections du site.
-                </p>
-            </div> -->
+              <p class="text-muted text-center">
+                Voici a quoi ressemble une API REST, il n'y a pas d'interface graphique et le résultat est
+                présenter en JSON, le JSON est un format principalement utilisé pour stocker et transporter
+                des données.
+              </p>
             </div>
+
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap32-API_REST/talend/PresTalend.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                Pour plus de simplicité nous allons passer par une extension Google Chrome qui vas nous permettre de
+                faire plus facilement des requêtes spécifiques et de les paramétrers plus facilement. <br>
+                Talend cette extension permet de faire des requêtes HTTP. Nous pouvons ajouter ce que l'on appelle des
+                assertions, elles permettent de faire des vérifications sur le résultat de la rêquete que nous avons
+                effectué
+                ainsi nous pouvons effectuer des testes pour vérifier que notre requête renvoie bien ce que nous
+                voulons.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#imgModal">
+              <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-tous.png"
+                class="img-fluid rounded shadow-sm border gallery-img">
+              <p class="text-muted text-center">
+                La requête effectuer ci-dessus est une requête GET, elle nous permet de récupérer tous les stages
+                présents
+                dans notre base de données - contruite avec notre ORM (Object Relation Mapper) permet de gérer manipuler
+                et
+                de récupérer des tables de données de la même façon qu'un objet quelconque, tout en gardant le langage
+                PHP. Nous n'étions que 2 dans le groupe nous avons donc pas pu implémenter l'entrée API pour les
+                contacts.
+              </p>
+            </div>
+
+            <h3 class="h5 mb-3">Requêtes possible pour les stages</h3>
+            <h4 class="h6 mb-3">Requêtes de récupération (GET)</h4>
+
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselStagesOne" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselStagesOne" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselStagesOne" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-one.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'un stage"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-one_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselStagesOne"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselStagesOne"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui permet de récupérer un seul stage, cependant il faut connaitre son numéros
+                dans la base de données.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselStagesTous" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselStagesTous" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselStagesTous" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-tous.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'un stage"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-tous_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselStagesTous"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselStagesTous"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui permet de récupérer tous les stages, elle est général et donc plus simple d'accès.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselStagesErreur" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselStagesErreur" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselStagesErreur" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#CarouselStagesErreur" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#CarouselStagesErreur" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <!-- Erreur 400 -->
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-one_bad_param.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la tentative de récupération d'un 
+            stage avec un mauvais paramètre" data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-one_bad_param_result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête, une erreur 400 est retournée"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <!-- Erreur 404 -->
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-one_bad.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la tentative de récupération d'un 
+            stage avec un identifiant qui n'existe pas" data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/GET/GET-one_bad_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête, une erreur 404 est retournée"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselStagesErreur"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselStagesErreur"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Afin de vérifier que notre API ne vas pas avoir un comportement inattendue nous devons effectuer
+                différents testes,
+                je vous ai mis ci-dessus 2 testes, un avec un paramètre d'identification d'un stage mauvais - <a href="#" data-bs-target="#CarouselStagesErreur" data-bs-slide-to="0">slide 1</a> - 
+                et un avec la tentative
+                de récupération d'un stage qui n'existe pas encore - <a href="#" data-bs-target="#CarouselStagesErreur" data-bs-slide-to="2">slide 3</a> - 
+              </p>
+            </div>
+
+            <h4 class="h6 mb-3">Requêtes de création (POST)</h4>
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselStagesPost" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselStagesPost" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 0"></button>
+                  <button type="button" data-bs-target="#CarouselStagesPost" data-bs-slide-to="1"
+                    aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselStagesPost" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/POST/POST-Bon.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'un stage"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                    
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/POST/POST-Bon_corp.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image montrant le corps de la requête"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/POST/POST-Bon_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselStagesPost"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselStagesPost"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui permet de créer un stage, elle est différente de la récupération d'un stage où on
+                n'avait rien a
+                ajouter on entrait juste l'URL et on recevait un résultat. Ici nous devons ajouter un corps a la
+                requête, dans ce corps
+                nous allons ajouter ce qui est requis pour créer un stage (ici tous le corps que vous voyez en
+                <a href="#" data-bs-target="#CarouselStagesPost" data-bs-slide-to="1">slide 2</a> 
+                est requis). Une
+                fois le corps de la requête écrit nous avons plus qu'à envoyer et nous obtiendrons le résultat en
+                <a href="#" data-bs-target="#CarouselStagesPost" data-bs-slide-to="2">slide 3</a>
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselStagesPostB" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselStagesPostB" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 0"></button>
+                  <button type="button" data-bs-target="#CarouselStagesPostB" data-bs-slide-to="1"
+                    aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselStagesPostB" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/POST/POST-bad.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la création d'un stage"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                    
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/POST/POST-bad_corp.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image montrant le corps de la requête"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/stage/POST/POST-bad_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselStagesPostB"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselStagesPostB"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête invalide qui essayer de créer un stage. Dans le cas où le corps de la requête est  
+                invalide, nous renvoyons une erreur 400 nommée Bad request, ainsi l'utilisateur peux se corriger dans le 
+                corps de sa requête.
+              </p>
+            </div>
+
+
+            <h3 class="h5 mb-3">Requêtes possibles pour les organisations (Partie effectuée par Titouan)</h3>
+
+            <h4 class="h6 mb-3">Requêtes de récupération (GET)</h4>
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselOrganisationOne" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselOrganisationOne" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationOne" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-one.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'une Organisation"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-one_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselOrganisationOne"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselOrganisationOne"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui permet de récupérer une seule organisation, cependant il faut connaitre son numéros
+                dans la base de données.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselOrganisationTous" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselOrganisationTous" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationTous" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-tous.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'une Organisation"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-tous_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselOrganisationTous"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselOrganisationTous"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui permet de récupérer toutes les organisations, elle est général et donc plus simple d'accès.
+              </p>
+            </div>
+
+
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselOrganisation400" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselOrganisation400" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisation400" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#CarouselOrganisation400" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#CarouselOrganisation400" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-400.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'une Organisation"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-400_result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-404.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'une Organisation"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+
+                  <div class="carousel-item active">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/GET/GET-404_result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'une Organisation"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselOrganisation400"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselOrganisation400"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici les requêtes de testes qui tente de récupérer une organisations, 
+                elles se finissent 
+                en erreur 400 (<a href="#" data-bs-target="#CarouselOrganisation400" data-bs-slide-to="0">slide 1</a>) 
+                ou 404 (<a href="#" data-bs-target="#CarouselOrganisation400" data-bs-slide-to="2">slide 3</a>).
+              </p>
+            </div>
+
+            <h4 class="h6 mb-3">Requêtes de modification (PUT)</h4>
+            <!-- Othographe clean ci dessous -->
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselOrganisationPUT" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 0"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT" data-bs-slide-to="1"
+                    aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-200.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'un stage"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                    
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-200_corp.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image montrant le corps de la requête"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-200_Result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselOrganisationPUT"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselOrganisationPUT"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui permet de modifier une organisation, 
+                elle est différente de la récupération d'une organisation où on n'avait rien à ajouter, 
+                on entrait juste l'URL et on recevait un résultat. Ici nous devons ajouter un corps à la requête, 
+                dans ce corps nous allons modifier un attribut d'une organisation 
+                (exemple : <a href="#" data-bs-target="#CarouselStagesPost" data-bs-slide-to="1">slide 2</a>). 
+                Une fois le corps de la requête écrit, nous n'avons plus qu'à envoyer et nous obtiendrons le résultat en 
+                <a href="#" data-bs-target="#CarouselStagesPost" data-bs-slide-to="2">slide 3</a>
+              </p>
+            </div>
+            
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselOrganisationPUT400" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT400" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 0"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT400" data-bs-slide-to="1"
+                    aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT400" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-400.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'un stage"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                    
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-400_corp.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image montrant le corps de la requête"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-400_result.png"CarouselOrganisationPUT400
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselOrganisationPUT400"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselOrganisationPUT400"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui teste le cas où l'utilisateur se trompe dans le corps de la requête.
+                Ici nous devons ajouter une donnée erronée dans corps la requête, 
+                nous allons essayer de modifier un attribut d'une organisation
+                 (exemple: 
+                <a href="#" data-bs-target="#CarouselOrganisationPUT400" data-bs-slide-to="1">slide 2</a>). Une
+                fois le corps de la requête écrit nous avons plus qu'à envoyer et nous obtiendrons le résultat en
+                <a href="#" data-bs-target="#CarouselOrganisationPUT400" data-bs-slide-to="2">slide 3</a>
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div id="CarouselOrganisationPUT404" class="carousel carousel-dark slide"
+                style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT404" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 0"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT404" data-bs-slide-to="1"
+                    aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#CarouselOrganisationPUT404" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-404.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'un stage"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                    
+                  </div>
+
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-404_corp.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image montrant le corps de la requête"
+                        data-bs-toggle="modal" data-bs-target="#imgModal">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./images/ProjetCours/ap32-API_REST/talend/organisation/PUT/PUT-404_result.png"
+                        class="d-block w-auto mx-auto img-fluid gallery-img"
+                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        data-bs-target="#imgModal">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CarouselOrganisationPUT404"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CarouselOrganisationPUT404"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+              <p class="text-muted text-center">
+                Voici la requête qui teste le cas où l'utilisateur se trompe dans le corps de la requête.
+                Ici nous devons ajouter une donnée erronée dans corps la requête, 
+                nous allons essayer de modifier un attribut d'une organisation
+                 (exemple: 
+                <a href="#" data-bs-target="#CarouselOrganisationPUT404" data-bs-slide-to="1">slide 2</a>). Une
+                fois le corps de la requête écrit nous avons plus qu'à envoyer et nous obtiendrons le résultat en
+                <a href="#" data-bs-target="#CarouselOrganisationPUT404" data-bs-slide-to="2">slide 3</a>
+              </p>
+            </div>
+
+          </div>
         </section>
 
       </div>

@@ -1,13 +1,11 @@
 - [] Crypter ou sécuriser les ressources (fichier de rapport de stage, documentation, ect...)
-- [] refaire les screens pour l'ap31 (pour qu'ils aient la même taille)
-- [] img de présentation AP31 + AP32
 - [] le fichier en .csv avec le même formats mais les données anonymes
-
+- [] Correction orthographique du site
 - [] Vérifier que le site est a jours avec les dernières données (A faire tous les 3-4 mois et 1 ou 2 semaines avant l'épreuve)
-- [] dans les carousels faire en sorte de pouvoir avoir un agrendissement lors de l'appuie dessus
 
 
-
+- [x] refaire les screens pour l'ap31 (pour qu'ils aient la même taille)
+- [x] img de présentation AP31 + AP32
 - [x] Ajouter le référentiel des compétences comme ressource en liens sur la page de stage
 - [x] Mettre les numéros des missions sur les compétences présentée et ajouter un Hover sur les libellés des mission pour comprendre a quoi correspondent les numéros
 - [x] Crée une page destinnée a l'alternance (contenue)
