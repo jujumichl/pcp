@@ -2,7 +2,9 @@
 - [] le fichier en .csv avec le même formats mais les données anonymes
 - [] Correction orthographique du site
 - [] Vérifier que le site est a jours avec les dernières données (A faire tous les 3-4 mois et 1 ou 2 semaines avant l'épreuve)
-
+- [] lier les projets à leurs page respective
+- [] Vérifier l'orthographe de toutes les pages
+- [] Corriger la page de l'AP32
 
 - [x] refaire les screens pour l'ap31 (pour qu'ils aient la même taille)
 - [x] img de présentation AP31 + AP32
