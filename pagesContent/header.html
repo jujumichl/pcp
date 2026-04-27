@@ -11,16 +11,16 @@
             margin-top: 0;
             /* remove the gap so it doesn't close */
         }
-        
-        .offcanvas .dropdown-item:hover{
+
+        .offcanvas .dropdown-item:hover {
             background-color: blue;
         }
 
-        .offcanvas .dropdown-item .active{
+        .offcanvas .dropdown-item .active {
             background-color: rgba(115, 231, 252, 0.781);
         }
-        
-        .offcanvas .dropdown-menu{
+
+        .offcanvas .dropdown-menu {
             background-color: transparent;
         }
     </style>
@@ -34,25 +34,31 @@
             <a href="./index.html"><img src="images/favicon.ico" alt="logo" width="100" height="100" class="img-fluid"
                     style="max-width: 150px;" /></a>
         </div>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link header" id="index" aria-current="index"
                         href="./index.html?pages=index">Accueil</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link header" id="proj" aria-current="proj" href="./index.html?pages=proj">Projets</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link header" id="stages" aria-current="stages"
                         href="./index.html?pages=stages">Stages</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link header" id="alt" aria-current="alt" href="./index.html?pages=alt">Alternances</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link header" id="veille" aria-current="veille" href="./index.html?pages=veille">Veille
                         cyber</a>
+
                     <button type="button" class="visually-hidden dropdown-toggle dropdown-toggle-split"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
@@ -60,10 +66,14 @@
 
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" aria-current="anssi" href="index.html?pages=anssi">ANSSI</a></li>
-                        <li><a class="dropdown-item" href="https://breizhcyber.bzh/actualites/" target="_blank">Cyber
-                                breizh</a></li>
+                        <li>
+                            <a class="dropdown-item" href="https://breizhcyber.bzh/actualites/" target="_blank">
+                                Cyber Breizh
+                            </a>
+                        </li>
                     </ul>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link header" id="propos" aria-current="propos" href="./index.html?pages=propos">À
                         propos</a>
@@ -75,38 +85,51 @@
 
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar"
     aria-labelledby="offcanvasNavbarLabel">
+
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Fermer"></button>
     </div>
+
     <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
             <li class="nav-item">
                 <a class="nav-link text-white" aria-current="index" href="./index.html?pages=index">Accueil</a>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link text-white" aria-current="proj" href="./index.html?pages=proj">Projets</a>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link text-white" aria-current="stages" href="./index.html?pages=stages">Stages</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" aria-current="alt" href="./index.html?pages=alt">Alternances</a>
+                <a class="nav-link text-white" aria-current="alt" href="./index.html?pages=alt">Alternances</a>
             </li>
+
             <li class="nav-item dropdown dropend">
                 <a class="nav-link header" id="veille" aria-current="veille" href="./index.html?pages=veille">Veille
                     cyber</a>
+
                 <button type="button" class="visually-hidden dropdown-toggle dropdown-toggle-split"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
 
                 <ul class="dropdown-menu" style="background-color: transparent;">
-                    <li><a class="dropdown-item text-white" aria-current="anssi" href="index.html?pages=anssi">ANSSI</a></li>
-                    <li><a class="dropdown-item text-white" href="https://breizhcyber.bzh/actualites/" target="_blank">Cyber
-                            breizh</a></li>
+                    <li><a class="dropdown-item text-white" href="index.html?pages=anssi">ANSSI</a></li>
+                    <li>
+                        <a class="dropdown-item text-white" href="https://breizhcyber.bzh/actualites/" target="_blank">
+                            Cyber Breizh
+                        </a>
+                    </li>
                 </ul>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link text-white" aria-current="propos" href="./index.html?pages=propos">À propos</a>
             </li>
