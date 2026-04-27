@@ -114,6 +114,7 @@ async function loadProjAlt() {
     qcm: "./pagesContent/projetAlt/qcm.html",
     ap31: "./pagesContent/projetSIO/ap31.html",
     ap32: "./pagesContent/projetSIO/ap32.html",
+    ap41: "./pagesContent/projetSIO/ap41.html",
   };
 
   const project = getProjectFromURLProj();
