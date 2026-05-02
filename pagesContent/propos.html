@@ -2,11 +2,11 @@
     <!-- <h1 class="display-4 text-dark mb-3">Sommaire : </h1>
             <p class="lead mb-3">DÉBUT DU SOMMAIRE, suite du sommaire avec la même classe</p> -->
     <h2 class="display-6 text-secondary mb-3">À propos de moi</h2>
-    <p>Ci-dessous vous retrouverez mon CV, le calendrier des alternances de l'année scolaire 2025-2026 ainsi que mes
-        réseaux.</p>
+    <p>Ci-dessous, vous retrouverez mon CV, le calendrier des alternances de l'année scolaire 
+        2025-2026, le référentiel du BTS SIO ainsi que mon tableau de synthèse E5.
+    </p>
     <div class="container">
-        <p>Cliquez sur les images pour consulter mon CV, mon calendrier d'alternance (sept. 2025 - juil. 2026) ou mon
-            référentiel des compétences acquises durant le BTS SIO.</p>
+        <p>Cliquez sur les images pour consulter les documents.</p>
         <a data-bs-toggle="modal" data-bs-target="#cvModal" data-bs-toggle="tooltip" data-bs-placement="bottom"
             title="Cliquez pour voir le CV en grand" class="text-decoration-none">
             <img class="minia" src="./images/PDFpres/cv_thumbnail.png" alt="Miniature du CV">
@@ -20,7 +20,31 @@
             title="Cliquez pour voir le référentiel en grand" class="text-decoration-none">
             <img class="minia" src="./images/PDFpres/ref_thumbnail.png" alt="Miniature du référentiel du BTS SIO">
         </a>
+        <a data-bs-toggle="modal" data-bs-target="#E5Modal" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="Cliquez pour voir le tableau de synthèse" class="text-decoration-none">
+            <img class="minia" src="./images/PDFpres/E5Tab.png" alt="Miniature du tableau E5">
+        </a>
 
+        <div class="modal fade" id="E5Modal" tabindex="-1" aria-labelledby="E5ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="E5ModallLabel">Mon tableau de synthèse</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="./PDFfiles/E5_TableauSynthese-final.pdf" width="75%" height="600px"
+                            style="border:none;"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a class="btn btn-primary" href="./PDFfiles/E5_TableauSynthese-final.pdf"
+                            download="E5_tableauSynthèse-Julien_Michelin">Télécharger le tableau E5</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">

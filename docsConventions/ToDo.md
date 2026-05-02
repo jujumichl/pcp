@@ -1,9 +1,10 @@
 - [ ] Crypter ou sécuriser les ressources (fichier de rapport de stage, documentation, ect...)
 - [ ] le fichier en .csv avec le même formats mais les données anonymes
 
-- [ ] Ajouter les screens du QCM
-- [ ] Mettre a jours l'AP41
+- [x] Ajouter les compétences pour tout les projets
 
+- [x] Mettre a jours l'AP41
+- [x] Ajouter les screens du QCM
 - [x] Vérifier l'orthographe de toutes les pages
 - [x] lier les projets à leurs page respective
 - [x] Correction orthographique du site
