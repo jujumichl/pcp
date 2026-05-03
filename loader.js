@@ -71,7 +71,7 @@ async function currentPage(element) {
   if (paths[element]) {
 
     if (getProjectFromURLProj()) {
-      await loadProjAlt();
+      await loadProj();
       document.querySelectorAll(`[aria-current=${element}`).forEach(elem => elem.classList.add('active'));
     }
     else {
@@ -107,7 +107,7 @@ function getProjectFromURLPage() {
   return params.get("pages");
 }
 
-async function loadProjAlt() {
+async function loadProj() {
   const projects = {
     carto: "./pagesContent/projetAlt/carto.html",
     castle: "./pagesContent/projetAlt/castle.html",

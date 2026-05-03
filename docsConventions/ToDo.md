@@ -1,8 +1,9 @@
 - [ ] Crypter ou sécuriser les ressources (fichier de rapport de stage, documentation, ect...)
 - [ ] le fichier en .csv avec le même formats mais les données anonymes
 
+- [x] corriger le carousel img non cliquable 
+- [x] Ajout d'une croix en haut a droite 
 - [x] Ajouter les compétences pour tout les projets
-
 - [x] Mettre a jours l'AP41
 - [x] Ajouter les screens du QCM
 - [x] Vérifier l'orthographe de toutes les pages

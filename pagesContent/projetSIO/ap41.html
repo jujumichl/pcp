@@ -1,5 +1,8 @@
 <section class="hero-section py-5 bg-light text-dark" id="presentation-MairieFougeres">
   <div class="container">
+    <a href="index.html?pages=proj" class="btn btn-outline-secondary" style="font-style: italic;">
+      Retour
+    </a>
 
     <!-- Titre -->
     <div class="text-center mb-5">
@@ -89,12 +92,14 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img src="./images/ProjetCours/ap-41-ReactNatif/stageScreenDesc.jpg"
-                      class="img-fluid rounded shadow-sm border gallery-img" data-bs-target="#imgModal">
+                      class="img-fluid rounded shadow-sm border gallery-img" data-bs-toggle="modal"
+                      data-bs-target="#imgModal">
                   </div>
 
                   <div class="carousel-item">
                     <img src="./images/ProjetCours/ap-41-ReactNatif/stageScreenAsc.jpg"
-                      class="img-fluid rounded shadow-sm border gallery-img" data-bs-target="#imgModal">
+                      class="img-fluid rounded shadow-sm border gallery-img" data-bs-toggle="modal"
+                      data-bs-target="#imgModal">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#CarouselStages"
@@ -113,7 +118,7 @@
                 triée dans l'ordre croissant ou décroissant.
                 J'ai donc trié par défaut dans l'ordre décroissant afin d'avoir les stages les plus anciens d'abord.
                 Ensuite j'ai ajouté un bouton pour trier les stages, soit dans l'
-                <a href="#" data-bs-target="#CarouselStages" data-bs-slide-to="1">ordre croissant</a> 
+                <a href="#" data-bs-target="#CarouselStages" data-bs-slide-to="1">ordre croissant</a>
                 soit dans l'<a href="#" data-bs-target="#CarouselStages" data-bs-slide-to="0">ordre décroissant</a>.
               </p>
             </div>
@@ -122,9 +127,9 @@
               <img src="./images/ProjetCours/ap-41-ReactNatif/stageDetailScreen.jpg"
                 class="img-fluid rounded shadow-sm border gallery-img">
               <p class="text-muted text-center">
-                Voici la page de détail d'un stage, je suis resté dans un format identique à celui des détails 
-                d'une organisation, cependant j'ai ajouté ou supprimé des éléments qui ne m'étaient pas utiles. 
-                N'ayant pas de demande particulière concernant les stages je me suis donc permis de créer un tableau 
+                Voici la page de détail d'un stage, je suis resté dans un format identique à celui des détails
+                d'une organisation, cependant j'ai ajouté ou supprimé des éléments qui ne m'étaient pas utiles.
+                N'ayant pas de demande particulière concernant les stages je me suis donc permis de créer un tableau
                 des compétences exploitées durant le stage sélectionné.
               </p>
             </div>
@@ -258,11 +263,13 @@
   </div>
 </section>
 
-<!-- MODAL -->
 <div class="modal fade" id="imgModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-sm">
     <div class="modal-content bg-transparent border-0">
-      <div class="modal-body text-center">
+      <div class="modal-body p-0 position-relative">
+        <button type="button" class="btn-close bg-white position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
+          aria-label="Close" style="z-index: 1; outline: 3px solid black;">
+        </button>
         <img id="modalImage" class="img-fluid rounded shadow">
       </div>
     </div>
