@@ -1,0 +1,161 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark py-3 px-3">
+    <style>
+        /*
+            Source - https://stackoverflow.com/a/16214473
+            Posted by brbcoding, modified by community. See post 'Timeline' for change history
+            Retrieved 2026-02-25, License - CC BY-SA 4.0
+        */
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            /* remove the gap so it doesn't close */
+        }
+
+        .offcanvas .dropdown-item:hover {
+            background-color: blue;
+        }
+
+        .offcanvas .dropdown-item .active {
+            background-color: rgba(115, 231, 252, 0.781);
+        }
+
+        .offcanvas .dropdown-menu {
+            background-color: transparent;
+        }
+    </style>
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="logo">
+            <a href="./index.html"><img src="images/favicon.ico" alt="logo" width="100" height="100" class="img-fluid"
+                    style="max-width: 150px;" /></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link header" id="index" aria-current="index"
+                        href="./index.html?lang=en&pages=index">Accueil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link header" id="proj" aria-current="proj"
+                        href="./index.html?lang=en&pages=proj">Projets</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link header" id="stages" aria-current="stages"
+                        href="./index.html?lang=en&pages=stages">Stages</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link header" id="alt" aria-current="alt"
+                        href="./index.html?lang=en&pages=alt">Alternances</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link header" id="veille" aria-current="veille"
+                        href="./index.html?lang=en&pages=veille">Veille
+                        cyber</a>
+
+                    <button type="button" class="visually-hidden dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" aria-current="anssi"
+                                href="index.html?lang=en&pages=anssi">ANSSI</a></li>
+                        <li>
+                            <a class="dropdown-item" href="https://breizhcyber.bzh/actualites/" target="_blank">
+                                Cyber Breizh
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link header" id="propos" aria-current="propos"
+                        href="./index.html?lang=en&pages=propos">À
+                        propos</a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="./index.html?lang=fr" class="frFlag"><img src="./images/langue/frFlag.png"
+                        class="img-fluid rounded m-1" style="width: 50px; height: 40px;" /></a>
+                <a href="./index.html?lang=en" class="enFlag"><img src="./images/langue/enFlag.png"
+                        class="img-fluid rounded m-1" style="width: 50px; height: 40px;" /></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+    aria-labelledby="offcanvasNavbarLabel">
+
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Fermer"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+                <a class="nav-link text-white" aria-current="index" href="./index.html?lang=en&pages=index">Accueil</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" aria-current="proj" href="./index.html?lang=en&pages=proj">Projets</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" aria-current="stages" href="./index.html?lang=en&pages=stages">Stages</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" aria-current="alt" href="./index.html?lang=en&pages=alt">Alternances</a>
+            </li>
+
+            <li class="nav-item dropdown dropend">
+                <a class="nav-link header" id="veille" aria-current="veille"
+                    href="./index.html?lang=en&pages=veille">Veille
+                    cyber</a>
+
+                <button type="button" class="visually-hidden dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+
+                <ul class="dropdown-menu" style="background-color: transparent;">
+                    <li><a class="dropdown-item text-white" href="index.html?lang=en&pages=anssi">ANSSI</a></li>
+                    <li>
+                        <a class="dropdown-item text-white" href="https://breizhcyber.bzh/actualites/" target="_blank">
+                            Cyber Breizh
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" aria-current="propos" href="./index.html?lang=en&pages=propos">À
+                    propos</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="m-2 ms-3">
+        <a href="./index.html?lang=fr" class="frFlag">
+            <img src="./images/langue/frFlag.png" class="img-fluid rounded m-1" style="width: 40px; height: 30px;" />
+        </a>
+        <a href="./index.html?lang=en" class="enFlag">
+            <img src="./images/langue/enFlag.png" class="img-fluid rounded m-1" style="width: 40px; height: 30px;" />
+        </a>
+    </div>
+</div>

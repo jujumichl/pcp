@@ -5,22 +5,69 @@ window.addEventListener("load", initApp);
  * function which is 
  * launch during the loading of page
  */
+
 async function initApp() {
 
-  await insertHTMLFile("pagesContent/header.html", document.getElementById('header-content'));
+  const lang = getlanguage();
 
+  setLanguageInUrl(lang);
 
-  if (getProjectFromURLPage()) {
-    currentPage(getProjectFromURLPage());
-  }
-  else {
-    currentPage("index");
-  }
-  await insertHTMLFile("pagesContent/footer.html", document.getElementById('footer'));
-  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-    new bootstrap.Tooltip(el)
+  await insertHTMLFile(`pagesContent/${lang}/header.html`, document.getElementById('header-content'));
+
+  document.querySelectorAll('.frFlag').forEach(el => {
+    el.addEventListener('click', async () => await switchLang('fr'));
   });
 
+  document.querySelectorAll('.enFlag').forEach(el => {
+    el.addEventListener('click', async () => await switchLang('en'));
+  });
+
+  if (getPageFromURL()) {
+    await currentPage(getPageFromURL(), lang);
+  } else {
+    await currentPage("index", lang);
+  }
+
+  await insertHTMLFile(`pagesContent/${lang}/footer.html`, document.getElementById('footer'));
+
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);
+  });
+}
+
+function getlanguage() {
+  const params = new URLSearchParams(window.location.search);
+  const langParam = params.get("lang");
+  if (langParam === 'fr' || langParam === 'en') return langParam;
+  return navigator.language.startsWith('fr') ? 'fr' : 'en';
+}
+
+function setLanguageInUrl(lang) {
+  const langParam = new URLSearchParams(window.location.search);
+  langParam.set("lang", lang)
+  window.history.pushState({}, '', `?${langParam.toString()}`);
+}
+
+async function switchLang(lang) {
+  setLanguageInUrl(lang);
+
+  await insertHTMLFile(`pagesContent/${lang}/header.html`, document.getElementById('header-content'));
+
+  document.querySelectorAll('.frFlag').forEach(el => {
+    el.addEventListener('click', async () => await switchLang('fr'));
+  });
+
+  document.querySelectorAll('.enFlag').forEach(el => {
+    el.addEventListener('click', async () => await switchLang('en'));
+  });
+
+  if (getPageFromURL()) {
+    await currentPage(getPageFromURL(), lang);
+  } else {
+    await currentPage("index", lang);
+  }
+
+  await insertHTMLFile(`pagesContent/${lang}/footer.html`, document.getElementById('footer'));
 }
 
 /**
@@ -52,34 +99,33 @@ async function insertHTMLFile(htmlFile, htmlElement) {
   }
 }
 
-async function currentPage(element) {
-
+async function currentPage(element, lang) {
 
   const paths = {
-    index: "./pagesContent/index.html",
-    proj: "./pagesContent/proj.html",
-    stages: "./pagesContent/stages.html",
-    alt: "./pagesContent/alt.html",
-    propos: "./pagesContent/propos.html",
-    veille: "./pagesContent/veille.html",
-    anssi: "./pagesContent/veille/ANSSI.html",
-    // cyberbreizh: "./pagesContent/veille/cyberbreizh.html",
+    index: `./pagesContent/${lang}/index.html`,
+    proj: `./pagesContent/${lang}/proj.html`,
+    stages: `./pagesContent/${lang}/stages.html`,
+    alt: `./pagesContent/${lang}/alt.html`,
+    propos: `./pagesContent/${lang}/propos.html`,
+    veille: `./pagesContent/${lang}/veille.html`,
+    anssi: `./pagesContent/${lang}/veille/ANSSI.html`,
+    // cyberbreizh: `./pagesContent/${lang}/veille/cyberbreizh.html`,
   };
   const content = document.getElementById(`main-content`);
 
 
   if (paths[element]) {
 
-    if (getProjectFromURLProj()) {
-      await loadProj();
+    if (getProjectFromURL()) {
+      await loadProj(lang);
       document.querySelectorAll(`[aria-current=${element}`).forEach(elem => elem.classList.add('active'));
     }
     else {
       await insertHTMLFile(paths[element], content);
       // load content
       document.querySelectorAll(`[aria-current=${element}`).forEach(elem => elem.classList.add('active'));
-      if (element == "anssi"){
-        this.feed()
+      if (element == "anssi") {
+        await feed()
       }
       // else if (element == "cyberbreizh"){
       //   document.getElementById('main-content').addEventListener("DOMContentLoaded", (event) => {
@@ -88,7 +134,7 @@ async function currentPage(element) {
       //   });
       // }
     }
-    
+
   }
   else {
     await insertHTMLFile(paths['index'], content);
@@ -97,27 +143,28 @@ async function currentPage(element) {
 
 }
 
-function getProjectFromURLProj() {
+function getProjectFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get("project");
 }
 
-function getProjectFromURLPage() {
+function getPageFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get("pages");
 }
 
-async function loadProj() {
+async function loadProj(lang) {
+
   const projects = {
-    carto: "./pagesContent/projetAlt/carto.html",
-    castle: "./pagesContent/projetAlt/castle.html",
-    qcm: "./pagesContent/projetAlt/qcm.html",
-    ap31: "./pagesContent/projetSIO/ap31.html",
-    ap32: "./pagesContent/projetSIO/ap32.html",
-    ap41: "./pagesContent/projetSIO/ap41.html",
+    carto: `./pagesContent/${lang}/projetAlt/carto.html`,
+    castle: `./pagesContent/${lang}/projetAlt/castle.html`,
+    qcm: `./pagesContent/${lang}/projetAlt/qcm.html`,
+    ap31: `./pagesContent/${lang}/projetSIO/ap31.html`,
+    ap32: `./pagesContent/${lang}/projetSIO/ap32.html`,
+    ap41: `./pagesContent/${lang}/projetSIO/ap41.html`,
   };
 
-  const project = getProjectFromURLProj();
+  const project = getProjectFromURL();
 
   if (projects[project]) {
     await insertHTMLFile(projects[project], document.getElementById('main-content'));
@@ -129,7 +176,7 @@ async function loadProj() {
     });
   }
   else {
-    await insertHTMLFile("./pagesContent/index.html", document.getElementById('main-content'));
+    await insertHTMLFile(`./pagesContent/${lang}/index.html`, document.getElementById('main-content'));
   }
 }
 

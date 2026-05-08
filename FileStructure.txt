@@ -1,0 +1,245 @@
+pcp
+│
+│── .gitignore
+│── .htaccessDev
+│── .htaccessProd
+│── css
+│   │── style.css
+│   └── style.css.bak
+│── docsConventions
+│   │── convention.md
+│   │── FileTree.md
+│   │── logiciel_CompCCR.md
+│   │── ToDo.md
+│   └── workers.md
+│── images
+│   │── alternances
+│   │   │── appCastle
+│   │   │   │── cartechateau.png
+│   │   │   │── icon.jpg
+│   │   │   │── menu.jpg
+│   │   │   │── menuAide.jpg
+│   │   │   │── pageAccueil.jpg
+│   │   │   │── pagePrincipal.jpg
+│   │   │   └── presAppCastle.png
+│   │   │── carto
+│   │   │   │── API
+│   │   │   │   │── apiArretes.png
+│   │   │   │   └── apiChantiers.png
+│   │   │   │── geoserver
+│   │   │   │   │── couches.png
+│   │   │   │   │── Entrepot.png
+│   │   │   │   │── espaceTravail.png
+│   │   │   │   └── geoserver.png
+│   │   │   │── mapstore
+│   │   │   │   │── affichage.png
+│   │   │   │   │── carteUse.png
+│   │   │   │   │── champ.png
+│   │   │   │   │── editionCouche.png
+│   │   │   │   │── mapstore.png
+│   │   │   │   │── style.png
+│   │   │   │   │── template.png
+│   │   │   │   └── visuelTemplate.png
+│   │   │   │── presCarto.png
+│   │   │   └── siteWeb
+│   │   │       │── accueil.png
+│   │   │       └── pagePrincipal.png
+│   │   └── QCM
+│   │       │── accueil.png
+│   │       │── accueilSSQcm.png
+│   │       │── allSelect.png
+│   │       │── codeQcm.png
+│   │       │── Corbeille.png
+│   │       │── failedMessage.png
+│   │       │── loadingQcm.png
+│   │       │── login.png
+│   │       │── MessConfSuppr.png
+│   │       │── MessRenameConf.png
+│   │       │── modif.png
+│   │       │── paramQcm.png
+│   │       │── presQCM.png
+│   │       │── qcmQuestions.png
+│   │       │── rename.png
+│   │       │── RenameEffec.png
+│   │       │── schemaRelationnel.png
+│   │       │── selectQcm.png
+│   │       │── successMessage.png
+│   │       │── typeRep.png
+│   │       └── whishmical.png
+│   │── favicon.ico
+│   │── langue
+│   │   │── enFlag.png
+│   │   └── frFlag.png
+│   │── PDFpres
+│   │   │── alt_thumbnail.png
+│   │   │── cv_thumbnail.png
+│   │   │── E5Tab.png
+│   │   └── ref_thumbnail.png
+│   │── ProjetCours
+│   │   │── ap-41-ReactNatif
+│   │   │   │── login.jpg
+│   │   │   │── orgaDetailScreen.jpg
+│   │   │   │── orgaScreen.jpg
+│   │   │   │── pres.png
+│   │   │   │── stageDetailScreen.jpg
+│   │   │   │── stageScreenAsc.jpg
+│   │   │   └── stageScreenDesc.jpg
+│   │   │── ap31-gitlab
+│   │   │   │── msgError
+│   │   │   │   │── confChangeVis.png
+│   │   │   │   │── confSuprPro.png
+│   │   │   │   │── dmdConfPro.png
+│   │   │   │   │── dmdConfVis.png
+│   │   │   │   └── ErrorUrl.png
+│   │   │   │── PresentationSite
+│   │   │   │   │── ChangVis.png
+│   │   │   │   │── PageAccueil.png
+│   │   │   │   │── PageParam.png
+│   │   │   │   │── PageProj.png
+│   │   │   │   │── ResVis.png
+│   │   │   │   │── stockageData.png
+│   │   │   │   └── supprProj.png
+│   │   │   └── tutoGitlab
+│   │   │       │── DroitMinimTK.png
+│   │   │       │── ExConfigTK.png
+│   │   │       │── PageAccGitlab.png
+│   │   │       └── ParamAccessTK.png
+│   │   └── ap32-API_REST
+│   │       │── GETtousAPI.png
+│   │       └── talend
+│   │           │── organisation
+│   │           │   │── GET
+│   │           │   │   │── GET-400.png
+│   │           │   │   │── GET-400_result.png
+│   │           │   │   │── GET-404.png
+│   │           │   │   │── GET-404_result.png
+│   │           │   │   │── GET-one.png
+│   │           │   │   │── GET-one_Result.png
+│   │           │   │   │── GET-tous.png
+│   │           │   │   └── GET-tous_Result.png
+│   │           │   └── PUT
+│   │           │       │── PUT-200.png
+│   │           │       │── PUT-200_corp.png
+│   │           │       │── PUT-200_Result.png
+│   │           │       │── PUT-400.png
+│   │           │       │── PUT-400_corp.png
+│   │           │       │── PUT-400_result.png
+│   │           │       │── PUT-404.png
+│   │           │       │── PUT-404_corp.png
+│   │           │       └── PUT-404_result.png
+│   │           │── PresTalend.png
+│   │           └── stage
+│   │               │── GET
+│   │               │   │── GET-one.png
+│   │               │   │── GET-one_bad.png
+│   │               │   │── GET-one_bad_param.png
+│   │               │   │── GET-one_bad_param_result.png
+│   │               │   │── GET-one_bad_Result.png
+│   │               │   │── GET-one_Result.png
+│   │               │   │── GET-tous.png
+│   │               │   └── GET-tous_Result.png
+│   │               └── POST
+│   │                   │── POST-bad.png
+│   │                   │── POST-bad_corp.png
+│   │                   │── POST-bad_Result.png
+│   │                   │── POST-Bon.png
+│   │                   │── POST-Bon_corp.png
+│   │                   └── POST-Bon_Result.png
+│   │── Stages
+│   │   └── CCR
+│   │       └── M3
+│   │           │── colonesFichier1.png
+│   │           │── colonesFichier2.png
+│   │           │── CR.png
+│   │           │── Database-cc-rennes.png
+│   │           │── EXerrror.png
+│   │           │── EXlog.png
+│   │           │── HOME.png
+│   │           │── homeIntergration.png
+│   │           │── home_page.png
+│   │           │── integrationFichier.png
+│   │           │── integrer.png
+│   │           │── Menu.png
+│   │           │── personCard.png
+│   │           │── searchBy.png
+│   │           │── searchByA.png
+│   │           │── searching.png
+│   │           │── whishmical.png
+│   │           │── whiteFill.png
+│   │           └── YB.drawio.png
+│   └── veille
+│       │── Anssi.png
+│       └── cyberbreizh.png
+│── index.html
+│── loader.js
+│── pagesContent
+│   │── backupFr
+│   │   │── alt.html
+│   │   │── footer.html
+│   │   │── header.html
+│   │   │── index.html
+│   │   │── proj.html
+│   │   │── projetAlt
+│   │   │   │── carto.html
+│   │   │   │── castle.html
+│   │   │   └── qcm.html
+│   │   │── projetSIO
+│   │   │   │── ap31.html
+│   │   │   │── ap32.html
+│   │   │   └── ap41.html
+│   │   │── propos.html
+│   │   │── stages.html
+│   │   │── veille
+│   │   │   │── ANSSI.html
+│   │   │   └── cyberbreizh.html
+│   │   └── veille.html
+│   │── en
+│   │   │── alt.html
+│   │   │── footer.html
+│   │   │── header.html
+│   │   │── index.html
+│   │   │── proj.html
+│   │   │── projetAlt
+│   │   │   │── carto.html
+│   │   │   │── castle.html
+│   │   │   └── qcm.html
+│   │   │── projetSIO
+│   │   │   │── ap31.html
+│   │   │   │── ap32.html
+│   │   │   └── ap41.html
+│   │   │── propos.html
+│   │   │── stages.html
+│   │   │── veille
+│   │   │   │── ANSSI.html
+│   │   │   └── cyberbreizh.html
+│   │   └── veille.html
+│   └── fr
+│       │── alt.html
+│       │── footer.html
+│       │── header.html
+│       │── index.html
+│       │── proj.html
+│       │── projetAlt
+│       │   │── carto.html
+│       │   │── castle.html
+│       │   └── qcm.html
+│       │── projetSIO
+│       │   │── ap31.html
+│       │   │── ap32.html
+│       │   └── ap41.html
+│       │── propos.html
+│       │── stages.html
+│       │── veille
+│       │   │── ANSSI.html
+│       │   └── cyberbreizh.html
+│       └── veille.html
+│── PDFfiles
+│   │── E5_TableauSynthese-final.pdf
+│   │── Julien_Michelin-alt.pdf
+│   │── Julien_Michelin-CV-alt.pdf
+│   │── Julien_Michelin-CV.pdf
+│   └── SLAM_Competences_Savoirs.pdf
+│── projetCCR
+│   │── adhesion.zip
+│   └── CCR_brevo.zip
+└── README.md
