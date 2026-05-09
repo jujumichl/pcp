@@ -15,11 +15,17 @@ async function initApp() {
   await insertHTMLFile(`pagesContent/${lang}/header.html`, document.getElementById('header-content'));
 
   document.querySelectorAll('.frFlag').forEach(el => {
-    el.addEventListener('click', async () => await switchLang('fr'));
+    el.addEventListener('click', async function (e) {
+      e.preventDefault();
+      await switchLang('fr', getPageFromURL());
+    });
   });
 
   document.querySelectorAll('.enFlag').forEach(el => {
-    el.addEventListener('click', async () => await switchLang('en'));
+    el.addEventListener('click', async function (e) {
+      e.preventDefault();
+      await switchLang('en', getPageFromURL());
+    });
   });
 
   if (getPageFromURL()) {
@@ -48,20 +54,30 @@ function setLanguageInUrl(lang) {
   window.history.pushState({}, '', `?${langParam.toString()}`);
 }
 
-async function switchLang(lang) {
+async function switchLang(lang, page = "") {
+  event.preventDefault;
   setLanguageInUrl(lang);
 
   await insertHTMLFile(`pagesContent/${lang}/header.html`, document.getElementById('header-content'));
 
   document.querySelectorAll('.frFlag').forEach(el => {
-    el.addEventListener('click', async () => await switchLang('fr'));
+    el.addEventListener('click', async function (e) {
+      e.preventDefault();
+      await switchLang('fr', getPageFromURL());
+    });
   });
 
   document.querySelectorAll('.enFlag').forEach(el => {
-    el.addEventListener('click', async () => await switchLang('en'));
+    el.addEventListener('click', async function (e) {
+      e.preventDefault();
+      await switchLang('en', getPageFromURL());
+    });
   });
 
-  if (getPageFromURL()) {
+  if (page !== "") {
+    await currentPage(page, lang);
+  }
+  else if (getPageFromURL()) {
     await currentPage(getPageFromURL(), lang);
   } else {
     await currentPage("index", lang);
