@@ -1,165 +1,149 @@
 <section class="hero-section py-5 bg-light text-dark" id="presentation-MairieFougeres">
   <div class="container">
-    <a href="index.html?pages=proj" class="btn btn-outline-secondary" style="font-style: italic;">
-      Retour
+    <a href="index.html?lang=en&pages=alt" class="btn btn-outline-secondary" style="font-style: italic;">
+      Back
     </a>
 
-    <!-- Titre -->
     <div class="text-center mb-5">
-      <h1 class="fw-bold">Projet de site web de QCM</h1>
+      <h1 class="fw-bold">Quiz (QCM) Website Project</h1>
       <p class="text-muted fs-5">
         PHP Symfony • Stimulus • Webpack Encore • MySQL • Twig • Markdown
       </p>
       <p class="text-muted">
-        Framework UI : Bootstrap • Nombre de personnes sur le projet : 2
+        UI Framework: Bootstrap • Number of people on the project: 2
       </p>
     </div>
 
     <div class="row justify-content-center">
       <div class="col-lg-9">
 
-        <!-- Présentation -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Présentation du projet</h2>
+          <h2 class="h4 mb-3">Project Overview</h2>
           <p>
-            Le projet a été réalisé par Owen ainsi que moi-même,
-            le code est accessible sur GitHub :
+            The project was carried out by Owen and myself.
+            The code is accessible on GitHub:
             <a href="https://github.com/jujumichl/qcm-fougeres" target="_blank">
-              dépôt GitHub
+              GitHub repository
             </a>
           </p>
         </section>
 
-        <!-- Origine -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Origine et besoin client</h2>
+          <h2 class="h4 mb-3">Origin and Client Need</h2>
           <p>
-            Le projet provient d’une demande de Yasin, employé du service informatique.
-            Il souhaitait disposer d’un site permettant de créer et d’effectuer des QCM.
+            The project originated from a request by Yasin, an IT department employee.
+            He wanted a website that would allow users to create and take quizzes.
           </p>
         </section>
 
-        <!-- Conception -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Phase de conception</h2>
+          <h2 class="h4 mb-3">Design Phase</h2>
           <p>
-            Un brainstorming a été réalisé afin de définir les fonctionnalités et le design.
-            Cette phase s’est déroulée sur une semaine et a permis une première mise en place
-            de l’interface utilisateur (UI).
+            A brainstorming session was held to define the features and design.
+            This phase took place over one week and resulted in an initial
+            implementation of the user interface (UI).
           </p>
 
           <a href="https://whimsical.com/Q1TwnYKNwju5niCVTq5zTD" target="_blank">
             <img src="./images/alternances/QCM/whishmical.png" class="img-fluid rounded shadow-sm border mt-3" alt="">
           </a>
           <p class="text-muted text-center">
-            Vous pouvez cliquer sur l'image afin de l'ouvrir dans votre navigateur
+            You can click on the image to open it in your browser
           </p>
         </section>
 
-        <!-- Développement -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Développement – Authentification</h2>
+          <h2 class="h4 mb-3">Development – Authentication</h2>
           <p>
-            Une fois la maquette validée par Yasin, nous avons commencé le développement.
-            L’authentification est liée à l’Active Directory (AD), ce qui ne nécessite
-            pas la gestion du hachage des mots de passe. Cette partie a été mise en place
-            par Owen.
+            Once the mockup was approved by Yasin, we began development.
+            Authentication is linked to the Active Directory (AD), which means
+            password hashing does not need to be managed. This part was implemented
+            by Owen.
           </p>
 
           <img src="./images/alternances/QCM/login.png" class="img-fluid rounded shadow-sm border mt-3"
-            alt="Interface de connexion">
+            alt="Login interface">
         </section>
 
-        <!-- Menu latéral -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Développement – Menu de gestion des QCM</h2>
+          <h2 class="h4 mb-3">Development – Quiz Management Menu</h2>
           <p>
-            Pendant qu’Owen s’occupait de la mise en place de la page de connexion,
-            je me suis chargé du développement du menu latéral.
-            Les fonctionnalités demandées par Yasin étaient :
+            While Owen was working on setting up the login page,
+            I took charge of developing the side menu.
+            The features requested by Yasin were:
           </p>
 
           <p class="text-muted">
-            Ci-dessous, plusieurs captures d’écran illustrent le fonctionnement du menu, vous pouvez cliquer dessus afin
-            de les agrandir.
+            Below, several screenshots illustrate how the menu works. You can click on them to enlarge them.
           </p>
           <div id="gallerie">
-            <!-- Galerie -->
             <div class="row g-4">
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/accueilSSQcm.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
                 <p class="text-muted text-center">
-                  Voici la page d'accueil pour un nouvel utilisateur, il y a un texte qui permet à l'utilisateur
-                  de comprendre comment créer un nouveau QCM
+                  This is the home page for a new user. A message helps the user understand how to create a new quiz.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/modif.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Voici le menu de modification des QCM, ici l'utilisateur peut ajouter, renommer et supprimer un QCM
+                  This is the quiz management menu, where the user can add, rename, and delete a quiz.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/rename.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Voici l'interface quand un utilisateur choisit de renommer un QCM, comme vous pouvez le constater, il
-                  y a un bouton de validation de renommage, il est aussi possible de valider le renommage avec la touche
-                  entrée
-                  et d'annuler le renommage avec la touche échap
+                  This is the interface when a user chooses to rename a quiz. As you can see, there is a rename
+                  confirmation button. It is also possible to confirm the rename with the Enter key
+                  and cancel it with the Escape key.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/MessRenameConf.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
                 <p class="text-muted text-center">
-                  Le message affiché est un message de confirmation de renommage, il apparaît uniquement quand on
-                  clique sur un autre renommage ou qu'on souhaite quitter le mode de modification.
+                  The message displayed is a rename confirmation message. It only appears when
+                  clicking on another rename action or when attempting to exit edit mode.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/allSelect.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Il y a aussi la possibilité de sélectionner tous les QCM créés et donc de les supprimer.
+                  It is also possible to select all created quizzes and delete them all at once.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/MessConfSuppr.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
                 <p class="text-muted text-center">
-                  Lorsque l'on souhaite supprimer un QCM, un message de confirmation apparaît, ce message est là pour
-                  éviter
-                  les suppressions accidentelles
+                  When attempting to delete a quiz, a confirmation message appears to prevent accidental deletions.
                 </p>
               </div>
-
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/Corbeille.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Une fois les messages supprimés ils sont placés dans la corbeille, ils sont datés de la date de
-                  suppression,
-                  les QCM sont gardés en corbeille pendant 7 jours, ils sont donc récupérables dans l'intervalle des 7
-                  jours suivant la suppression.
+                  Once deleted, quizzes are moved to the trash and stamped with their deletion date.
+                  They are kept in the trash for 7 days and can therefore be recovered within the 7 days following deletion.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/selectQcm.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Un QCM sélectionné a un style différent que les QCM qui ne sont pas sélectionnés afin de les
-                  différencier
-                  (ici la fonctionnalité qui va servir à lire les QCM n'est pas encore développée).
+                  A selected quiz has a different style from unselected ones to differentiate them
+                  (the feature for taking a quiz is not yet developed at this stage).
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/QCM/accueil.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Et voici la page d'accueil quand l'utilisateur a déjà créé des QCM
+                  This is the home page when the user has already created quizzes.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal"
@@ -167,9 +151,8 @@
                 <img src="./images/alternances/QCM/codeQcm.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Les QCM peuvent être passés grâce à un code, ce code est un chiffre hexadécimal de 7 caractères de
-                  long,
-                  il est automatiquement généré à la création d'un QCM.
+                  Quizzes can be accessed using a code: a 7-character hexadecimal number
+                  automatically generated when a quiz is created.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal"
@@ -177,10 +160,9 @@
                 <img src="./images/alternances/QCM/loadingQcm.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
                 <p class="text-muted text-center">
-                  Lorsque l'on clique sur un QCM pour le passer, une animation de chargement apparaît; Cette animation
-                  est là pour
-                  indiquer à l'utilisateur que le QCM est en train de se charger, cela permet d'améliorer
-                  l'expérience utilisateur en évitant les incertitudes pendant le chargement du QCM.
+                  When clicking on a quiz to take it, a loading animation appears. This animation
+                  indicates to the user that the quiz is loading, improving the user experience
+                  by removing uncertainty during the loading process.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal"
@@ -188,11 +170,11 @@
                 <img src="./images/alternances/QCM/qcmQuestions.png"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
                 <p class="text-muted text-center">
-                  Voici l'interface de modification d'un QCM,
-                  il est possible de modifier tous les champs du QCM
-                  (titre, description, questions, réponses et les réponses correctes),
-                  il est aussi possible d'ajouter et de supprimer des questions et des réponses.
-                  Vous pouvez aussi choisir le type de réponse pour chaque question.
+                  This is the quiz editing interface.
+                  All quiz fields can be modified
+                  (title, description, questions, answers, and correct answers).
+                  It is also possible to add and remove questions and answers.
+                  You can also choose the answer type for each question.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal"
@@ -200,9 +182,8 @@
                 <img src="./images/alternances/QCM/typeRep.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Il existe 3 types de réponses différents pour les questions, les réponses à choix unique, les réponses
-                  à choix multiples et les listes de réponse.
-                  Les listes de réponses sont des réponses qui peuvent être sélectionnées dans une liste déroulante.
+                  There are 3 different answer types for questions: single-choice answers, multiple-choice answers,
+                  and dropdown list answers. Dropdown answers can be selected from a drop-down list.
                 </p>
               </div>
 
@@ -216,37 +197,36 @@
                       aria-label="Slide 2"></button>
                   </div>
                   <div class="carousel-inner">
-                    <div class="carousel-item active" >
+                    <div class="carousel-item active">
                       <img src="./images/alternances/QCM/successMessage.png"
-                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Image de la récupération d'un stage"
+                        class="d-block w-auto mx-auto img-fluid gallery-img" alt="Success message"
                         data-bs-toggle="modal" data-bs-target="#picModal">
                     </div>
-
                     <div class="carousel-item">
                       <img src="./images/alternances/QCM/failedMessage.png"
                         class="d-block w-auto mx-auto img-fluid gallery-img"
-                        alt="Image montrant le résultat de la requête" data-bs-toggle="modal"
+                        alt="Error message" data-bs-toggle="modal"
                         data-bs-target="#picModal">
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#CarouselQcmMessageSave"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Précédent</span>
+                    <span class="visually-hidden">Previous</span>
                   </button>
                   <button class="carousel-control-next" type="button" data-bs-target="#CarouselQcmMessageSave"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Suivant</span>
+                    <span class="visually-hidden">Next</span>
                   </button>
                 </div>
                 <p class="text-muted text-center">
-                  Il existe le bouton d'enregistrement des modifications, lorsque l'on clique dessus,
-                  les modifications sont enregistrées et un
-                  <a href="#" data-bs-target="#CarouselQcmMessageSave" data-bs-slide-to="0">message de succès</a>
-                  apparaît en bas à droite, si jamais il y a une erreur lors de l'enregistrement des modifications,
-                  un <a href="#" data-bs-target="#CarouselQcmMessageSave" data-bs-slide-to="1"> message d'erreur</a>
-                  apparaît à la place du message de succès.
+                  There is a save button for changes. When clicked,
+                  the changes are saved and a
+                  <a href="#" data-bs-target="#CarouselQcmMessageSave" data-bs-slide-to="0">success message</a>
+                  appears in the bottom right corner. If an error occurs while saving,
+                  an <a href="#" data-bs-target="#CarouselQcmMessageSave" data-bs-slide-to="1">error message</a>
+                  appears instead.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal" data-bs-toggle="modal"
@@ -254,8 +234,8 @@
                 <img src="./images/alternances/QCM/paramQcm.png" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Les QCM peuvent être paramétrés, afin de définir une période de disponibilité du QCM.
-                  Une fois cette période passée le QCM ne peut plus être passé.
+                  Quizzes can be configured to define an availability period.
+                  Once this period has passed, the quiz can no longer be taken.
                 </p>
               </div>
             </div>
@@ -263,52 +243,46 @@
 
         </section>
 
-        <!-- Compétences -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Compétences exploitées</h2>
-          <p class="lead mb-5">Retrouvez ci-dessous une présentation exhaustive des compétences que j'ai eu
-            l'occasion de mettre en pratique
-            et d'approfondir durant ce projet, classées par blocs thématiques conformément au référentiel.
-            Elles témoignent de ma capacité à maîtriser divers aspects de l'informatique et du développement.
+          <h2 class="h4 mb-3">Skills Developed</h2>
+          <p class="lead mb-5">Below is a comprehensive overview of the skills I had the opportunity to apply
+            and deepen during this project, organised by thematic blocks in accordance with the official
+            curriculum. They demonstrate my ability to master various aspects of computing and software development.
           </p>
           <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-lg-4 d-flex">
               <div class="card w-100 mb-4 border-0 shadow-sm">
                 <div class="card-body">
-                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Bloc 1 - Support et mise à
-                    disposition des services informatiques</h2>
+                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Block 1 - IT Service Support and Delivery</h2>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered align-middle">
                       <thead>
                         <tr>
                           <th scope="col" style="width: 20%;"
-                            class="bg-dark text-white align-middle text-center fw-bold">Libellé
-                            de la Compétence</th>
-                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">
-                            Intitulé
-                            de la Compétence</th>
+                            class="bg-dark text-white align-middle text-center fw-bold">Skill Code</th>
+                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Skill Description</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr class="mission-links">
                           <tr class="mission-links">
                           <td class="text-center">B1.1</td>
-                          <td>Gérer le patrimoine informatique</td>
+                          <td>Manage the IT asset base</td>
                         </tr>
                           <td class="text-center">B1.2</td>
-                          <td>Répondre aux incidents et aux demandes d’assistance et d’évolution</td>
+                          <td>Respond to incidents and support or change requests</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B1.4</td>
-                          <td>Travailler en mode projet</td>
+                          <td>Work in project mode</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B1.5</td>
-                          <td>Mettre à disposition des utilisateurs un service informatique (orienté utilisateurs)</td>
+                          <td>Deliver an IT service to end users</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B1.6</td>
-                          <td>Organiser son développement professionnel</td>
+                          <td>Manage one's own professional development</td>
                         </tr>
                       </tbody>
                     </table>
@@ -316,36 +290,31 @@
                 </div>
               </div>
             </div>
-
             <div class="col-12 col-md-6 col-lg-4 d-flex">
               <div class="card w-100 mb-4 border-0 shadow-sm">
                 <div class="card-body">
-                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Bloc 2 - SLAM Conception et
-                    développement d’applications</h2>
+                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Block 2 - SLAM Application Design and Development</h2>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered align-middle">
                       <thead>
                         <tr>
                           <th scope="col" style="width: 20%;"
-                            class="bg-dark text-white align-middle text-center fw-bold">Libellé
-                            de la Compétence</th>
-                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">
-                            Intitulé
-                            de la Compétence</th>
+                            class="bg-dark text-white align-middle text-center fw-bold">Skill Code</th>
+                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Skill Description</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr class="mission-links">
                           <td class="text-center">B2.1</td>
-                          <td>Concevoir et développer une solution applicative</td>
+                          <td>Design and develop an application solution</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B2.2</td>
-                          <td>Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
+                          <td>Carry out corrective or evolutionary maintenance of an application solution</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B2.3</td>
-                          <td>Gérer les données</td>
+                          <td>Manage data</td>
                         </tr>
                       </tbody>
                     </table>
@@ -353,40 +322,34 @@
                 </div>
               </div>
             </div>
-
             <div class="col-12 col-md-6 col-lg-4 d-flex">
               <div class="card w-100 mb-4 border-0 shadow-sm">
                 <div class="card-body">
-                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Bloc 3 - Cybersécurité des services
-                    informatiques</h2>
+                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Block 3 - IT Services Cybersecurity</h2>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered align-middle">
                       <thead>
                         <tr>
                           <th scope="col" style="width: 20%;"
-                            class="bg-dark text-white align-middle text-center fw-bold">Libellé
-                            de la Compétence</th>
-                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">
-                            Intitulé
-                            de la Compétence</th>
+                            class="bg-dark text-white align-middle text-center fw-bold">Skill Code</th>
+                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Skill Description</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr class="mission-links">
                           <td class="text-center">B3.3</td>
-                          <td>Sécuriser les équipements et les usages des utilisateurs</td>
+                          <td>Secure equipment and user practices</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B3.4</td>
                           <td>
-                             Garantir la disponibilité, l’intégrité et la confidentialité des services informatiques
-                             et des données de l’organisation face aux cyberattaques
+                            Ensure the availability, integrity and confidentiality of IT services
+                            and organisational data against cyberattacks
                           </td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B3.5B</td>
-                          <td>Assurer la cybersécurité d’une solution applicative et de son développement
-                          </td>
+                          <td>Ensure the cybersecurity of an application solution and its development</td>
                         </tr>
                       </tbody>
                     </table>
@@ -401,12 +364,11 @@
   </div>
 </section>
 
-
 <div class="modal fade" id="picModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content bg-transparent border-0">
       <div class="modal-body text-center">
-        <img id="modalImage" class="img-fluid rounded shadow" alt="Image agrandie">
+        <img id="modalImage" class="img-fluid rounded shadow" alt="Enlarged image">
       </div>
     </div>
   </div>

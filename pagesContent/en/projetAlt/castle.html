@@ -1,153 +1,141 @@
 <section class="hero-section py-5 bg-light text-dark" id="presentation-MairieFougeres">
   <div class="container">
-    <a href="index.html?pages=proj" class="btn btn-outline-secondary" style="font-style: italic;">
-      Retour
+    <a href="index.html?lang=en&pages=alt" class="btn btn-outline-secondary" style="font-style: italic;">
+      Back
     </a>
 
-    <!-- Titre -->
     <div class="text-center mb-5">
-      <h1 class="fw-bold">Projet d'application Android pour le château de Fougères</h1>
+      <h1 class="fw-bold">Android Application Project for Fougères Castle</h1>
       <p class="text-muted fs-5">
         XAML • C# • Markdown
       </p>
       <p class="text-muted">
-        Nombre de personnes sur le projet : 1
+        Number of people on the project: 1
       </p>
     </div>
 
     <div class="row justify-content-center">
       <div class="col-lg-9">
 
-        <!-- Présentation -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Présentation du projet</h2>
+          <h2 class="h4 mb-3">Project Overview</h2>
           <p>
-            Le projet a été réalisé par moi-même, 
-            le code est accessible sur GitHub :
+            The project was carried out by myself.
+            The code is accessible on GitHub:
             <a href="https://github.com/jujumichl/AppCarteInteractive" target="_blank">
-              dépôt GitHub
+              GitHub repository
             </a>
           </p>
         </section>
 
-        <!-- Origine -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Origine et besoin client</h2>
+          <h2 class="h4 mb-3">Origin and Client Need</h2>
           <p>
-            Le projet provient d’une demande du château de Fougères.
-            Il souhaitait avoir une application quelconque qui permet sans connexion internet de consulter les vidéos 
-            de présentation en langue des signes française pour les personnes malentendantes, avant ils avaient un site web local
-            à déployer sur tablette, puis ils devaient aller sur internet pour consulter les vidéos, sauf que la connexion internet n'est
-            pas stable, ils m'ont donc demandé de trouver une solution, j'ai donc proposé de faire une application Android.
+            The project originated from a request by Fougères Castle.
+            They wanted an application that would allow visitors to watch French Sign Language presentation videos
+            without an internet connection. Previously, they had a local website deployed on a tablet,
+            which then required an internet connection to stream the videos — but the connection was unreliable.
+            They therefore asked me to find a solution, and I proposed building an Android application.
           </p>
         </section>
 
-        <!-- Conception -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Phase de conception</h2>
+          <h2 class="h4 mb-3">Design Phase</h2>
           <p>
-            Un brainstorming a été réalisé afin de définir les fonctionnalités et le design.
-            Cette phase s’est déroulée sur une journée, la personne n'a pas demandé d'interface utilisateur 
-            particulière, elle souhaitait juste qu'on ait accès aux vidéos hors ligne et qu'on puisse cliquer sur la carte.
+            A brainstorming session was held to define the features and design.
+            This phase took place over one day. The client had no specific interface requirements;
+            they simply wanted offline access to the videos and the ability to tap on the map.
           </p>
         </section>
 
-        <!-- Développement -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Développement</h2>
+          <h2 class="h4 mb-3">Development</h2>
           <p>
-            Après m'être documenté sur la façon de faire une application web, j'ai choisi d'utiliser le C#. 
-            J'ai donc commencé par mettre en place ma première page XAML puis j'ai commencé à faire le backend en C#, 
-            ci-dessous vous retrouverez les différentes pages de l'application. Vous pouvez cliquer sur les images pour les agrandir
+            After researching how to build a mobile application, I chose to use C#.
+            I started by setting up my first XAML page, then began developing the backend in C#.
+            Below you will find the different pages of the application. You can click on the images to enlarge them.
           </p>
 
           <div id="gallerie">
-            <!-- Galerie -->
             <div class="row g-4">
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/appCastle/pageAccueil.jpg"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
                 <p class="text-muted text-center">
-                  Voici la page d'accueil de l'application, l'application est épinglée afin de ne pas pouvoir la quitter sans 
-                  une manipulation particulière.
+                  This is the application's home page. The application is pinned so that it cannot be exited
+                  without a specific action.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/appCastle/pagePrincipal.jpg" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Voici la page principale de l'application, quand on clique sur un numéro une vidéo explicative en langue des signes 
-                  est lancée, il est possible d'appuyer 2 fois pour zoomer sur la carte.
+                  This is the main page of the application. Tapping a number launches an explanatory video in French Sign Language.
+                  It is possible to double-tap to zoom in on the map.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/appCastle/menuAide.jpg" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Voici le menu d'aide de l'application, il permet aux personnes malentendantes de comprendre les différentes 
-                  manipulation qu'ils peuvent effectuer.
+                  This is the application's help menu. It helps hearing-impaired visitors understand the different
+                  actions they can perform.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/appCastle/menu.jpg"
                   class="img-fluid rounded shadow-sm border gallery-img" alt="">
                 <p class="text-muted text-center">
-                  Le menu permet de naviguer d'une page à une autre.
+                  The menu allows navigation between pages.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4" data-bs-toggle="modal" data-bs-target="#picModal">
                 <img src="./images/alternances/appCastle/icon.jpg" class="img-fluid rounded shadow-sm border gallery-img"
                   alt="">
                 <p class="text-muted text-center">
-                  Voici l'icône de l'application, il correspond au logo de la coursive de la mairie de Fougères.
+                  This is the application icon. It corresponds to the logo of the Fougères town hall arcade.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Compétences -->
         <section class="mb-5">
-          <h2 class="h4 mb-3">Compétences exploitées</h2>
-          <p class="lead mb-5">Retrouvez ci-dessous une présentation exhaustive des compétences que j'ai eu
-            l'occasion de mettre en pratique
-            et d'approfondir durant ce projet, classées par blocs thématiques conformément au référentiel.
-            Elles témoignent de ma capacité à maîtriser divers aspects de l'informatique et du développement.
+          <h2 class="h4 mb-3">Skills Developed</h2>
+          <p class="lead mb-5">Below is a comprehensive overview of the skills I had the opportunity to apply
+            and deepen during this project, organised by thematic blocks in accordance with the official
+            curriculum. They demonstrate my ability to master various aspects of computing and software development.
           </p>
           <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-lg-4 d-flex">
               <div class="card w-100 mb-4 border-0 shadow-sm">
                 <div class="card-body">
-                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Bloc 1 - Support et mise à
-                    disposition des services informatiques</h2>
+                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Block 1 - IT Service Support and Delivery</h2>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered align-middle">
                       <thead>
                         <tr>
                           <th scope="col" style="width: 20%;"
-                            class="bg-dark text-white align-middle text-center fw-bold">Libellé
-                            de la Compétence</th>
-                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">
-                            Intitulé
-                            de la Compétence</th>
+                            class="bg-dark text-white align-middle text-center fw-bold">Skill Code</th>
+                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Skill Description</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr class="mission-links">
                           <tr class="mission-links">
                           <td class="text-center">B1.1</td>
-                          <td>Gérer le patrimoine informatique</td>
+                          <td>Manage the IT asset base</td>
                         </tr>
                           <td class="text-center">B1.2</td>
-                          <td>Répondre aux incidents et aux demandes d’assistance et d’évolution</td>
+                          <td>Respond to incidents and support or change requests</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B1.5</td>
-                          <td>Mettre à disposition des utilisateurs un service informatique (orienté utilisateurs)</td>
+                          <td>Deliver an IT service to end users</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B1.6</td>
-                          <td>Organiser son développement professionnel</td>
+                          <td>Manage one's own professional development</td>
                         </tr>
                       </tbody>
                     </table>
@@ -155,32 +143,27 @@
                 </div>
               </div>
             </div>
-
             <div class="col-12 col-md-6 col-lg-4 d-flex">
               <div class="card w-100 mb-4 border-0 shadow-sm">
                 <div class="card-body">
-                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Bloc 2 - SLAM Conception et
-                    développement d’applications</h2>
+                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Block 2 - SLAM Application Design and Development</h2>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered align-middle">
                       <thead>
                         <tr>
                           <th scope="col" style="width: 20%;"
-                            class="bg-dark text-white align-middle text-center fw-bold">Libellé
-                            de la Compétence</th>
-                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">
-                            Intitulé
-                            de la Compétence</th>
+                            class="bg-dark text-white align-middle text-center fw-bold">Skill Code</th>
+                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Skill Description</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr class="mission-links">
                           <td class="text-center">B2.1</td>
-                          <td>Concevoir et développer une solution applicative</td>
+                          <td>Design and develop an application solution</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B2.2</td>
-                          <td>Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
+                          <td>Carry out corrective or evolutionary maintenance of an application solution</td>
                         </tr>
                       </tbody>
                     </table>
@@ -188,33 +171,27 @@
                 </div>
               </div>
             </div>
-
             <div class="col-12 col-md-6 col-lg-4 d-flex">
               <div class="card w-100 mb-4 border-0 shadow-sm">
                 <div class="card-body">
-                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Bloc 3 - Cybersécurité des services
-                    informatiques</h2>
+                  <h2 class="card-title h5 text-dark mb-4 fw-semibold">Block 3 - IT Services Cybersecurity</h2>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered align-middle">
                       <thead>
                         <tr>
                           <th scope="col" style="width: 20%;"
-                            class="bg-dark text-white align-middle text-center fw-bold">Libellé
-                            de la Compétence</th>
-                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">
-                            Intitulé
-                            de la Compétence</th>
+                            class="bg-dark text-white align-middle text-center fw-bold">Skill Code</th>
+                          <th scope="col" class="bg-dark text-white align-middle text-center fw-bold">Skill Description</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr class="mission-links">
                           <td class="text-center">B3.3</td>
-                          <td>Sécuriser les équipements et les usages des utilisateurs</td>
+                          <td>Secure equipment and user practices</td>
                         </tr>
                         <tr class="mission-links">
                           <td class="text-center">B3.5B</td>
-                          <td>Assurer la cybersécurité d’une solution applicative et de son développement
-                          </td>
+                          <td>Ensure the cybersecurity of an application solution and its development</td>
                         </tr>
                       </tbody>
                     </table>
@@ -229,12 +206,11 @@
   </div>
 </section>
 
-
 <div class="modal fade" id="picModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content bg-transparent border-0">
       <div class="modal-body text-center">
-        <img id="modalImage" class="img-fluid rounded shadow" alt="Image agrandie">
+        <img id="modalImage" class="img-fluid rounded shadow" alt="Enlarged image">
       </div>
     </div>
   </div>
